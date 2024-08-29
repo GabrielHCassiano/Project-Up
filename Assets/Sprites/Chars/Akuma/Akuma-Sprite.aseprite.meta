@@ -1,0 +1,4107 @@
+fileFormatVersion: 2
+guid: 505a0ad43ab388049933df768c2dcb08
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 16
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638605444846372641
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Akuma-Sprite_Frame_0
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 373
+      width: 39
+      height: 71
+    spriteID: 679d7664ad044354eadf6973accf9b93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 373}
+  - name: Akuma-Sprite_Frame_1
+    originalName: 
+    pivot: {x: 0.21428567, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 846
+      width: 28
+      height: 67
+    spriteID: d8b437d2c60f41448b2e17fbbe2f559a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 846}
+  - name: Akuma-Sprite_Frame_2
+    originalName: 
+    pivot: {x: 0.12903228, y: -0.1764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 423
+      width: 31
+      height: 68
+    spriteID: 0eb2cc14bdfd0f4408a4c1ed95cae2bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 423}
+  - name: Akuma-Sprite_Frame_3
+    originalName: 
+    pivot: {x: 0.46666667, y: -0.18461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 558
+      width: 30
+      height: 65
+    spriteID: 2bbc68c88c23812419243b002cf86764
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 558}
+  - name: Akuma-Sprite_Frame_4
+    originalName: 
+    pivot: {x: 0.5471698, y: -0.1764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 590
+      width: 53
+      height: 68
+    spriteID: fd6cafb712dd1024ba6530fd63683d5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 590}
+  - name: Akuma-Sprite_Frame_5
+    originalName: 
+    pivot: {x: 0.5471698, y: -0.1764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 666
+      width: 53
+      height: 68
+    spriteID: f3db78e2c2b27994da435e4a01116080
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 666}
+  - name: Akuma-Sprite_Frame_6
+    originalName: 
+    pivot: {x: 0.5471698, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 436
+      width: 53
+      height: 69
+    spriteID: 21fa5a901c6b9f24b9cfe1cd0c91e2a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 436}
+  - name: Akuma-Sprite_Frame_7
+    originalName: 
+    pivot: {x: 0.5471698, y: -0.17142858}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 846
+      y: 118
+      width: 53
+      height: 70
+    spriteID: 14448a89a51c64f4093cf64ecd6a29a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 846, y: 118}
+  - name: Akuma-Sprite_Frame_8
+    originalName: 
+    pivot: {x: 0.5471698, y: -0.17142858}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 907
+      y: 118
+      width: 53
+      height: 70
+    spriteID: 022273245a0e3d746b15e9e873cd1f82
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 907, y: 118}
+  - name: Akuma-Sprite_Frame_9
+    originalName: 
+    pivot: {x: 0.5471698, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 815
+      width: 53
+      height: 67
+    spriteID: 384d82ed81e474f4f889f4eeca02549e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 815}
+  - name: Akuma-Sprite_Frame_10
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 890
+      width: 35
+      height: 66
+    spriteID: c82d4b3c776e8cc4d9c3a0ee05a532ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 890}
+  - name: Akuma-Sprite_Frame_11
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 815
+      width: 35
+      height: 67
+    spriteID: af6cf4d7cd5a1574583eebb0b1dbce3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 815}
+  - name: Akuma-Sprite_Frame_12
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.1764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 590
+      width: 35
+      height: 68
+    spriteID: 781c9c8f55bbf594394f99f18ff86725
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 590}
+  - name: Akuma-Sprite_Frame_13
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 436
+      width: 35
+      height: 67
+    spriteID: 258980b358aa19f4c9d8af4ef53a2f8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 436}
+  - name: Akuma-Sprite_Frame_14
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 331
+      width: 35
+      height: 66
+    spriteID: 75ccb7b5e08452e43b7ff6022cdab1c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 331}
+  - name: Akuma-Sprite_Frame_15
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.18461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 627
+      width: 35
+      height: 65
+    spriteID: c747c711b96970340a3ed9dc5a98f462
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 627}
+  - name: Akuma-Sprite_Frame_16
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 405
+      width: 35
+      height: 66
+    spriteID: 79d525af756ba5a428b6c8453507ecd8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 405}
+  - name: Akuma-Sprite_Frame_17
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 513
+      width: 35
+      height: 67
+    spriteID: eaae781cc964fb64280597b9468851f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 513}
+  - name: Akuma-Sprite_Frame_18
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.1764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 666
+      width: 35
+      height: 68
+    spriteID: 568aff90b5a25244e950ba5d569c481a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 666}
+  - name: Akuma-Sprite_Frame_19
+    originalName: 
+    pivot: {x: 0.4193549, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 945
+      width: 31
+      height: 63
+    spriteID: 87de04c0c8431c0429740a18701a58fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 945}
+  - name: Akuma-Sprite_Frame_20
+    originalName: 
+    pivot: {x: 0.5135135, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 501
+      width: 37
+      height: 66
+    spriteID: b269823e1e870184b86c8df4b2481ffc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 501}
+  - name: Akuma-Sprite_Frame_21
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 358
+      width: 35
+      height: 67
+    spriteID: 3900e338e786509469fb48bf207933a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 358}
+  - name: Akuma-Sprite_Frame_22
+    originalName: 
+    pivot: {x: 0.4193549, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 499
+      width: 31
+      height: 67
+    spriteID: 64581c2b7cbe3d74a8960ac8c5cb7ce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 499}
+  - name: Akuma-Sprite_Frame_23
+    originalName: 
+    pivot: {x: 0.37931028, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 631
+      width: 29
+      height: 67
+    spriteID: af668525a07093241ae43be667bc1b84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 631}
+  - name: Akuma-Sprite_Frame_24
+    originalName: 
+    pivot: {x: 0.40000007, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 871
+      width: 30
+      height: 66
+    spriteID: 11d5e39a48ac87c4183190a043600907
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 871}
+  - name: Akuma-Sprite_Frame_25
+    originalName: 
+    pivot: {x: 0.44444442, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 808
+      width: 45
+      height: 62
+    spriteID: d7fe9c3926f7a8c479d062330c615e51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 808}
+  - name: Akuma-Sprite_Frame_26
+    originalName: 
+    pivot: {x: 0.45454544, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 286
+      width: 44
+      height: 62
+    spriteID: 6001bd174d3045145b19bbeaf50fe2a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 286}
+  - name: Akuma-Sprite_Frame_27
+    originalName: 
+    pivot: {x: 0.4666666, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 878
+      width: 45
+      height: 62
+    spriteID: 2b7a2ad6bd8fe1d4f9ece5a1548966a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 878}
+  - name: Akuma-Sprite_Frame_28
+    originalName: 
+    pivot: {x: 0.32258064, y: -0.1967213}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 776
+      y: 118
+      width: 62
+      height: 61
+    spriteID: 3bbb86378eb3364449666fcb7e870be6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 776, y: 118}
+  - name: Akuma-Sprite_Frame_29
+    originalName: 
+    pivot: {x: 0.40816325, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 370
+      width: 49
+      height: 63
+    spriteID: b1ec584aa182f64478b5ed18c3d80f51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 370}
+  - name: Akuma-Sprite_Frame_30
+    originalName: 
+    pivot: {x: 0.53846145, y: -0.16923077}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 811
+      width: 39
+      height: 65
+    spriteID: f0451fc8d804aba4a92642d5bebc08a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 811}
+  - name: Akuma-Sprite_Frame_31
+    originalName: 
+    pivot: {x: 0.65624994, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 772
+      width: 32
+      height: 67
+    spriteID: 681d3c63172566b42b4dae516decb856
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 772}
+  - name: Akuma-Sprite_Frame_32
+    originalName: 
+    pivot: {x: 0.2903226, y: -0.20000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 396
+      width: 31
+      height: 60
+    spriteID: 5be7109d1694dc94b8ef4568b4ad7a97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 396}
+  - name: Akuma-Sprite_Frame_33
+    originalName: 
+    pivot: {x: 0.36170217, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 441
+      width: 47
+      height: 63
+    spriteID: 990201f3b74c2b940a3a215ef126dce5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 441}
+  - name: Akuma-Sprite_Frame_34
+    originalName: 
+    pivot: {x: 0.21818185, y: -0.18461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 742
+      width: 55
+      height: 65
+    spriteID: f217390a7e19ddb48a05744d64f32b10
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 742}
+  - name: Akuma-Sprite_Frame_35
+    originalName: 
+    pivot: {x: 0.24999997, y: -0.18461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 661
+      width: 44
+      height: 65
+    spriteID: 97b8d19982223444fa3bc51cb4d2e6c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 661}
+  - name: Akuma-Sprite_Frame_36
+    originalName: 
+    pivot: {x: 0.3214286, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 464
+      width: 28
+      height: 66
+    spriteID: 5037b2f15eb2e2d40be56ffb67baf804
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 464}
+  - name: Akuma-Sprite_Frame_37
+    originalName: 
+    pivot: {x: 0.53125006, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 847
+      width: 32
+      height: 67
+    spriteID: 1b0f334de5584f846bd7a72fa18b469d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 847}
+  - name: Akuma-Sprite_Frame_38
+    originalName: 
+    pivot: {x: 0.42105258, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 661
+      width: 38
+      height: 67
+    spriteID: 88ff876038a3f9547b08e553dbbcb47c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 661}
+  - name: Akuma-Sprite_Frame_39
+    originalName: 
+    pivot: {x: 0.28301886, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 890
+      width: 53
+      height: 66
+    spriteID: 4240e5b5e35f1b44ea71eedcf201a940
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 890}
+  - name: Akuma-Sprite_Frame_40
+    originalName: 
+    pivot: {x: 0.42105258, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 736
+      width: 38
+      height: 67
+    spriteID: 47dd843e2c3796d46a47a83c039779e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 736}
+  - name: Akuma-Sprite_Frame_41
+    originalName: 
+    pivot: {x: 0.46511626, y: -0.1969697}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 734
+      width: 43
+      height: 66
+    spriteID: b23b840772bc66d42b3e38439fc83761
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 734}
+  - name: Akuma-Sprite_Frame_42
+    originalName: 
+    pivot: {x: 0.32258064, y: -0.20967741}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 706
+      width: 31
+      height: 62
+    spriteID: d8e5f937ce4ae174bb12f9944f4be41e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 706}
+  - name: Akuma-Sprite_Frame_43
+    originalName: 
+    pivot: {x: 0.26923078, y: -0.20967741}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 218
+      width: 52
+      height: 62
+    spriteID: 18f5a71ebde90bc4687c0ee8960dab4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 218}
+  - name: Akuma-Sprite_Frame_44
+    originalName: 
+    pivot: {x: 0.33333334, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 822
+      width: 27
+      height: 64
+    spriteID: d4e5b59d2a7dabd4caa525bb6c49c870
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 822}
+  - name: Akuma-Sprite_Frame_45
+    originalName: 
+    pivot: {x: 0.5813953, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 586
+      width: 43
+      height: 67
+    spriteID: eb18c60f845896f4fa2568a503fc0570
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 586}
+  - name: Akuma-Sprite_Frame_46
+    originalName: 
+    pivot: {x: 0.53125006, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 922
+      width: 32
+      height: 67
+    spriteID: 16552ecaeca9f434aa8b1bc15d0898c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 922}
+  - name: Akuma-Sprite_Frame_47
+    originalName: 
+    pivot: {x: 0.51515156, y: -0.23529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 894
+      width: 33
+      height: 51
+    spriteID: 6a89c6f28de8a15499862a5cdf3027e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 894}
+  - name: Akuma-Sprite_Frame_48
+    originalName: 
+    pivot: {x: 0.49999994, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 504
+      y: 218
+      width: 32
+      height: 47
+    spriteID: c134bf10cdd672c46b762381e58d6a59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 504, y: 218}
+  - name: Akuma-Sprite_Frame_49
+    originalName: 
+    pivot: {x: 0.41666663, y: -0.2264151}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 274
+      width: 36
+      height: 53
+    spriteID: 621146bd0d43f8b4580e38889feae6a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 274}
+  - name: Akuma-Sprite_Frame_50
+    originalName: 
+    pivot: {x: 0.30952382, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 519
+      width: 42
+      height: 63
+    spriteID: 6a6f2fca4356c8b4f98422db33e288e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 519}
+  - name: Akuma-Sprite_Frame_51
+    originalName: 
+    pivot: {x: 0.40000007, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 337
+      width: 30
+      height: 84
+    spriteID: 8451768a5deae8d4ca2e678905748f92
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 337}
+  - name: Akuma-Sprite_Frame_52
+    originalName: 
+    pivot: {x: 0.30952382, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 590
+      width: 42
+      height: 63
+    spriteID: 739ac1e42a005784cb89bb42fb99a435
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 590}
+  - name: Akuma-Sprite_Frame_53
+    originalName: 
+    pivot: {x: 0.41666663, y: -0.2264151}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 335
+      width: 36
+      height: 53
+    spriteID: b88855face752f84e93ad4f67cfc8598
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 335}
+  - name: Akuma-Sprite_Frame_54
+    originalName: 
+    pivot: {x: 0.49999994, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 218
+      width: 32
+      height: 47
+    spriteID: fbac03ee110e5114a864ffb5716292fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 544, y: 218}
+  - name: Akuma-Sprite_Frame_55
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.23529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 763
+      width: 34
+      height: 51
+    spriteID: 8cd4eb22b6a34e74db5fe39b1da2ceee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 763}
+  - name: Akuma-Sprite_Frame_56
+    originalName: 
+    pivot: {x: 0.48387095, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 274
+      width: 31
+      height: 63
+    spriteID: 8914868f98e8f9941a11c31613698baa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 274}
+  - name: Akuma-Sprite_Frame_57
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 479
+      width: 35
+      height: 66
+    spriteID: 3ff1bc12e93e398419aac817379b7c17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 479}
+  - name: Akuma-Sprite_Frame_58
+    originalName: 
+    pivot: {x: 0.51724136, y: -0.23913044}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 707
+      y: 218
+      width: 29
+      height: 46
+    spriteID: 62da8f6b9f9c7b84e831f8e7a7a5692d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 707, y: 218}
+  - name: Akuma-Sprite_Frame_59
+    originalName: 
+    pivot: {x: 0.34999996, y: -0.27906978}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 342
+      y: 218
+      width: 60
+      height: 43
+    spriteID: 6281c48d92e49d947a26cac438d38ca3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 342, y: 218}
+  - name: Akuma-Sprite_Frame_60
+    originalName: 
+    pivot: {x: 0.38235298, y: -0.29268292}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 665
+      y: 218
+      width: 34
+      height: 41
+    spriteID: ad3e531baf4250b44b5ae094cd4547a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 665, y: 218}
+  - name: Akuma-Sprite_Frame_61
+    originalName: 
+    pivot: {x: 0.42424244, y: -0.26666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 624
+      y: 218
+      width: 33
+      height: 45
+    spriteID: b47c9cee6c744c04e9194a05c5c99698
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 624, y: 218}
+  - name: Akuma-Sprite_Frame_62
+    originalName: 
+    pivot: {x: 0.49999994, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 584
+      y: 218
+      width: 32
+      height: 47
+    spriteID: 1fd255e2316caf245b9d5b39ac859335
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 584, y: 218}
+  - name: Akuma-Sprite_Frame_63
+    originalName: 
+    pivot: {x: 0.4324324, y: -0.24489796}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 559
+      y: 331
+      width: 37
+      height: 49
+    spriteID: c8b070ce09ffa4849abf648c82de0d3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 559, y: 331}
+  - name: Akuma-Sprite_Frame_64
+    originalName: 
+    pivot: {x: 0.29411763, y: -0.24489796}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 274
+      width: 51
+      height: 49
+    spriteID: 693a451d7c0f9ad46998809af13b302c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 274}
+  - name: Akuma-Sprite_Frame_65
+    originalName: 
+    pivot: {x: 0.44736847, y: -0.24489796}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 559
+      y: 274
+      width: 38
+      height: 49
+    spriteID: bc945f8c4d8fd004c82f25667d0725ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 559, y: 274}
+  - name: Akuma-Sprite_Frame_66
+    originalName: 
+    pivot: {x: 0.48717946, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 218
+      width: 39
+      height: 47
+    spriteID: 0f33a6ba91b6b724083e984cf5bbcec3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 218}
+  - name: Akuma-Sprite_Frame_67
+    originalName: 
+    pivot: {x: 0.36363634, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 218
+      width: 55
+      height: 48
+    spriteID: 63ee6aa7e2403794c9d24595ba7c0db3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 218}
+  - name: Akuma-Sprite_Frame_68
+    originalName: 
+    pivot: {x: 0.48717946, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 457
+      y: 218
+      width: 39
+      height: 47
+    spriteID: c8c7f8d1aaab48d4283cca4d4e03f6bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 457, y: 218}
+  - name: Akuma-Sprite_Frame_69
+    originalName: 
+    pivot: {x: 0.5555555, y: -0.18461539}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 909
+      width: 36
+      height: 65
+    spriteID: 51b4634a070bce2438c4fa2e67e126ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 909}
+  - name: Akuma-Sprite_Frame_70
+    originalName: 
+    pivot: {x: 0.675, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 957
+      width: 40
+      height: 63
+    spriteID: 7c96c6bb3c0a73f4cbde8527d83f8f2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 957}
+  - name: Akuma-Sprite_Frame_71
+    originalName: 
+    pivot: {x: 0.45454544, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 512
+      width: 44
+      height: 66
+    spriteID: f24ceab32cec51340abf0606218df86f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 512}
+  - name: Akuma-Sprite_Frame_72
+    originalName: 
+    pivot: {x: 0.5428571, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 700
+      width: 35
+      height: 64
+    spriteID: 3d8730c8e3fbe2844b06e00ea96e5924
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 700}
+  - name: Akuma-Sprite_Frame_73
+    originalName: 
+    pivot: {x: 0.4193549, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 345
+      width: 31
+      height: 63
+    spriteID: d4d0ec44fe17bae40afdb17fe1f1fa71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 345}
+  - name: Akuma-Sprite_Frame_74
+    originalName: 
+    pivot: {x: 0.53846145, y: -0.16923077}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 884
+      width: 39
+      height: 65
+    spriteID: 1f1983f943d866342b2ee58c5db45a3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 884}
+  - name: Akuma-Sprite_Frame_75
+    originalName: 
+    pivot: {x: 0.4565217, y: -0.20000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 218
+      width: 46
+      height: 60
+    spriteID: 71d4aa5c031379c46a6febca08ee6d6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 218}
+  - name: Akuma-Sprite_Frame_76
+    originalName: 
+    pivot: {x: 0.43749994, y: -0.21818182}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 274
+      width: 48
+      height: 55
+    spriteID: 9a1cf1213ae6764449b0587f6cda0646
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 274}
+  - name: Akuma-Sprite_Frame_77
+    originalName: 
+    pivot: {x: 0.33898303, y: -0.21818182}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 964
+      width: 59
+      height: 55
+    spriteID: 96eba142b83f37542ab2288c271c495f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 964}
+  - name: Akuma-Sprite_Frame_78
+    originalName: 
+    pivot: {x: 0.53125006, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 274
+      width: 32
+      height: 67
+    spriteID: b066d9cd455a9da478e604fbd41f3c6d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 274}
+  - name: Akuma-Sprite_Frame_79
+    originalName: 
+    pivot: {x: 0.4193549, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 416
+      width: 31
+      height: 63
+    spriteID: 889c89e2b8ca82b4781e313caf804b87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 416}
+  - name: Akuma-Sprite_Frame_80
+    originalName: 
+    pivot: {x: 0.4117647, y: -0.21052632}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 473
+      y: 274
+      width: 34
+      height: 57
+    spriteID: 4fec958599f975844868049ce7486a26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 473, y: 274}
+  - name: Akuma-Sprite_Frame_81
+    originalName: 
+    pivot: {x: 0.33333334, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 429
+      width: 39
+      height: 64
+    spriteID: e6ae9ce8301b7e04fb1c404d3c63f251
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 429}
+  - name: Akuma-Sprite_Frame_82
+    originalName: 
+    pivot: {x: 0.40625003, y: -0.116279066}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 250
+      width: 32
+      height: 86
+    spriteID: 76cb8969041ddc54497cc93a0f4a3c05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 250}
+  - name: Akuma-Sprite_Frame_83
+    originalName: 
+    pivot: {x: 0.40625003, y: -0.30952382}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 427
+      width: 32
+      height: 84
+    spriteID: 883c362a05d9cdd489e0bbabbb289c87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 427}
+  - name: Akuma-Sprite_Frame_84
+    originalName: 
+    pivot: {x: 0.586207, y: -0.46913582}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 745
+      width: 29
+      height: 81
+    spriteID: 2f5e73e81d035494685b510252d2017f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 745}
+  - name: Akuma-Sprite_Frame_85
+    originalName: 
+    pivot: {x: 0.516129, y: -0.4871795}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 575
+      width: 31
+      height: 78
+    spriteID: 7f8c8f62c6c2fa245bc31f706339f8fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 575}
+  - name: Akuma-Sprite_Frame_86
+    originalName: 
+    pivot: {x: 0.5625, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 742
+      width: 32
+      height: 65
+    spriteID: 50961f3686c58d740b998702592cf014
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 742}
+  - name: Akuma-Sprite_Frame_87
+    originalName: 
+    pivot: {x: 0.4193549, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 776
+      width: 31
+      height: 62
+    spriteID: 1d12d7e97f3adb84d9327f430732b460
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 776}
+  - name: Akuma-Sprite_Frame_88
+    originalName: 
+    pivot: {x: 0.6111111, y: -0.16883117}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 288
+      width: 36
+      height: 77
+    spriteID: 14081b841569725498ad03c3682b76c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 288}
+  - name: Akuma-Sprite_Frame_89
+    originalName: 
+    pivot: {x: 0.68750006, y: -0.61290324}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 801
+      width: 32
+      height: 62
+    spriteID: b3759009f4e515741a556b9f31c67c59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 801}
+  - name: Akuma-Sprite_Frame_90
+    originalName: 
+    pivot: {x: 0.74999994, y: -1.0816326}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 71
+      y: 964
+      width: 28
+      height: 49
+    spriteID: 20ddccf781a3ed342a16e15c8c237397
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 71, y: 964}
+  - name: Akuma-Sprite_Frame_91
+    originalName: 
+    pivot: {x: 0.54838717, y: -0.9444445}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 953
+      width: 31
+      height: 54
+    spriteID: 66166e79172dd9e44892df6675363d96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 953}
+  - name: Akuma-Sprite_Frame_92
+    originalName: 
+    pivot: {x: 0.3877551, y: -0.5294118}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 968
+      y: 118
+      width: 49
+      height: 68
+    spriteID: 2ebef3d310d8b1e4dbbd90f44515524b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 968, y: 118}
+  - name: Akuma-Sprite_Frame_93
+    originalName: 
+    pivot: {x: 0.6666666, y: -0.5217391}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 574
+      width: 30
+      height: 69
+    spriteID: bd3dfe349f5f2bf458885a4f464892c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 574}
+  - name: Akuma-Sprite_Frame_94
+    originalName: 
+    pivot: {x: 0.85714287, y: -0.5735294}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 218
+      width: 49
+      height: 68
+    spriteID: 3076ac6570dd059418f1260fc1ca863d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 218}
+  - name: Akuma-Sprite_Frame_95
+    originalName: 
+    pivot: {x: 0.68750006, y: -0.5757576}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 349
+      width: 32
+      height: 66
+    spriteID: 10435b42603f60e4a95b4c93e9902df0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 349}
+  - name: Akuma-Sprite_Frame_96
+    originalName: 
+    pivot: {x: 0.3877551, y: -0.5294118}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 294
+      width: 49
+      height: 68
+    spriteID: 6ef827a91875ed04db41f6213e35bad8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 294}
+  - name: Akuma-Sprite_Frame_97
+    originalName: 
+    pivot: {x: 0.70370364, y: -0.5522388}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 688
+      width: 27
+      height: 67
+    spriteID: d6112fcfc1651de43b8c35af2174844e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 688}
+  - name: Akuma-Sprite_Frame_98
+    originalName: 
+    pivot: {x: 0.6785714, y: -0.49295774}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 722
+      width: 28
+      height: 71
+    spriteID: 3e2fd5a4d602cec47a8425f683419822
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 722}
+  - name: Akuma-Sprite_Frame_99
+    originalName: 
+    pivot: {x: 0.74074066, y: -0.48529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 612
+      width: 27
+      height: 68
+    spriteID: c67676a0b2c3c64468314cb34651a7c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 612}
+  - name: Akuma-Sprite_Frame_100
+    originalName: 
+    pivot: {x: 0.6428572, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 515
+      y: 538
+      width: 28
+      height: 66
+    spriteID: 35b381663ee89e8408eba69b2b5951d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 515, y: 538}
+  - name: Akuma-Sprite_Frame_101
+    originalName: 
+    pivot: {x: 0.54838717, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 487
+      width: 31
+      height: 63
+    spriteID: 4eb126a43c0e4864782459fbfa185e3e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 487}
+  - name: Akuma-Sprite_Frame_102
+    originalName: 
+    pivot: {x: 0.48387095, y: -0.078947365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 661
+      width: 31
+      height: 76
+    spriteID: 5af9ed9c37df06941afd548c8cff5c30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 661}
+  - name: Akuma-Sprite_Frame_103
+    originalName: 
+    pivot: {x: 0.372093, y: -0.17460318}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 356
+      width: 43
+      height: 63
+    spriteID: 71df41871945ca7428fcc0d9a14dd040
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 225, y: 356}
+  - name: Akuma-Sprite_Frame_104
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 452
+      width: 39
+      height: 71
+    spriteID: 3787b6ae4555c024f82b36250e71b371
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 452}
+  - name: Akuma-Sprite_Frame_105
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 531
+      width: 39
+      height: 71
+    spriteID: 5ef4a2f662a972c43adc4a30361b3ca2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 531}
+  - name: Akuma-Sprite_Frame_106
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 610
+      width: 39
+      height: 71
+    spriteID: 9d78bfcc9457e5a46a156fbc9ab08acd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 610}
+  - name: Akuma-Sprite_Frame_107
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 689
+      width: 39
+      height: 71
+    spriteID: 96c039ae58bac514d88f7578804e0864
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 689}
+  - name: Akuma-Sprite_Frame_108
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 768
+      width: 39
+      height: 71
+    spriteID: a9a61d949782a3c4b9a2577108642c63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 768}
+  - name: Akuma-Sprite_Frame_109
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 847
+      width: 39
+      height: 71
+    spriteID: b499afcaee37da148a4ebcd480d7e9a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 847}
+  - name: Akuma-Sprite_Frame_110
+    originalName: 
+    pivot: {x: 0.5128205, y: -0.15492958}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 926
+      width: 39
+      height: 71
+    spriteID: 2776dc9cffb34dc499e35719661b5fca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 926}
+  - name: Akuma-Sprite_Frame_111
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 279
+      y: 834
+      width: 35
+      height: 67
+    spriteID: 8fb5850c57d633f42b12b0d073ed5be3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 279, y: 834}
+  - name: Akuma-Sprite_Frame_112
+    originalName: 
+    pivot: {x: 0.48571432, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 553
+      width: 35
+      height: 66
+    spriteID: 755e9db4f7ec8e64590f9d54d6ad45b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 553}
+  - name: Akuma-Sprite_Frame_113
+    originalName: 
+    pivot: {x: 0.49999994, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 394
+      y: 651
+      width: 32
+      height: 63
+    spriteID: 86f99c7afab98a94faacbfdff35028fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 394, y: 651}
+  - name: Akuma-Sprite_Frame_114
+    originalName: 
+    pivot: {x: 0.21428567, y: -0.17910448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 434
+      y: 921
+      width: 28
+      height: 67
+    spriteID: 732806438f0442c4e8df6a75630ce6d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 434, y: 921}
+  - name: Akuma-Sprite_Frame_115
+    originalName: 
+    pivot: {x: 0.49056607, y: -0.1594203}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 513
+      width: 53
+      height: 69
+    spriteID: 1528cafe327639446a866e15928395b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 513}
+  - name: Akuma-Sprite_Frame_116
+    originalName: 
+    pivot: {x: 0.61904764, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 948
+      width: 42
+      height: 66
+    spriteID: ebb668010b61bfa40bd5f75ac64d7c41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 948}
+  - name: Akuma-Sprite_Frame_117
+    originalName: 
+    pivot: {x: 0.5660377, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 358
+      width: 53
+      height: 70
+    spriteID: f83a64e362d95c741a6b1abf1f98b422
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 358}
+  - name: Akuma-Sprite_Frame_118
+    originalName: 
+    pivot: {x: 0.5660377, y: -0.081081085}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 715
+      y: 118
+      width: 53
+      height: 74
+    spriteID: f71d081fb4ff89e488f686281f9bd9d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 715, y: 118}
+  - name: Akuma-Sprite_Frame_119
+    originalName: 
+    pivot: {x: 0.5660377, y: -0.06741573}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 532
+      y: 118
+      width: 53
+      height: 89
+    spriteID: f60228b5334b2ae4d9f349357b301cc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 532, y: 118}
+  - name: Akuma-Sprite_Frame_120
+    originalName: 
+    pivot: {x: 0.5660377, y: -0.08}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 654
+      y: 118
+      width: 53
+      height: 75
+    spriteID: 021ecf3c5ee07f64ebac5bb26ad45761
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 654, y: 118}
+  - name: Akuma-Sprite_Frame_121
+    originalName: 
+    pivot: {x: 0.5660377, y: -0.051282052}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 593
+      y: 118
+      width: 53
+      height: 78
+    spriteID: 6714f75745ce0a048afee5b376ff31f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 593, y: 118}
+  - name: Akuma-Sprite_Frame_122
+    originalName: 
+    pivot: {x: 0.5660377, y: -0.04}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 250
+      width: 53
+      height: 100
+    spriteID: 73f6d7cbbbaf90f4ba5491d2fe00ed60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 250}
+  - name: Akuma-Sprite_Frame_123
+    originalName: 
+    pivot: {x: 0.5148515, y: -0.037974685}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 351
+      y: 118
+      width: 101
+      height: 79
+    spriteID: 8cdf44161f4ae0140ac69cc182d0281b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 351, y: 118}
+  - name: Akuma-Sprite_Frame_124
+    originalName: 
+    pivot: {x: 0.5148515, y: -0.032967035}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 118
+      width: 101
+      height: 91
+    spriteID: 8e3fa01042e2557489fcfbe2bb340fb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 118}
+  - name: Akuma-Sprite_Frame_125
+    originalName: 
+    pivot: {x: 0.55118114, y: -0.018867925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 127
+      height: 106
+    spriteID: aca4df6478563d94c9ba5dfaec53b4d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Akuma-Sprite_Frame_126
+    originalName: 
+    pivot: {x: 0.54761904, y: -0.02173913}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 108
+      y: 118
+      width: 126
+      height: 92
+    spriteID: 357ab209ebb06b746bce811b4dfe608c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 108, y: 118}
+  - name: Akuma-Sprite_Frame_127
+    originalName: 
+    pivot: {x: 0.5043478, y: -0.01980198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 657
+      y: 4
+      width: 115
+      height: 101
+    spriteID: d98346c6264f59c4ab8bd5efce6613d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 657, y: 4}
+  - name: Akuma-Sprite_Frame_128
+    originalName: 
+    pivot: {x: 0.54761904, y: -0.01904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 4
+      width: 126
+      height: 105
+    spriteID: 9e10eb04010cef84cbad8b6ac8f09c43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 4}
+  - name: Akuma-Sprite_Frame_129
+    originalName: 
+    pivot: {x: 0.54761904, y: -0.01980198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 273
+      y: 4
+      width: 126
+      height: 101
+    spriteID: 3008d97cb2773f8459c4e960a33e6b09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 273, y: 4}
+  - name: Akuma-Sprite_Frame_130
+    originalName: 
+    pivot: {x: 0.51282054, y: -0.01980198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 532
+      y: 4
+      width: 117
+      height: 101
+    spriteID: fb5e93cccad8ea446aa457038433a2f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 532, y: 4}
+  - name: Akuma-Sprite_Frame_131
+    originalName: 
+    pivot: {x: 0.51282054, y: -0.018867925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 4
+      width: 117
+      height: 106
+    spriteID: f38d3f46a2d3338419bdc4b7a6f31ab1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 407, y: 4}
+  - name: Akuma-Sprite_Frame_132
+    originalName: 
+    pivot: {x: 0.5043478, y: -0.01980198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 780
+      y: 4
+      width: 115
+      height: 101
+    spriteID: 7a1b4db497e05294aaf371e76feac522
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 780, y: 4}
+  - name: Akuma-Sprite_Frame_133
+    originalName: 
+    pivot: {x: 0.5416667, y: -0.01980198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 903
+      y: 4
+      width: 96
+      height: 101
+    spriteID: af6a68c4646d9174eabcb1457d3a7189
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 903, y: 4}
+  - name: Akuma-Sprite_Frame_134
+    originalName: 
+    pivot: {x: 0.5416667, y: -0.016129032}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 118
+      width: 96
+      height: 124
+    spriteID: 03315ca888727af489552615559b49cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 118}
+  - name: Akuma-Sprite_Frame_135
+    originalName: 
+    pivot: {x: 0.578125, y: -0.051282052}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 460
+      y: 118
+      width: 64
+      height: 78
+    spriteID: 95a91bde8f8398f469becd8262d00462
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 460, y: 118}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -270211725
+    name: Akuma-Sprite
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Akuma-Sprite_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: 679d7664ad044354eadf6973accf9b93
+    - name: Akuma-Sprite_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 69
+        y: 12
+        width: 28
+        height: 67
+      spriteId: d8b437d2c60f41448b2e17fbbe2f559a
+    - name: Akuma-Sprite_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 71
+        y: 12
+        width: 31
+        height: 68
+      spriteId: 0eb2cc14bdfd0f4408a4c1ed95cae2bd
+    - name: Akuma-Sprite_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 61
+        y: 12
+        width: 30
+        height: 65
+      spriteId: 2bbc68c88c23812419243b002cf86764
+    - name: Akuma-Sprite_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 12
+        width: 53
+        height: 68
+      spriteId: fd6cafb712dd1024ba6530fd63683d5b
+    - name: Akuma-Sprite_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 12
+        width: 53
+        height: 68
+      spriteId: f3db78e2c2b27994da435e4a01116080
+    - name: Akuma-Sprite_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 12
+        width: 53
+        height: 69
+      spriteId: 21fa5a901c6b9f24b9cfe1cd0c91e2a8
+    - name: Akuma-Sprite_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 12
+        width: 53
+        height: 70
+      spriteId: 14448a89a51c64f4093cf64ecd6a29a4
+    - name: Akuma-Sprite_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 12
+        width: 53
+        height: 70
+      spriteId: 022273245a0e3d746b15e9e873cd1f82
+    - name: Akuma-Sprite_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 46
+        y: 12
+        width: 53
+        height: 67
+      spriteId: 384d82ed81e474f4f889f4eeca02549e
+    - name: Akuma-Sprite_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 66
+      spriteId: c82d4b3c776e8cc4d9c3a0ee05a532ac
+    - name: Akuma-Sprite_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 67
+      spriteId: af6cf4d7cd5a1574583eebb0b1dbce3d
+    - name: Akuma-Sprite_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 68
+      spriteId: 781c9c8f55bbf594394f99f18ff86725
+    - name: Akuma-Sprite_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 67
+      spriteId: 258980b358aa19f4c9d8af4ef53a2f8f
+    - name: Akuma-Sprite_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 66
+      spriteId: 75ccb7b5e08452e43b7ff6022cdab1c0
+    - name: Akuma-Sprite_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 65
+      spriteId: c747c711b96970340a3ed9dc5a98f462
+    - name: Akuma-Sprite_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 66
+      spriteId: 79d525af756ba5a428b6c8453507ecd8
+    - name: Akuma-Sprite_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 67
+      spriteId: eaae781cc964fb64280597b9468851f2
+    - name: Akuma-Sprite_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 68
+      spriteId: 568aff90b5a25244e950ba5d569c481a
+    - name: Akuma-Sprite_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 31
+        height: 63
+      spriteId: 87de04c0c8431c0429740a18701a58fe
+    - name: Akuma-Sprite_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 12
+        width: 37
+        height: 66
+      spriteId: b269823e1e870184b86c8df4b2481ffc
+    - name: Akuma-Sprite_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 67
+      spriteId: 3900e338e786509469fb48bf207933a3
+    - name: Akuma-Sprite_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 31
+        height: 67
+      spriteId: 64581c2b7cbe3d74a8960ac8c5cb7ce0
+    - name: Akuma-Sprite_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 12
+        width: 29
+        height: 67
+      spriteId: af668525a07093241ae43be667bc1b84
+    - name: Akuma-Sprite_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 63
+        y: 12
+        width: 30
+        height: 66
+      spriteId: 11d5e39a48ac87c4183190a043600907
+    - name: Akuma-Sprite_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 12
+        width: 45
+        height: 62
+      spriteId: d7fe9c3926f7a8c479d062330c615e51
+    - name: Akuma-Sprite_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 12
+        width: 44
+        height: 62
+      spriteId: 6001bd174d3045145b19bbeaf50fe2a0
+    - name: Akuma-Sprite_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 12
+        width: 45
+        height: 62
+      spriteId: 2b7a2ad6bd8fe1d4f9ece5a1548966a7
+    - name: Akuma-Sprite_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 12
+        width: 62
+        height: 61
+      spriteId: 3bbb86378eb3364449666fcb7e870be6
+    - name: Akuma-Sprite_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 12
+        width: 49
+        height: 63
+      spriteId: b1ec584aa182f64478b5ed18c3d80f51
+    - name: Akuma-Sprite_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 11
+        width: 39
+        height: 65
+      spriteId: f0451fc8d804aba4a92642d5bebc08a9
+    - name: Akuma-Sprite_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 12
+        width: 32
+        height: 67
+      spriteId: 681d3c63172566b42b4dae516decb856
+    - name: Akuma-Sprite_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 66
+        y: 12
+        width: 31
+        height: 60
+      spriteId: 5be7109d1694dc94b8ef4568b4ad7a97
+    - name: Akuma-Sprite_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 47
+        height: 63
+      spriteId: 990201f3b74c2b940a3a215ef126dce5
+    - name: Akuma-Sprite_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 63
+        y: 12
+        width: 55
+        height: 65
+      spriteId: f217390a7e19ddb48a05744d64f32b10
+    - name: Akuma-Sprite_Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 12
+        width: 44
+        height: 65
+      spriteId: 97b8d19982223444fa3bc51cb4d2e6c9
+    - name: Akuma-Sprite_Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 66
+        y: 12
+        width: 28
+        height: 66
+      spriteId: 5037b2f15eb2e2d40be56ffb67baf804
+    - name: Akuma-Sprite_Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 32
+        height: 67
+      spriteId: 1b0f334de5584f846bd7a72fa18b469d
+    - name: Akuma-Sprite_Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 12
+        width: 38
+        height: 67
+      spriteId: 88ff876038a3f9547b08e553dbbcb47c
+    - name: Akuma-Sprite_Frame_39
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 12
+        width: 53
+        height: 66
+      spriteId: 4240e5b5e35f1b44ea71eedcf201a940
+    - name: Akuma-Sprite_Frame_40
+      frameIndex: 40
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 12
+        width: 38
+        height: 67
+      spriteId: 47dd843e2c3796d46a47a83c039779e3
+    - name: Akuma-Sprite_Frame_41
+      frameIndex: 41
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 13
+        width: 43
+        height: 66
+      spriteId: b23b840772bc66d42b3e38439fc83761
+    - name: Akuma-Sprite_Frame_42
+      frameIndex: 42
+      additiveSortOrder: 0
+      cellRect:
+        x: 65
+        y: 13
+        width: 31
+        height: 62
+      spriteId: d8e5f937ce4ae174bb12f9944f4be41e
+    - name: Akuma-Sprite_Frame_43
+      frameIndex: 43
+      additiveSortOrder: 0
+      cellRect:
+        x: 61
+        y: 13
+        width: 52
+        height: 62
+      spriteId: 18f5a71ebde90bc4687c0ee8960dab4d
+    - name: Akuma-Sprite_Frame_44
+      frameIndex: 44
+      additiveSortOrder: 0
+      cellRect:
+        x: 66
+        y: 12
+        width: 27
+        height: 64
+      spriteId: d4e5b59d2a7dabd4caa525bb6c49c870
+    - name: Akuma-Sprite_Frame_45
+      frameIndex: 45
+      additiveSortOrder: 0
+      cellRect:
+        x: 50
+        y: 12
+        width: 43
+        height: 67
+      spriteId: eb18c60f845896f4fa2568a503fc0570
+    - name: Akuma-Sprite_Frame_46
+      frameIndex: 46
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 32
+        height: 67
+      spriteId: 16552ecaeca9f434aa8b1bc15d0898c6
+    - name: Akuma-Sprite_Frame_47
+      frameIndex: 47
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 33
+        height: 51
+      spriteId: 6a89c6f28de8a15499862a5cdf3027e4
+    - name: Akuma-Sprite_Frame_48
+      frameIndex: 48
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 12
+        width: 32
+        height: 47
+      spriteId: c134bf10cdd672c46b762381e58d6a59
+    - name: Akuma-Sprite_Frame_49
+      frameIndex: 49
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 12
+        width: 36
+        height: 53
+      spriteId: 621146bd0d43f8b4580e38889feae6a5
+    - name: Akuma-Sprite_Frame_50
+      frameIndex: 50
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 42
+        height: 63
+      spriteId: 6a6f2fca4356c8b4f98422db33e288e1
+    - name: Akuma-Sprite_Frame_51
+      frameIndex: 51
+      additiveSortOrder: 0
+      cellRect:
+        x: 63
+        y: 12
+        width: 30
+        height: 84
+      spriteId: 8451768a5deae8d4ca2e678905748f92
+    - name: Akuma-Sprite_Frame_52
+      frameIndex: 52
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 42
+        height: 63
+      spriteId: 739ac1e42a005784cb89bb42fb99a435
+    - name: Akuma-Sprite_Frame_53
+      frameIndex: 53
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 12
+        width: 36
+        height: 53
+      spriteId: b88855face752f84e93ad4f67cfc8598
+    - name: Akuma-Sprite_Frame_54
+      frameIndex: 54
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 12
+        width: 32
+        height: 47
+      spriteId: fbac03ee110e5114a864ffb5716292fa
+    - name: Akuma-Sprite_Frame_55
+      frameIndex: 55
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 34
+        height: 51
+      spriteId: 8cd4eb22b6a34e74db5fe39b1da2ceee
+    - name: Akuma-Sprite_Frame_56
+      frameIndex: 56
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 12
+        width: 31
+        height: 63
+      spriteId: 8914868f98e8f9941a11c31613698baa
+    - name: Akuma-Sprite_Frame_57
+      frameIndex: 57
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 66
+      spriteId: 3ff1bc12e93e398419aac817379b7c17
+    - name: Akuma-Sprite_Frame_58
+      frameIndex: 58
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 11
+        width: 29
+        height: 46
+      spriteId: 62da8f6b9f9c7b84e831f8e7a7a5692d
+    - name: Akuma-Sprite_Frame_59
+      frameIndex: 59
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 12
+        width: 60
+        height: 43
+      spriteId: 6281c48d92e49d947a26cac438d38ca3
+    - name: Akuma-Sprite_Frame_60
+      frameIndex: 60
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 34
+        height: 41
+      spriteId: ad3e531baf4250b44b5ae094cd4547a8
+    - name: Akuma-Sprite_Frame_61
+      frameIndex: 61
+      additiveSortOrder: 0
+      cellRect:
+        x: 61
+        y: 12
+        width: 33
+        height: 45
+      spriteId: b47c9cee6c744c04e9194a05c5c99698
+    - name: Akuma-Sprite_Frame_62
+      frameIndex: 62
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 12
+        width: 32
+        height: 47
+      spriteId: 1fd255e2316caf245b9d5b39ac859335
+    - name: Akuma-Sprite_Frame_63
+      frameIndex: 63
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 12
+        width: 37
+        height: 49
+      spriteId: c8b070ce09ffa4849abf648c82de0d3d
+    - name: Akuma-Sprite_Frame_64
+      frameIndex: 64
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 12
+        width: 51
+        height: 49
+      spriteId: 693a451d7c0f9ad46998809af13b302c
+    - name: Akuma-Sprite_Frame_65
+      frameIndex: 65
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 38
+        height: 49
+      spriteId: bc945f8c4d8fd004c82f25667d0725ba
+    - name: Akuma-Sprite_Frame_66
+      frameIndex: 66
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 12
+        width: 39
+        height: 47
+      spriteId: 0f33a6ba91b6b724083e984cf5bbcec3
+    - name: Akuma-Sprite_Frame_67
+      frameIndex: 67
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 12
+        width: 55
+        height: 48
+      spriteId: 63ee6aa7e2403794c9d24595ba7c0db3
+    - name: Akuma-Sprite_Frame_68
+      frameIndex: 68
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 12
+        width: 39
+        height: 47
+      spriteId: c8c7f8d1aaab48d4283cca4d4e03f6bb
+    - name: Akuma-Sprite_Frame_69
+      frameIndex: 69
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 12
+        width: 36
+        height: 65
+      spriteId: 51b4634a070bce2438c4fa2e67e126ba
+    - name: Akuma-Sprite_Frame_70
+      frameIndex: 70
+      additiveSortOrder: 0
+      cellRect:
+        x: 48
+        y: 12
+        width: 40
+        height: 63
+      spriteId: 7c96c6bb3c0a73f4cbde8527d83f8f2d
+    - name: Akuma-Sprite_Frame_71
+      frameIndex: 71
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 44
+        height: 66
+      spriteId: f24ceab32cec51340abf0606218df86f
+    - name: Akuma-Sprite_Frame_72
+      frameIndex: 72
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 12
+        width: 35
+        height: 64
+      spriteId: 3d8730c8e3fbe2844b06e00ea96e5924
+    - name: Akuma-Sprite_Frame_73
+      frameIndex: 73
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 31
+        height: 63
+      spriteId: d4d0ec44fe17bae40afdb17fe1f1fa71
+    - name: Akuma-Sprite_Frame_74
+      frameIndex: 74
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 11
+        width: 39
+        height: 65
+      spriteId: 1f1983f943d866342b2ee58c5db45a3c
+    - name: Akuma-Sprite_Frame_75
+      frameIndex: 75
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 12
+        width: 46
+        height: 60
+      spriteId: 71d4aa5c031379c46a6febca08ee6d6c
+    - name: Akuma-Sprite_Frame_76
+      frameIndex: 76
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 12
+        width: 48
+        height: 55
+      spriteId: 9a1cf1213ae6764449b0587f6cda0646
+    - name: Akuma-Sprite_Frame_77
+      frameIndex: 77
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 12
+        width: 59
+        height: 55
+      spriteId: 96eba142b83f37542ab2288c271c495f
+    - name: Akuma-Sprite_Frame_78
+      frameIndex: 78
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 32
+        height: 67
+      spriteId: b066d9cd455a9da478e604fbd41f3c6d
+    - name: Akuma-Sprite_Frame_79
+      frameIndex: 79
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 31
+        height: 63
+      spriteId: 889c89e2b8ca82b4781e313caf804b87
+    - name: Akuma-Sprite_Frame_80
+      frameIndex: 80
+      additiveSortOrder: 0
+      cellRect:
+        x: 61
+        y: 12
+        width: 34
+        height: 57
+      spriteId: 4fec958599f975844868049ce7486a26
+    - name: Akuma-Sprite_Frame_81
+      frameIndex: 81
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 39
+        height: 64
+      spriteId: e6ae9ce8301b7e04fb1c404d3c63f251
+    - name: Akuma-Sprite_Frame_82
+      frameIndex: 82
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 10
+        width: 32
+        height: 86
+      spriteId: 76cb8969041ddc54497cc93a0f4a3c05
+    - name: Akuma-Sprite_Frame_83
+      frameIndex: 83
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 26
+        width: 32
+        height: 84
+      spriteId: 883c362a05d9cdd489e0bbabbb289c87
+    - name: Akuma-Sprite_Frame_84
+      frameIndex: 84
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 38
+        width: 29
+        height: 81
+      spriteId: 2f5e73e81d035494685b510252d2017f
+    - name: Akuma-Sprite_Frame_85
+      frameIndex: 85
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 38
+        width: 31
+        height: 78
+      spriteId: 7f8c8f62c6c2fa245bc31f706339f8fb
+    - name: Akuma-Sprite_Frame_86
+      frameIndex: 86
+      additiveSortOrder: 0
+      cellRect:
+        x: 57
+        y: 13
+        width: 32
+        height: 65
+      spriteId: 50961f3686c58d740b998702592cf014
+    - name: Akuma-Sprite_Frame_87
+      frameIndex: 87
+      additiveSortOrder: 0
+      cellRect:
+        x: 62
+        y: 12
+        width: 31
+        height: 62
+      spriteId: 1d12d7e97f3adb84d9327f430732b460
+    - name: Akuma-Sprite_Frame_88
+      frameIndex: 88
+      additiveSortOrder: 0
+      cellRect:
+        x: 53
+        y: 13
+        width: 36
+        height: 77
+      spriteId: 14081b841569725498ad03c3682b76c8
+    - name: Akuma-Sprite_Frame_89
+      frameIndex: 89
+      additiveSortOrder: 0
+      cellRect:
+        x: 53
+        y: 38
+        width: 32
+        height: 62
+      spriteId: b3759009f4e515741a556b9f31c67c59
+    - name: Akuma-Sprite_Frame_90
+      frameIndex: 90
+      additiveSortOrder: 0
+      cellRect:
+        x: 54
+        y: 53
+        width: 28
+        height: 49
+      spriteId: 20ddccf781a3ed342a16e15c8c237397
+    - name: Akuma-Sprite_Frame_91
+      frameIndex: 91
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 51
+        width: 31
+        height: 54
+      spriteId: 66166e79172dd9e44892df6675363d96
+    - name: Akuma-Sprite_Frame_92
+      frameIndex: 92
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 36
+        width: 49
+        height: 68
+      spriteId: 2ebef3d310d8b1e4dbbd90f44515524b
+    - name: Akuma-Sprite_Frame_93
+      frameIndex: 93
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 36
+        width: 30
+        height: 69
+      spriteId: bd3dfe349f5f2bf458885a4f464892c0
+    - name: Akuma-Sprite_Frame_94
+      frameIndex: 94
+      additiveSortOrder: 0
+      cellRect:
+        x: 33
+        y: 39
+        width: 49
+        height: 68
+      spriteId: 3076ac6570dd059418f1260fc1ca863d
+    - name: Akuma-Sprite_Frame_95
+      frameIndex: 95
+      additiveSortOrder: 0
+      cellRect:
+        x: 53
+        y: 38
+        width: 32
+        height: 66
+      spriteId: 10435b42603f60e4a95b4c93e9902df0
+    - name: Akuma-Sprite_Frame_96
+      frameIndex: 96
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 36
+        width: 49
+        height: 68
+      spriteId: 6ef827a91875ed04db41f6213e35bad8
+    - name: Akuma-Sprite_Frame_97
+      frameIndex: 97
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 37
+        width: 27
+        height: 67
+      spriteId: d6112fcfc1651de43b8c35af2174844e
+    - name: Akuma-Sprite_Frame_98
+      frameIndex: 98
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 35
+        width: 28
+        height: 71
+      spriteId: 3e2fd5a4d602cec47a8425f683419822
+    - name: Akuma-Sprite_Frame_99
+      frameIndex: 99
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 33
+        width: 27
+        height: 68
+      spriteId: c67676a0b2c3c64468314cb34651a7c2
+    - name: Akuma-Sprite_Frame_100
+      frameIndex: 100
+      additiveSortOrder: 0
+      cellRect:
+        x: 57
+        y: 24
+        width: 28
+        height: 66
+      spriteId: 35b381663ee89e8408eba69b2b5951d8
+    - name: Akuma-Sprite_Frame_101
+      frameIndex: 101
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 31
+        height: 63
+      spriteId: 4eb126a43c0e4864782459fbfa185e3e
+    - name: Akuma-Sprite_Frame_102
+      frameIndex: 102
+      additiveSortOrder: 0
+      cellRect:
+        x: 60
+        y: 6
+        width: 31
+        height: 76
+      spriteId: 5af9ed9c37df06941afd548c8cff5c30
+    - name: Akuma-Sprite_Frame_103
+      frameIndex: 103
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 11
+        width: 43
+        height: 63
+      spriteId: 71df41871945ca7428fcc0d9a14dd040
+    - name: Akuma-Sprite_Frame_104
+      frameIndex: 104
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: 3787b6ae4555c024f82b36250e71b371
+    - name: Akuma-Sprite_Frame_105
+      frameIndex: 105
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: 5ef4a2f662a972c43adc4a30361b3ca2
+    - name: Akuma-Sprite_Frame_106
+      frameIndex: 106
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: 9d78bfcc9457e5a46a156fbc9ab08acd
+    - name: Akuma-Sprite_Frame_107
+      frameIndex: 107
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: 96c039ae58bac514d88f7578804e0864
+    - name: Akuma-Sprite_Frame_108
+      frameIndex: 108
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: a9a61d949782a3c4b9a2577108642c63
+    - name: Akuma-Sprite_Frame_109
+      frameIndex: 109
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: b499afcaee37da148a4ebcd480d7e9a8
+    - name: Akuma-Sprite_Frame_110
+      frameIndex: 110
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 11
+        width: 39
+        height: 71
+      spriteId: 2776dc9cffb34dc499e35719661b5fca
+    - name: Akuma-Sprite_Frame_111
+      frameIndex: 111
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 67
+      spriteId: 8fb5850c57d633f42b12b0d073ed5be3
+    - name: Akuma-Sprite_Frame_112
+      frameIndex: 112
+      additiveSortOrder: 0
+      cellRect:
+        x: 58
+        y: 12
+        width: 35
+        height: 66
+      spriteId: 755e9db4f7ec8e64590f9d54d6ad45b8
+    - name: Akuma-Sprite_Frame_113
+      frameIndex: 113
+      additiveSortOrder: 0
+      cellRect:
+        x: 59
+        y: 12
+        width: 32
+        height: 63
+      spriteId: 86f99c7afab98a94faacbfdff35028fb
+    - name: Akuma-Sprite_Frame_114
+      frameIndex: 114
+      additiveSortOrder: 0
+      cellRect:
+        x: 69
+        y: 12
+        width: 28
+        height: 67
+      spriteId: 732806438f0442c4e8df6a75630ce6d3
+    - name: Akuma-Sprite_Frame_115
+      frameIndex: 115
+      additiveSortOrder: 0
+      cellRect:
+        x: 49
+        y: 11
+        width: 53
+        height: 69
+      spriteId: 1528cafe327639446a866e15928395b3
+    - name: Akuma-Sprite_Frame_116
+      frameIndex: 116
+      additiveSortOrder: 0
+      cellRect:
+        x: 49
+        y: 11
+        width: 42
+        height: 66
+      spriteId: ebb668010b61bfa40bd5f75ac64d7c41
+    - name: Akuma-Sprite_Frame_117
+      frameIndex: 117
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 10
+        width: 53
+        height: 70
+      spriteId: f83a64e362d95c741a6b1abf1f98b422
+    - name: Akuma-Sprite_Frame_118
+      frameIndex: 118
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 6
+        width: 53
+        height: 74
+      spriteId: f71d081fb4ff89e488f686281f9bd9d2
+    - name: Akuma-Sprite_Frame_119
+      frameIndex: 119
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 6
+        width: 53
+        height: 89
+      spriteId: f60228b5334b2ae4d9f349357b301cc9
+    - name: Akuma-Sprite_Frame_120
+      frameIndex: 120
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 6
+        width: 53
+        height: 75
+      spriteId: 021ecf3c5ee07f64ebac5bb26ad45761
+    - name: Akuma-Sprite_Frame_121
+      frameIndex: 121
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 4
+        width: 53
+        height: 78
+      spriteId: 6714f75745ce0a048afee5b376ff31f3
+    - name: Akuma-Sprite_Frame_122
+      frameIndex: 122
+      additiveSortOrder: 0
+      cellRect:
+        x: 45
+        y: 4
+        width: 53
+        height: 100
+      spriteId: 73f6d7cbbbaf90f4ba5491d2fe00ed60
+    - name: Akuma-Sprite_Frame_123
+      frameIndex: 123
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 3
+        width: 101
+        height: 79
+      spriteId: 8cdf44161f4ae0140ac69cc182d0281b
+    - name: Akuma-Sprite_Frame_124
+      frameIndex: 124
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 3
+        width: 101
+        height: 91
+      spriteId: 8e3fa01042e2557489fcfbe2bb340fb6
+    - name: Akuma-Sprite_Frame_125
+      frameIndex: 125
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 127
+        height: 106
+      spriteId: aca4df6478563d94c9ba5dfaec53b4d4
+    - name: Akuma-Sprite_Frame_126
+      frameIndex: 126
+      additiveSortOrder: 0
+      cellRect:
+        x: 6
+        y: 2
+        width: 126
+        height: 92
+      spriteId: 357ab209ebb06b746bce811b4dfe608c
+    - name: Akuma-Sprite_Frame_127
+      frameIndex: 127
+      additiveSortOrder: 0
+      cellRect:
+        x: 17
+        y: 2
+        width: 115
+        height: 101
+      spriteId: d98346c6264f59c4ab8bd5efce6613d3
+    - name: Akuma-Sprite_Frame_128
+      frameIndex: 128
+      additiveSortOrder: 0
+      cellRect:
+        x: 6
+        y: 2
+        width: 126
+        height: 105
+      spriteId: 9e10eb04010cef84cbad8b6ac8f09c43
+    - name: Akuma-Sprite_Frame_129
+      frameIndex: 129
+      additiveSortOrder: 0
+      cellRect:
+        x: 6
+        y: 2
+        width: 126
+        height: 101
+      spriteId: 3008d97cb2773f8459c4e960a33e6b09
+    - name: Akuma-Sprite_Frame_130
+      frameIndex: 130
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 117
+        height: 101
+      spriteId: fb5e93cccad8ea446aa457038433a2f4
+    - name: Akuma-Sprite_Frame_131
+      frameIndex: 131
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 117
+        height: 106
+      spriteId: f38d3f46a2d3338419bdc4b7a6f31ab1
+    - name: Akuma-Sprite_Frame_132
+      frameIndex: 132
+      additiveSortOrder: 0
+      cellRect:
+        x: 17
+        y: 2
+        width: 115
+        height: 101
+      spriteId: 7a1b4db497e05294aaf371e76feac522
+    - name: Akuma-Sprite_Frame_133
+      frameIndex: 133
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 2
+        width: 96
+        height: 101
+      spriteId: af6a68c4646d9174eabcb1457d3a7189
+    - name: Akuma-Sprite_Frame_134
+      frameIndex: 134
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 2
+        width: 96
+        height: 124
+      spriteId: 03315ca888727af489552615559b49cc
+    - name: Akuma-Sprite_Frame_135
+      frameIndex: 135
+      additiveSortOrder: 0
+      cellRect:
+        x: 38
+        y: 4
+        width: 64
+        height: 78
+      spriteId: 95a91bde8f8398f469becd8262d00462
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 150, y: 128}
