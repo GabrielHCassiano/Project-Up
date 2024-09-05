@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyControl : MonoBehaviour
 {
     private EnemyMovement enemyMovement;
-    private EnemyCombat enemyCombat;
     private EnemyStatus enemyStatus;
+    private EnemyCombat enemyCombat;
     private EnemyAnimation enemyAnimation;
     private EnemyHurtbox enemyHurtbox;
 
@@ -28,9 +28,9 @@ public class EnemyControl : MonoBehaviour
         animator = GetComponent<Animator>();
 
         enemyMovement = new EnemyMovement(rb, gameObject, player);
-        enemyCombat = new EnemyCombat();
         enemyStatus = new EnemyStatus(gameObject);
-        enemyAnimation = new EnemyAnimation(animator, spriteRenderer, enemyMovement);
+        enemyCombat = new EnemyCombat(rb, enemyMovement, enemyStatus);
+        enemyAnimation = new EnemyAnimation(animator, spriteRenderer, enemyMovement, enemyStatus);
 
         enemyHurtbox.SetStatus(enemyStatus);
     }
@@ -38,6 +38,8 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemyMovement.LockPlayer();
+        enemyMovement.CheckGround();
         enemyStatus.DeathLogic();
         enemyAnimation.FlipLogic();
         enemyAnimation.AnimationLogic();
@@ -48,9 +50,30 @@ public class EnemyControl : MonoBehaviour
         enemyMovement.MoveLogic();
     }
 
+    public EnemyMovement EnemyMovement
+    {
+        get { return enemyMovement; }
+        set { enemyMovement = value; }
+    }
+
     public EnemyStatus EnemyStatus
     {
         get { return enemyStatus; }
         set { enemyStatus = value; }
+    }
+
+    public void SpawnLogic()
+    {
+        enemyMovement.SpawnLogic();
+    }
+
+    public void ResetStatus()
+    {
+        enemyCombat.ResetStatus();
+    }
+
+    public void InStun()
+    {
+        enemyCombat.InStun();
     }
 }

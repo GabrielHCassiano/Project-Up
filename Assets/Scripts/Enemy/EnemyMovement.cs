@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -9,11 +10,17 @@ public class EnemyMovement : MonoBehaviour
     private GameObject enemy;
     private GameObject player;
 
-    private float speed = 1;
+    private float speed = 4;
 
     private Vector2 direction;
+    private float distance;
 
-    private bool canMove;
+    private float ground;
+
+    private bool canMove = true;
+    private bool lockMove;
+
+    private bool inSpawn = true;
 
     public EnemyMovement(Rigidbody2D rb,GameObject enemy, GameObject player)
     {
@@ -28,10 +35,58 @@ public class EnemyMovement : MonoBehaviour
         set { direction = value; }
     }
 
+    public bool CanMove
+    {
+        get { return canMove; }
+        set { canMove = value; }
+    }
+
+    public bool InSpawn
+    {
+        get { return inSpawn; }
+        set { inSpawn = value; }
+    }
+
+    public float Ground
+    {
+        get { return ground; }
+        set { ground = value; }
+    }
+
+    public void SpawnLogic()
+    {
+        inSpawn = false;
+        canMove = false;
+    }
+
     public void MoveLogic()
     {
         direction = player.transform.position - enemy.transform.position;
         direction = direction.normalized;
-        rb.velocity = direction * speed;
+
+        if (canMove && lockMove)
+        {
+            rb.velocity = direction * speed;
+        }
+    }
+
+    public void LockPlayer()
+    {
+        distance = Vector2.Distance(player.transform.position, enemy.transform.position);
+
+        if (distance < 10)
+        {
+            lockMove = true;
+        }
+        else
+        {
+            lockMove = false;
+            rb.velocity = Vector2.zero;
+        }
+    }
+
+    public void CheckGround()
+    {
+        ground = enemy.transform.position.y;
     }
 }

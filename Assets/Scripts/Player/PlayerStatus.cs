@@ -12,6 +12,7 @@ public class PlayerStatus : MonoBehaviour
     private int maxStamina;
     private int stamina;
 
+    private bool inHurt;
     private bool death;
 
     private int force;
@@ -19,10 +20,10 @@ public class PlayerStatus : MonoBehaviour
     public PlayerStatus(GameObject player)
     {
         this.player = player;
-        maxLife = 1000;
+        maxLife = 500;
         life = maxLife;
-        maxStamina = 0;
-        stamina = maxStamina;
+        maxStamina = 300;
+        stamina = 0;
         force = 50;
     }
 
@@ -56,6 +57,24 @@ public class PlayerStatus : MonoBehaviour
         set { force = value; }
     }
 
+    public bool InHurt
+    {
+        get { return inHurt; }
+        set { inHurt = value; }
+    }
+
+    public void StatusBalance()
+    {
+        if (life > maxLife)
+            life = maxLife;
+        if (life < 0)
+            life = 0;
+        if (stamina > maxStamina)
+            stamina = maxStamina;
+        if (stamina < 0)
+            stamina = 0;
+    }
+
     public void DeathLogic()
     {
         if (life <= 0)
@@ -63,4 +82,11 @@ public class PlayerStatus : MonoBehaviour
         if (death)
             player.SetActive(false);
     }
+
+    public void InHurtLogic(GameObject enemy)
+    {
+        life -= enemy.GetComponentInParent<EnemyControl>().EnemyStatus.Force;
+        inHurt = true;
+    }
+
 }

@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody2D rb;
+    private EnemyMovement enemyMovement;
+    private EnemyStatus enemyStatus;
+
+    private bool canAttack = true;
+
+    public EnemyCombat(Rigidbody2D rb, EnemyMovement enemyMovement, EnemyStatus enemyStatus)
     {
-        
+        this.rb = rb;
+        this.enemyMovement = enemyMovement;
+        this.enemyStatus = enemyStatus;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetStatus()
     {
-        
+        enemyMovement.CanMove = true;
+        canAttack = true;
+    }
+
+    public void InStun()
+    {
+        rb.velocity = Vector2.zero;
+        enemyMovement.CanMove = false;
+        canAttack = false;
+        enemyStatus.InHurt = false;
     }
 }

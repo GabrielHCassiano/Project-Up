@@ -36,6 +36,12 @@ public class PlayerMovement : MonoBehaviour
         set { inJump = value; }
     }
 
+    public float Ground
+    {
+        get { return ground; }
+        set { ground = value; }
+    }
+
     public void MoveLogic()
     {
         direction = new Vector2(inputsPlayers.MoveDirection.x, inputsPlayers.MoveDirection.y).normalized;
@@ -48,9 +54,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpLogic()
     {
-        if (inputsPlayers.Button4 && player.transform.position.y == ground && !inJump)
+        if (inputsPlayers.Button2 && player.transform.position.y == ground && !inJump)
         {
-            inputsPlayers.Button4 = false;
+            inputsPlayers.Button2 = false;
             canMove = false;
             inJump = true;
             rb.velocity = Vector2.zero;

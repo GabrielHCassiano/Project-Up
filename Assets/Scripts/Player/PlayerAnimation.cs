@@ -7,14 +7,16 @@ public class PlayerAnimation : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private PlayerMovement playerMovement;
     private PlayerCombat playerCombat;
+    private PlayerStatus playerStatus;
     private InputsPlayers inputsPlayers;
     
-    public PlayerAnimation(Animator animator, SpriteRenderer spriteRenderer, PlayerMovement playerMovement, PlayerCombat playerCombat, InputsPlayers inputsPlayers)
+    public PlayerAnimation(Animator animator, SpriteRenderer spriteRenderer, PlayerMovement playerMovement, PlayerStatus playerStatus, PlayerCombat playerCombat, InputsPlayers inputsPlayers)
     {
         this.animator = animator;
         this.spriteRenderer = spriteRenderer;
         this.playerMovement = playerMovement;
         this.playerCombat = playerCombat;
+        this.playerStatus = playerStatus;
         this.inputsPlayers = inputsPlayers;
     }
 
@@ -31,6 +33,8 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetFloat("Horizontal", inputsPlayers.MoveDirection.x);
         animator.SetFloat("Vertical", inputsPlayers.MoveDirection.y);
         animator.SetBool("InJump", playerMovement.InJump);
-        animator.SetBool("InAttack", playerCombat.InAttack);
+        animator.SetBool("InHurt", playerStatus.InHurt);
+        animator.SetTrigger("Attack" + playerCombat.Combo);
+        animator.SetBool("SpecialAttack", playerCombat.SpecialAttack);
     }
 }

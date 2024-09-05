@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class EnemyStatus : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class EnemyStatus : MonoBehaviour
     private int maxStamina;
     private int stamina;
 
+    private bool inHurt;
     private bool death;
 
     private int force;
@@ -18,7 +20,7 @@ public class EnemyStatus : MonoBehaviour
     public EnemyStatus(GameObject enemy)
     {
         this.enemy = enemy;
-        maxLife = 150;
+        maxLife = 300;
         life = maxLife;
         maxStamina = 0;
         stamina = maxStamina;
@@ -55,11 +57,26 @@ public class EnemyStatus : MonoBehaviour
         set { force = value; }
     }
 
+    public bool InHurt
+    {
+        get { return inHurt; }
+        set { inHurt = value; }
+    }
+
     public void DeathLogic()
     {
         if (life <= 0)
             death = true;
         if (death)
-            enemy.SetActive(false);
+            Destroy(enemy.gameObject);
+    }
+
+    public void InHurtLogic(GameObject player)
+    {
+        life -= player.GetComponentInParent<PlayerControl>().PlayerStatus.Force;
+        player.GetComponentInParent<PlayerControl>().PlayerStatus.Stamina += 10;
+        player.GetComponentInParent<PlayerControl>().PlayerCombat.CanAttack = true;
+        player.GetComponentInParent<PlayerHUD>().AddHit();
+        inHurt = true;
     }
 }

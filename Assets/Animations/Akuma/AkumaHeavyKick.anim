@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AkumaLightPunch
+  m_Name: AkumaHeavyKick
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.05
+        time: 0.18333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -40,7 +40,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.11666667
+        time: 0.23333333
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -55,7 +55,7 @@ AnimationClip:
     path: Sprite/Hitbox
     classID: 1
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -70,8 +70,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 3.1894355
+        time: 0.18333334
+        value: 3.6574636
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -100,8 +100,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 0.5007603
+        time: 0.18333334
+        value: 0.8065777
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -130,8 +130,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 1.5197928
+        time: 0.18333334
+        value: 1.7854064
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -160,8 +160,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 1.7097707
+        time: 0.18333334
+        value: 1.8054729
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -180,13 +180,19 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -708790276, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
-    - time: 0.05
-      value: {fileID: -1586677884, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
-    - time: 0.11666667
-      value: {fileID: -1919040591, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
-    - time: 0.21666667
-      value: {fileID: -1919040591, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+      value: {fileID: -1157688739, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - time: 0.1
+      value: {fileID: -405676407, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - time: 0.18333334
+      value: {fileID: -300930357, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - time: 0.23333333
+      value: {fileID: 1274312042, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - time: 0.33333334
+      value: {fileID: 379850203, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - time: 0.43333334
+      value: {fileID: -791450524, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - time: 0.53333336
+      value: {fileID: -791450524, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
@@ -254,16 +260,19 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -708790276, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
-    - {fileID: -1586677884, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
-    - {fileID: -1919040591, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
-    - {fileID: -1919040591, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - {fileID: -1157688739, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - {fileID: -405676407, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - {fileID: -300930357, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - {fileID: 1274312042, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - {fileID: 379850203, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - {fileID: -791450524, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
+    - {fileID: -791450524, guid: 9e9f4a0dc9b024a40abbca83256bca46, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.23333333
+    m_StopTime: 0.55
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -293,7 +302,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.05
+        time: 0.18333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -302,7 +311,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.11666667
+        time: 0.23333333
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -317,7 +326,7 @@ AnimationClip:
     path: Sprite/Hitbox
     classID: 1
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -332,8 +341,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 3.1894355
+        time: 0.18333334
+        value: 3.6574636
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -362,8 +371,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 0.5007603
+        time: 0.18333334
+        value: 0.8065777
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -392,8 +401,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 1.5197928
+        time: 0.18333334
+        value: 1.7854064
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -422,8 +431,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.05
-        value: 1.7097707
+        time: 0.18333334
+        value: 1.8054729
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -449,7 +458,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.21666667
+  - time: 0.53333336
     functionName: ResetAttack
     data: 
     objectReferenceParameter: {fileID: 0}

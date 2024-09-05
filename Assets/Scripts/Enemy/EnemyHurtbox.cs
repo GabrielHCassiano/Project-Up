@@ -13,10 +13,12 @@ public class EnemyHurtbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("HitboxPlayer"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("HitboxPlayer") 
+            && GetComponentInParent<EnemyControl>().EnemyMovement.Ground <= collision.GetComponentInParent<PlayerControl>().PlayerMovement.Ground + 1.0f 
+            && GetComponentInParent<EnemyControl>().EnemyMovement.Ground >= collision.GetComponentInParent<PlayerControl>().PlayerMovement.Ground - 1.0f)
         {
             print("Player-Hit");
-            enemyStatus.Life -= collision.GetComponentInParent<PlayerControl>().PlayerStatus.Force;
+            enemyStatus.InHurtLogic(collision.gameObject);
         }
     }
 }

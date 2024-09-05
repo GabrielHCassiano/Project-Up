@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,8 +9,8 @@ public class PlayerControl : MonoBehaviour
     private InputsPlayers inputsPlayers;
 
     private PlayerMovement playerMovement;
-    private PlayerCombat playerCombat;
     private PlayerStatus playerStatus;
+    private PlayerCombat playerCombat;
     private PlayerAnimation playerAnimation;
     private PlayerHurtbox playerHurtbox;
 
@@ -33,9 +34,9 @@ public class PlayerControl : MonoBehaviour
         playerHUD = GetComponent<PlayerHUD>();
 
         playerMovement = new PlayerMovement(gameObject, rb, inputsPlayers);
-        playerCombat = new PlayerCombat(playerMovement, rb, inputsPlayers);
         playerStatus = new PlayerStatus(gameObject);
-        playerAnimation = new PlayerAnimation(animator, spriteRenderer, playerMovement, playerCombat, inputsPlayers);
+        playerCombat = new PlayerCombat(playerMovement, playerStatus, rb, inputsPlayers);
+        playerAnimation = new PlayerAnimation(animator, spriteRenderer, playerMovement, playerStatus, playerCombat, inputsPlayers);
 
         playerHurtbox.SetStatus(playerStatus);
     }
@@ -46,6 +47,8 @@ public class PlayerControl : MonoBehaviour
         playerMovement.CheckGround();
         playerMovement.JumpLogic();
         playerCombat.AttackLogic();
+        playerCombat.SpecialAttackLogic();
+        playerStatus.StatusBalance();
         playerStatus.DeathLogic();
         playerHUD.SetHUD(playerStatus);
         playerAnimation.FlipLogic();
@@ -57,16 +60,37 @@ public class PlayerControl : MonoBehaviour
         playerMovement.MoveLogic();
     }
 
+    public PlayerMovement PlayerMovement
+    {
+        get { return playerMovement; }
+        set { playerMovement = value; }
+    }
+
+    public PlayerCombat PlayerCombat
+    {
+        get { return playerCombat; }
+        set { playerCombat = value; }
+    }
+
     public PlayerStatus PlayerStatus
     { 
         get { return playerStatus; }
         set { playerStatus = value; }
     }
 
+
+    public void SetCombo()
+    {
+        playerCombat.SetCombo();
+    }
+
     public void ResetAttack()
     {
-        playerMovement.CanMove = true;
-        playerCombat.InAttack = false;
-        playerCombat.CanAttack = true;
+        playerCombat.ResetStatus();
+    }
+
+    public void InStun()
+    {
+        playerCombat.InStun();
     }
 }
