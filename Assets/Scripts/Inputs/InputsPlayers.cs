@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class InputsPlayers : MonoBehaviour
 {
     [SerializeField] private Vector2 moveDirection;
-    [SerializeField] private bool button1, button2, button3, button4;
+    [SerializeField] private bool button1, button2, button3, button3Hold, button4;
     [SerializeField] private bool buttonR1, buttonR2, buttonL1, buttonL2;
     [SerializeField] private bool buttonStart, buttonSelect;
 
@@ -46,6 +46,12 @@ public class InputsPlayers : MonoBehaviour
     {
         get { return button3; }
         set { button3 = value; }
+    }
+
+    public bool Button3Hold
+    {
+        get { return button3Hold; }
+        set { button3Hold = value; }
     }
 
     public bool Button4
@@ -112,6 +118,11 @@ public class InputsPlayers : MonoBehaviour
     public void Button3Set(InputAction.CallbackContext context)
     {
         button3 = context.action.triggered;
+    }
+
+    public void Button3HoldSet(InputAction.CallbackContext context)
+    {
+        button3Hold = context.action.triggered;
     }
 
     public void Button4Set(InputAction.CallbackContext context)

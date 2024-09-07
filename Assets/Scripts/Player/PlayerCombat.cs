@@ -10,6 +10,10 @@ public class PlayerCombat : MonoBehaviour
     private InputsPlayers inputsPlayers;
 
     private bool canAttack = true;
+
+    private float holdInput;
+
+    private bool heavyAttack;
     private bool specialAttack;
 
     private int combo = 0;
@@ -27,6 +31,18 @@ public class PlayerCombat : MonoBehaviour
     {
         get { return canAttack; }
         set { canAttack = value; }
+    }
+
+    public float HoldInput
+    {
+        get { return holdInput; }
+        set { holdInput = value; }
+    }
+
+    public bool HeavyAttack
+    {
+        get { return heavyAttack; }
+        set { heavyAttack = value; }
     }
 
     public bool SpecialAttack
@@ -54,6 +70,24 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public void HeavyAttackLogic()
+    {
+        if (!inputsPlayers.Button3Hold && holdInput > 1 && canAttack && !playerMovement.InJump)
+        {
+            rb.velocity = Vector2.zero;
+            playerMovement.CanMove = false;
+            canAttack = false;
+            heavyAttack = true;
+        }
+
+        if (inputsPlayers.Button3Hold && canAttack && !playerMovement.InJump)
+        {
+            holdInput += 1 * Time.deltaTime;
+        }
+        else
+            holdInput = 0;
+    }
+
     public void SpecialAttackLogic()
     {
         if (inputsPlayers.Button4 && canAttack && !playerMovement.InJump && playerStatus.Stamina > 50)
@@ -78,6 +112,7 @@ public class PlayerCombat : MonoBehaviour
         inCombo = 0;
         playerMovement.CanMove = true;
         canAttack = true;
+        heavyAttack = false;
         specialAttack = false;
     }
 

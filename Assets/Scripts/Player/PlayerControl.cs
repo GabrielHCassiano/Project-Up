@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
         playerHUD = GetComponent<PlayerHUD>();
 
         playerMovement = new PlayerMovement(gameObject, rb, inputsPlayers);
-        playerStatus = new PlayerStatus(gameObject);
+        playerStatus = new PlayerStatus(this, spriteRenderer, inputsPlayers);
         playerCombat = new PlayerCombat(playerMovement, playerStatus, rb, inputsPlayers);
         playerAnimation = new PlayerAnimation(animator, spriteRenderer, playerMovement, playerStatus, playerCombat, inputsPlayers);
 
@@ -47,10 +47,12 @@ public class PlayerControl : MonoBehaviour
         playerMovement.CheckGround();
         playerMovement.JumpLogic();
         playerCombat.AttackLogic();
+        playerCombat.HeavyAttackLogic();
         playerCombat.SpecialAttackLogic();
         playerStatus.StatusBalance();
         playerStatus.DeathLogic();
         playerHUD.SetHUD(playerStatus);
+        playerHUD.HeavyAnim(playerCombat, spriteRenderer);
         playerAnimation.FlipLogic();
         playerAnimation.AnimationLogic();
     }
@@ -79,6 +81,11 @@ public class PlayerControl : MonoBehaviour
     }
 
 
+    public void SetForce(int force)
+    {
+        playerStatus.Force = force;
+    }
+
     public void SetCombo()
     {
         playerCombat.SetCombo();
@@ -92,5 +99,6 @@ public class PlayerControl : MonoBehaviour
     public void InStun()
     {
         playerCombat.InStun();
+        playerHUD.CancelHit();
     }
 }

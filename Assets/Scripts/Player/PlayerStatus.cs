@@ -5,25 +5,34 @@ using UnityEngine.UIElements;
 
 public class PlayerStatus : MonoBehaviour
 {
-    private GameObject player;
+    private PlayerControl playerControl;
+    private SpriteRenderer spriteRenderer;
+    private InputsPlayers inputsPlayers;
 
     private int maxLife;
     private int life;
     private int maxStamina;
     private int stamina;
+    private int extraLife;
 
     private bool inHurt;
     private bool death;
 
     private int force;
 
-    public PlayerStatus(GameObject player)
+    private Vector3 checkpoint;
+
+    public PlayerStatus(PlayerControl playerControl, SpriteRenderer spriteRenderer, InputsPlayers inputsPlayers)
     {
-        this.player = player;
+        this.playerControl = playerControl;
+        this.spriteRenderer = spriteRenderer;
+        this.inputsPlayers = inputsPlayers;
+        checkpoint = playerControl.transform.position;
         maxLife = 500;
         life = maxLife;
         maxStamina = 300;
-        stamina = 0;
+        stamina = maxStamina;
+        extraLife = 1;
         force = 50;
     }
 
@@ -49,6 +58,12 @@ public class PlayerStatus : MonoBehaviour
     { 
         get { return stamina; }
         set {  stamina = value; }
+    }
+
+    public int ExtraLife
+    {
+        get { return extraLife; }
+        set { extraLife = value; }
     }
 
     public int Force
@@ -78,9 +93,27 @@ public class PlayerStatus : MonoBehaviour
     public void DeathLogic()
     {
         if (life <= 0)
+        {
             death = true;
+        }
         if (death)
-            player.SetActive(false);
+        {
+            spriteRenderer.gameObject.SetActive(false);
+            playerControl.InStun();
+        }
+
+        if (inputsPlayers.ButtonStart && death && extraLife > 0 && extraLife - 1 >= 0)
+        {
+            extraLife -= 1;
+            life = maxLife;
+            stamina = maxStamina;
+            death = false;
+            playerControl.transform.position = checkpoint;
+            inputsPlayers.ButtonStart = false;
+            spriteRenderer.gameObject.SetActive(true);
+            playerControl.ResetAttack();
+        }
+
     }
 
     public void InHurtLogic(GameObject enemy)

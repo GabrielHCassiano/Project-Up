@@ -35,6 +35,7 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetBool("InJump", playerMovement.InJump);
         animator.SetBool("InHurt", playerStatus.InHurt);
         animator.SetTrigger("Attack" + playerCombat.Combo);
+        animator.SetBool("HeavyAttack", playerCombat.HeavyAttack);
         animator.SetBool("SpecialAttack", playerCombat.SpecialAttack);
     }
 }

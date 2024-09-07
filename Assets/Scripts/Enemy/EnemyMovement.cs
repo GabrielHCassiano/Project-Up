@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     private GameObject enemy;
     private GameObject player;
 
-    private float speed = 4;
+    private float speed = 0;
 
     private Vector2 direction;
     private float distance;
@@ -64,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
         direction = player.transform.position - enemy.transform.position;
         direction = direction.normalized;
 
-        if (canMove && lockMove)
+        if (canMove && lockMove && player != null)
         {
             rb.velocity = direction * speed;
         }

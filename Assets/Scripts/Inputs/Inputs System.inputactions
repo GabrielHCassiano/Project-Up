@@ -42,6 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Button 3 Hold",
+                    "type": "Button",
+                    "id": "4448e2c7-e7eb-47ce-858b-6092b59ff8e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Button 4",
                     "type": "Button",
                     "id": "4c142e1d-4a72-497f-a721-d0e4cd638a11",
@@ -708,6 +717,39 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "55fde5ae-75a3-4f00-abc0-6085ad103a26",
+                    "path": "<HID:: USB Gamepad          >/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 01",
+                    "action": "Button 3 Hold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e4e6735-c5b2-43d2-8a19-b5236f83f028",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Button 3 Hold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "647f98d6-2a06-4982-863b-c73492c432a7",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Button 3 Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
