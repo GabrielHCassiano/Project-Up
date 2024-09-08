@@ -20,7 +20,7 @@ public class EnemyStatus : MonoBehaviour
     public EnemyStatus(GameObject enemy)
     {
         this.enemy = enemy;
-        maxLife = 30000;
+        maxLife = 300;
         life = maxLife;
         maxStamina = 0;
         stamina = maxStamina;

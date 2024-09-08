@@ -44,6 +44,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawLine(new Vector3(transform.position.x, transform.position.y + 1.0f, 1), new Vector3(transform.position.x, transform.position.y - 1.0f, 1), Color.red);
         playerMovement.CheckGround();
         playerMovement.JumpLogic();
         playerCombat.AttackLogic();
@@ -60,6 +61,12 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
         playerMovement.MoveLogic();
+    }
+
+    public InputsPlayers InputsPlayers
+    {
+        get { return inputsPlayers; }
+        set { inputsPlayers = value; }
     }
 
     public PlayerMovement PlayerMovement
@@ -80,6 +87,19 @@ public class PlayerControl : MonoBehaviour
         set { playerStatus = value; }
     }
 
+    public void GetIten()
+    {
+        print("oi");
+        rb.velocity = Vector2.zero;
+        playerMovement.CanMove = false;
+        playerCombat.CanAttack = false;
+        playerStatus.GetIten = false;
+    }
+
+    public void SetIten()
+    {
+        playerStatus.SetIten = true;
+    }
 
     public void SetForce(int force)
     {

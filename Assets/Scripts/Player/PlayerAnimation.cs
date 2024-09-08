@@ -34,6 +34,7 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetFloat("Vertical", inputsPlayers.MoveDirection.y);
         animator.SetBool("InJump", playerMovement.InJump);
         animator.SetBool("InHurt", playerStatus.InHurt);
+        animator.SetBool("GetIten", playerStatus.GetIten);
         animator.SetTrigger("Attack" + playerCombat.Combo);
         animator.SetBool("HeavyAttack", playerCombat.HeavyAttack);
         animator.SetBool("SpecialAttack", playerCombat.SpecialAttack);

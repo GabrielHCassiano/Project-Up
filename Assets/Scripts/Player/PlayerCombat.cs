@@ -114,6 +114,7 @@ public class PlayerCombat : MonoBehaviour
         canAttack = true;
         heavyAttack = false;
         specialAttack = false;
+        playerStatus.SetIten = true;
     }
 
     public void InStun()

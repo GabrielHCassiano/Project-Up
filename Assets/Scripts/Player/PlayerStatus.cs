@@ -16,6 +16,8 @@ public class PlayerStatus : MonoBehaviour
     private int extraLife;
 
     private bool inHurt;
+    private bool getIten;
+    private bool setIten;
     private bool death;
 
     private int force;
@@ -76,6 +78,18 @@ public class PlayerStatus : MonoBehaviour
     {
         get { return inHurt; }
         set { inHurt = value; }
+    }
+
+    public bool GetIten
+    {
+        get { return getIten; }
+        set { getIten = value; }
+    }
+
+    public bool SetIten
+    {
+        get { return setIten; }
+        set { setIten = value; }
     }
 
     public void StatusBalance()

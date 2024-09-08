@@ -102,8 +102,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 96
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e95780d299340f4468f3f02e6d208514
-      internalID: -1179882937
+      spriteID: b54dc3af467b87a44b74051059b2b2c4
+      internalID: -142349414
       vertices: []
       indices: 
       edges: []
@@ -121,10 +121,10 @@ TextureImporter:
       name: Menina_Lutadora_idle_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 0
-        width: 96
-        height: 96
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761464104b8ef1b44bdbc7b907ac078c
-      internalID: -693323909
+      spriteID: 1a6380053dd21874784b2ffc1b09f72d
+      internalID: -401008292
       vertices: []
       indices: 
       edges: []
@@ -142,10 +142,10 @@ TextureImporter:
       name: Menina_Lutadora_idle_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 0
-        width: 96
-        height: 96
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1242fc4a1ad8dd84f98952b13bb89eaa
-      internalID: 301742484
+      spriteID: 45c4d08e3103fad47a3663bfe62d8bc5
+      internalID: 557234866
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       name: Menina_Lutadora_idle_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 384
         y: 0
-        width: 96
-        height: 96
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66d80bc834d070344a8533254d827ce3
-      internalID: 970656669
+      spriteID: e94d5feab5349124fb5d1a623ce373ea
+      internalID: 24888333
       vertices: []
       indices: 
       edges: []
@@ -184,10 +184,10 @@ TextureImporter:
       name: Menina_Lutadora_idle_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 512
         y: 0
-        width: 96
-        height: 96
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a5595e860943c7489821855f673d3c5
-      internalID: 710173860
+      spriteID: 490c0b5f8202a4342a7f6358b7f8c20c
+      internalID: 257177085
       vertices: []
       indices: 
       edges: []
@@ -205,10 +205,10 @@ TextureImporter:
       name: Menina_Lutadora_idle_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 640
         y: 0
-        width: 96
-        height: 96
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 566a08f99934a9545b3f9ead38cedb91
-      internalID: -1001968246
+      spriteID: 21f3511c735f87a4aa8ec620a1e90ad0
+      internalID: 155723885
       vertices: []
       indices: 
       edges: []
@@ -233,12 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Menina_Lutadora_idle_0: -1179882937
-      Menina_Lutadora_idle_1: -693323909
-      Menina_Lutadora_idle_2: 301742484
-      Menina_Lutadora_idle_3: 970656669
-      Menina_Lutadora_idle_4: 710173860
-      Menina_Lutadora_idle_5: -1001968246
+      Menina_Lutadora_idle_0: -142349414
+      Menina_Lutadora_idle_1: -401008292
+      Menina_Lutadora_idle_2: 557234866
+      Menina_Lutadora_idle_3: 24888333
+      Menina_Lutadora_idle_4: 257177085
+      Menina_Lutadora_idle_5: 155723885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

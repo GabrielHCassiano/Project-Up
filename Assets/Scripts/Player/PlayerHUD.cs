@@ -38,7 +38,7 @@ public class PlayerHUD : MonoBehaviour
 
     public void HeavyAnim(PlayerCombat playerCombat, SpriteRenderer sprite)
     {
-        if (playerCombat.HoldInput >= 1 && playerCombat.HoldInput <= 1.1)
+        if (playerCombat.HoldInput >= 1 && playerCombat.HoldInput <= 1.15f)
         {
             spriteHeavy.sprite = sprite.sprite;
             spriteHeavy.gameObject.SetActive(true);
@@ -85,22 +85,23 @@ public class PlayerHUD : MonoBehaviour
 
     IEnumerator HitEndCooldown()
     {
-        if (hitCombo == 0)
-            hitComboText.text = "Bad";
-        else if (hitCombo > 0 && hitCombo < 10)
-            hitComboText.text = "Incomplete\n" + hitCombo.ToString() + "Hit";
-        else if (hitCombo > 0 && hitCombo < 25)
-            hitComboText.text = "Ok\n" + hitCombo.ToString() + "Hit";
-        else if (hitCombo >= 25 && hitCombo < 50)
-            hitComboText.text = "Good\n" + hitCombo.ToString() + "Hit";
-        else if (hitCombo >= 50 && hitCombo < 75)
-            hitComboText.text = "Very Good\n" + hitCombo.ToString() + "Hit";
-        else if (hitCombo >= 75 && hitCombo < 100)
-            hitComboText.text = "Great\n" + hitCombo.ToString() + "Hit";
-        else if (hitCombo >= 100)
-            hitComboText.text = "Excellent\n" + hitCombo.ToString() + "Hit";
-        yield return new WaitForSeconds(0.5f);
+        int endHit = hitCombo;
         hitCombo = 0;
+        if (endHit == 0)
+            hitComboText.text = "Bad";
+        else if (endHit > 0 && endHit < 10)
+            hitComboText.text = "Incomplete\n" + endHit.ToString() + "Hit";
+        else if (endHit > 0 && endHit < 25)
+            hitComboText.text = "Ok\n" + endHit.ToString() + "Hit";
+        else if (endHit >= 25 && endHit < 50)
+            hitComboText.text = "Good\n" + endHit.ToString() + "Hit";
+        else if (endHit >= 50 && endHit < 75)
+            hitComboText.text = "Very Good\n" + endHit.ToString() + "Hit";
+        else if (endHit >= 75 && endHit < 100)
+            hitComboText.text = "Great\n" + endHit.ToString() + "Hit";
+        else if (endHit >= 100)
+            hitComboText.text = "Excellent\n" + endHit.ToString() + "Hit";
+        yield return new WaitForSeconds(0.3f);
         hitComboText.fontSize = 25f;
         hitComboText.color = hitBaseColor;
         hitComboText.gameObject.SetActive(false);

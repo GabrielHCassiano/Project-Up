@@ -38,6 +38,7 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawLine(new Vector3(transform.position.x, transform.position.y + 1.0f, 1), new Vector3(transform.position.x, transform.position.y - 1.0f, 1), Color.red);
         enemyMovement.LockPlayer();
         enemyMovement.CheckGround();
         enemyStatus.DeathLogic();
