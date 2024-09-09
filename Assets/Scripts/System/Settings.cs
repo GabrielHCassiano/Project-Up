@@ -32,11 +32,6 @@ public class Settings : MonoBehaviour
 
     }
 
-    public void StartLevel(string nameLevel)
-    {
-        SceneManager.LoadScene(nameLevel);
-    }
-
     public void ExitGame()
     {
         Application.Quit();

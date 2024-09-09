@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    [SerializeField] private int idPlayer;
+
     private InputsPlayers inputsPlayers;
 
     private PlayerMovement playerMovement;
@@ -32,6 +34,9 @@ public class PlayerControl : MonoBehaviour
         animator = GetComponent<Animator>();
 
         playerHUD = GetComponent<PlayerHUD>();
+
+        playerHUD.SetPlayerUI(inputsPlayers.PlayerData);
+        animator.runtimeAnimatorController = inputsPlayers.PlayerData.AnimatorController;
 
         playerMovement = new PlayerMovement(gameObject, rb, inputsPlayers);
         playerStatus = new PlayerStatus(this, spriteRenderer, inputsPlayers);
@@ -61,6 +66,12 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
         playerMovement.MoveLogic();
+    }
+
+    public int IdPlayer
+    {
+        get { return idPlayer; }
+        set { idPlayer = value; }
     }
 
     public InputsPlayers InputsPlayers

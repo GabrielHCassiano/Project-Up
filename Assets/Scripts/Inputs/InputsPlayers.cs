@@ -5,15 +5,28 @@ using UnityEngine.InputSystem;
 
 public class InputsPlayers : MonoBehaviour
 {
+    private PlayerInput playerInput;
+
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private bool button1, button2, button3, button3Hold, button4;
     [SerializeField] private bool buttonR1, buttonR2, buttonL1, buttonL2;
     [SerializeField] private bool buttonStart, buttonSelect;
 
+    [SerializeField] private PlayerData playerData;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameManager.Instance != null)
+        {
+            playerInput = GetComponent<PlayerInput>();
+            playerData = ScriptableObject.CreateInstance<PlayerData>();
+            playerData.PlayerName = "Player" + (playerInput.playerIndex + 1);
+
+            transform.parent = GameManager.Instance.transform;
+
+            GameManager.Instance.InputsPlayers.Add(this);
+            GameManager.Instance.PlayersDatas.Add(playerData);
+        }
     }
 
     // Update is called once per frame
@@ -94,6 +107,12 @@ public class InputsPlayers : MonoBehaviour
     {
         get { return buttonSelect; }
         set { buttonSelect = value; }
+    }
+
+    public PlayerData PlayerData
+    {
+        get { return playerData; }
+        set { playerData = value; }
     }
 
     #endregion

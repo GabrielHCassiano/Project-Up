@@ -10,7 +10,7 @@ public class EnemyControl : MonoBehaviour
     private EnemyAnimation enemyAnimation;
     private EnemyHurtbox enemyHurtbox;
 
-    private GameObject player;
+    [SerializeField] private GameObject[] players;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -19,7 +19,7 @@ public class EnemyControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        players = GameObject.FindGameObjectsWithTag("Player");
 
         enemyHurtbox = GetComponentInChildren<EnemyHurtbox>();
 
@@ -27,7 +27,7 @@ public class EnemyControl : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
-        enemyMovement = new EnemyMovement(rb, gameObject, player);
+        enemyMovement = new EnemyMovement(rb, gameObject, players);
         enemyStatus = new EnemyStatus(gameObject);
         enemyCombat = new EnemyCombat(rb, enemyMovement, enemyStatus);
         enemyAnimation = new EnemyAnimation(animator, spriteRenderer, enemyMovement, enemyStatus);

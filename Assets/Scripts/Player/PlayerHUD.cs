@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class PlayerHUD : MonoBehaviour
 {
+    [SerializeField] private GameObject playerUI;
+    [SerializeField] private TextMeshProUGUI charName;
+    [SerializeField] private Image charImage;
     [SerializeField] private Slider playerLife;
     [SerializeField] private Slider playerStamina;
     [SerializeField] private TextMeshProUGUI extralifeText;
@@ -27,6 +32,13 @@ public class PlayerHUD : MonoBehaviour
     {
         get { return hitCombo; }
         set { hitCombo = value; }
+    }
+
+    public void SetPlayerUI(PlayerData playerData)
+    {
+        playerUI.SetActive(true);
+        charName.text = playerData.CharName;
+        charImage.sprite = playerData.IconSprite;
     }
 
     public void SetHUD(PlayerStatus playerStatus)
