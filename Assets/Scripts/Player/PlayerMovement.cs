@@ -17,6 +17,16 @@ public class PlayerMovement : MonoBehaviour
     private bool inJump = false;
     private float ground;
 
+    private float delayDash;
+    private bool canDash = true;
+    private bool inDash;
+    private float directionDash = 2;
+
+    private float delayInputLeft = 0;
+    private float delayInputRight = 0;
+    private bool inputDashLeft = false;
+    private bool inputDashRight = false;
+
     public PlayerMovement(GameObject player, Rigidbody2D rb, InputsPlayers inputsPlayers)
     {
         this.player = player;
@@ -42,6 +52,30 @@ public class PlayerMovement : MonoBehaviour
         set { ground = value; }
     }
 
+    public float DelayDash
+    {
+        get { return delayDash; }
+        set { delayDash = value; }
+    }
+
+    public float DelayInputLeft
+    {
+        get { return delayInputLeft; }
+        set { delayInputLeft = value; }
+    }
+
+    public float DelayInputRight
+    {
+        get { return delayInputRight; }
+        set { delayInputRight = value; }
+    }
+
+    public bool InDash
+    {
+        get { return inDash; }
+        set { inDash = value; }
+    }
+
     public void MoveLogic()
     {
         direction = new Vector2(inputsPlayers.MoveDirection.x, inputsPlayers.MoveDirection.y).normalized;
@@ -49,13 +83,19 @@ public class PlayerMovement : MonoBehaviour
         if (canMove)
             rb.velocity = direction * speed;
         //else if (inJump)
-        //    rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+            //rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
     }
 
     public void JumpLogic()
     {
+        if(player.transform.position.y == ground)
+        {
+            print("InGround");
+        }
+
         if (inputsPlayers.Button2 && player.transform.position.y == ground && !inJump)
         {
+            print("jump");
             inputsPlayers.Button2 = false;
             canMove = false;
             inJump = true;
@@ -67,10 +107,83 @@ public class PlayerMovement : MonoBehaviour
 
     public void DashLogic()
     {
-        if (inputsPlayers.MoveDirection.x > 0)
+        if (inDash)
         {
+            if (delayDash >= 0.3f)
+            {
+                delayDash = 0;
+                rb.velocity = Vector2.zero;
+                inDash = false;
+                canMove = true;
+            }
+            else
+                delayDash += 1 * Time.deltaTime;
 
+            rb.velocity = new Vector2(directionDash * speed, rb.velocity.y);
         }
+
+        if (inputDashLeft)
+        {
+            if (delayInputLeft >= 0.3f)
+            {
+                delayInputLeft = 0;
+                inputDashLeft = false;
+            }
+            else
+                delayInputLeft += 1 * Time.deltaTime;
+        }
+        if (inputsPlayers.ButtonDashLeft && !inDash)
+        {
+            inputsPlayers.ButtonDashLeft = false;
+            if (inputDashLeft && !inDash)
+            {
+                print("dash");
+                canMove = false;
+                directionDash = -2;
+                inDash = true;
+                inputDashLeft = false;
+            }
+            else
+            {
+                inputDashLeft = true;
+            }
+        }
+        if (inputDashRight)
+        {
+            if (delayInputRight >= 0.5f)
+            {
+                delayInputRight = 0;
+                inputDashRight = false;
+            }
+            else
+                delayInputRight += 1 * Time.deltaTime;
+        }
+        if (inputsPlayers.ButtonDashRight && !inDash)
+        {
+            inputsPlayers.ButtonDashRight = false;
+            if (inputDashRight && !inDash)
+            {
+                print("dash");
+                canMove = false;
+                directionDash = 2;
+                inDash = true;
+                inputDashRight = false;
+            }
+            else
+            {
+                inputDashRight = true;
+            }
+        }
+    }
+
+    public void ResetDash()
+    {
+        delayDash = 0;
+        delayInputLeft = 0;
+        delayInputRight = 0;
+        inDash = false;
+        inputDashLeft = false;
+        inputDashRight = false;
     }
 
     public void CheckGround()

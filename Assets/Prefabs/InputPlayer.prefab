@@ -251,6 +251,39 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4448e2c7-e7eb-47ce-858b-6092b59ff8e6
     m_ActionName: Players/Button 3 Hold[/Keyboard/j]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2875401548170692944}
+        m_TargetAssemblyTypeName: InputsPlayers, Assembly-CSharp
+        m_MethodName: ButtonDashLeftSet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fed0dd9e-5368-43dd-8e9a-353a01fcc206
+    m_ActionName: Players/DashLeft[/DragonRise Inc.   Generic   USB  Joystick  /stick/left,/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2875401548170692944}
+        m_TargetAssemblyTypeName: InputsPlayers, Assembly-CSharp
+        m_MethodName: ButtonDashRightSet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1be1828a-c25d-4c9b-95c6-7ca5fe1f4f89
+    m_ActionName: Players/DashRight[/Keyboard/d,/DragonRise Inc.   Generic   USB 
+      Joystick  /stick/right]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Players
@@ -269,6 +302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0}
+  buttonDashLeft: 0
+  buttonDashRight: 0
   button1: 0
   button2: 0
   button3: 0
@@ -280,3 +315,4 @@ MonoBehaviour:
   buttonL2: 0
   buttonStart: 0
   buttonSelect: 0
+  playerData: {fileID: 0}

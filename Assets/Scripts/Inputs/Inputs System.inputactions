@@ -15,6 +15,24 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "DashLeft",
+                    "type": "Button",
+                    "id": "fed0dd9e-5368-43dd-8e9a-353a01fcc206",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DashRight",
+                    "type": "Button",
+                    "id": "1be1828a-c25d-4c9b-95c6-7ca5fe1f4f89",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Button 1",
                     "type": "Button",
                     "id": "ce6c5aaa-cd9f-4310-a265-e5afa16dc56d",
@@ -1212,6 +1230,160 @@
                     "processors": "",
                     "groups": "Joystick 03",
                     "action": "Button 3 Hold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7fbdc051-1167-4c6a-a127-04e3af1a49be",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f63c4be-da9c-400c-be4d-f16c09c78dd2",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d247a39-e4d9-4c97-a017-550a31c1895f",
+                    "path": "<HID:: USB Gamepad          >/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 01",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45d0ea99-f792-4b0d-b215-74617bff6509",
+                    "path": "<HID:: USB Gamepad          >/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 01",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6f40ed7-9e8f-4cfa-91e5-a7ba073bbc45",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1cc37073-f417-4e06-8089-2408357ade75",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4a24184-c27b-4d3b-b8b5-09ceaa8fa38b",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c1e3ebc-2682-43a6-8bf4-463263fa2033",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae694c10-d2f2-42b9-aeb9-c55b4866a9c0",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb686158-3b18-4c19-9c6c-b5c701c223db",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a94f7709-6283-4f00-981d-d0439edffa77",
+                    "path": "<HID:: USB Gamepad          >/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 01",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9dac02fb-3370-4e7b-8ad5-ae0788c4e937",
+                    "path": "<HID:: USB Gamepad          >/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 01",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cde10ca0-0e0f-4e16-9d1a-fd0f340daab1",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b00dba82-25bc-47e0-b3cd-c190375d7498",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -8,6 +8,7 @@ public class InputsPlayers : MonoBehaviour
     private PlayerInput playerInput;
 
     [SerializeField] private Vector2 moveDirection;
+    [SerializeField] private bool buttonDashLeft, buttonDashRight;
     [SerializeField] private bool button1, button2, button3, button3Hold, button4;
     [SerializeField] private bool buttonR1, buttonR2, buttonL1, buttonL2;
     [SerializeField] private bool buttonStart, buttonSelect;
@@ -41,6 +42,18 @@ public class InputsPlayers : MonoBehaviour
     { 
         get { return moveDirection; } 
         set {  moveDirection = value; }
+    }
+
+    public bool ButtonDashLeft
+    {
+        get { return buttonDashLeft; }
+        set { buttonDashLeft = value; }
+    }
+
+    public bool ButtonDashRight
+    {
+        get { return buttonDashRight; }
+        set { buttonDashRight = value; }
     }
 
     public bool Button1
@@ -122,6 +135,16 @@ public class InputsPlayers : MonoBehaviour
     public void MoveSet(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>();
+    }
+
+    public void ButtonDashLeftSet(InputAction.CallbackContext context)
+    {
+        buttonDashLeft = context.action.triggered;
+    }
+
+    public void ButtonDashRightSet(InputAction.CallbackContext context)
+    {
+        buttonDashRight = context.action.triggered;
     }
 
     public void Button1Set(InputAction.CallbackContext context)

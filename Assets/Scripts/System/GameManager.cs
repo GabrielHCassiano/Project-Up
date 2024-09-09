@@ -82,12 +82,15 @@ public class GameManager : MonoBehaviour
             players = FindObjectsByType<PlayerControl>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             canSetPlayers = false;
 
-            for (int i = 0; i < inputsPlayers.Count; i++)
+            for (int i = 0; i < players.Length; i++)
             {
                 var player = players[i];
                 players[i] = players[player.IdPlayer - 1];
                 players[player.IdPlayer - 1] = player;
+            }
 
+            for (int i = 0; i < inputsPlayers.Count; i++)
+            {
                 inputsPlayers[i].transform.parent = players[i].gameObject.transform;
                 players[i].gameObject.SetActive(true);
             }

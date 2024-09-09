@@ -59,7 +59,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void AttackLogic()
     {
-        if (inputsPlayers.Button3 && canAttack && !playerMovement.InJump)
+        if (inputsPlayers.Button3 && canAttack && !playerMovement.InJump && !playerMovement.InDash)
         {
             inputsPlayers.Button3 = false;
             rb.velocity = Vector2.zero;
@@ -72,7 +72,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void HeavyAttackLogic()
     {
-        if (!inputsPlayers.Button3Hold && holdInput > 1 && canAttack && !playerMovement.InJump)
+        if (!inputsPlayers.Button3Hold && holdInput > 1 && canAttack && !playerMovement.InJump && !playerMovement.InDash)
         {
             rb.velocity = Vector2.zero;
             playerMovement.CanMove = false;
@@ -90,7 +90,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void SpecialAttackLogic()
     {
-        if (inputsPlayers.Button4 && canAttack && !playerMovement.InJump && playerStatus.Stamina > 50)
+        if (inputsPlayers.Button4 && canAttack && !playerMovement.InJump && playerStatus.Stamina > 50 && !playerMovement.InDash)
         {
             inputsPlayers.Button4 = false;
             rb.velocity = Vector2.zero;

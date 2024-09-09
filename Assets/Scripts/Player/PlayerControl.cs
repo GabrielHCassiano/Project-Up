@@ -51,6 +51,7 @@ public class PlayerControl : MonoBehaviour
     {
         Debug.DrawLine(new Vector3(transform.position.x, transform.position.y + 1.0f, 1), new Vector3(transform.position.x, transform.position.y - 1.0f, 1), Color.red);
         playerMovement.CheckGround();
+        playerMovement.DashLogic();
         playerMovement.JumpLogic();
         playerCombat.AttackLogic();
         playerCombat.HeavyAttackLogic();
@@ -100,11 +101,11 @@ public class PlayerControl : MonoBehaviour
 
     public void GetIten()
     {
-        print("oi");
         rb.velocity = Vector2.zero;
         playerMovement.CanMove = false;
         playerCombat.CanAttack = false;
         playerStatus.GetIten = false;
+        playerMovement.ResetDash();
     }
 
     public void SetIten()
@@ -120,16 +121,20 @@ public class PlayerControl : MonoBehaviour
     public void SetCombo()
     {
         playerCombat.SetCombo();
+        playerMovement.ResetDash();
+
     }
 
     public void ResetAttack()
     {
         playerCombat.ResetStatus();
+        playerMovement.ResetDash();
     }
 
     public void InStun()
     {
         playerCombat.InStun();
+        playerMovement.ResetDash();
         playerHUD.CancelHit();
     }
 }

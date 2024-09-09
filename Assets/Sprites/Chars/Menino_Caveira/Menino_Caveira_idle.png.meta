@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8f516ebbe2c35340a4db9f9feb81a26
+guid: 2e2eed032288d5a46ac992971352bda8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menino_Caveira_idle 1_0
+      name: Menino_Caveira_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d7e8245925eb4a42af0461e9f931c3b
-      internalID: 1908085450
+      spriteID: 4e2360bded0054544afc32415b48b539
+      internalID: 682258587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menino_Caveira_idle 1_1
+      name: Menino_Caveira_idle_1
       rect:
         serializedVersion: 2
         x: 128
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2673a2d73d5fcde49a9c4e07f9e72638
-      internalID: 806804115
+      spriteID: 05345cd2b9db0814185f1a3982b89b70
+      internalID: 1217615518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menino_Caveira_idle 1_2
+      name: Menino_Caveira_idle_2
       rect:
         serializedVersion: 2
         x: 256
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acdf764780006cb45943e57785d76959
-      internalID: 347354035
+      spriteID: 5e0d05eb64a56b24a8494a9f1d2a1e47
+      internalID: -1481029332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menino_Caveira_idle 1_3
+      name: Menino_Caveira_idle_3
       rect:
         serializedVersion: 2
         x: 384
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f146f153ecbbea34580861bba602d844
-      internalID: -1412517274
+      spriteID: 75b5c5e60929bff4cae8b0187c81f58c
+      internalID: -636526416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menino_Caveira_idle 1_4
+      name: Menino_Caveira_idle_4
       rect:
         serializedVersion: 2
         x: 512
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82d694196ccdb654fb52978e8f39fbdf
-      internalID: -377641651
+      spriteID: 82be0003bc844ef4f9b36912a43fe930
+      internalID: -229009454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menino_Caveira_idle 1_5
+      name: Menino_Caveira_idle_5
       rect:
         serializedVersion: 2
         x: 640
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d55edb186e63a8247bcac74a26d89eb6
-      internalID: 1015570038
+      spriteID: ac8db2489edf6c842a491927d3822d13
+      internalID: 123715476
       vertices: []
       indices: 
       edges: []
@@ -233,12 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Menino_Caveira_idle 1_0: 1908085450
-      Menino_Caveira_idle 1_1: 806804115
-      Menino_Caveira_idle 1_2: 347354035
-      Menino_Caveira_idle 1_3: -1412517274
-      Menino_Caveira_idle 1_4: -377641651
-      Menino_Caveira_idle 1_5: 1015570038
+      Menino_Caveira_idle_0: 682258587
+      Menino_Caveira_idle_1: 1217615518
+      Menino_Caveira_idle_2: -1481029332
+      Menino_Caveira_idle_3: -636526416
+      Menino_Caveira_idle_4: -229009454
+      Menino_Caveira_idle_5: 123715476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
