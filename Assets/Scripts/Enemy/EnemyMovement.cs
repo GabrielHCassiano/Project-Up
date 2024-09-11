@@ -35,6 +35,12 @@ public class EnemyMovement : MonoBehaviour
         set { direction = value; }
     }
 
+    public float Distance
+    {
+        get { return distance; }
+        set { distance = value; }
+    }
+
     public bool CanMove
     {
         get { return canMove; }

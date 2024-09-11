@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private bool inDash;
     private float directionDash = 2;
 
+    private float delayCanDash;
     private float delayInputLeft = 0;
     private float delayInputRight = 0;
     private bool inputDashLeft = false;
@@ -76,6 +77,13 @@ public class PlayerMovement : MonoBehaviour
         set { inDash = value; }
     }
 
+    public bool CanDash
+    {
+        get { return canDash; }
+        set { canDash = value; }
+    }
+
+
     public void MoveLogic()
     {
         direction = new Vector2(inputsPlayers.MoveDirection.x, inputsPlayers.MoveDirection.y).normalized;
@@ -107,6 +115,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void DashLogic()
     {
+
+        if (!canDash && !inDash)
+        {
+            if (delayCanDash >= 1f)
+            {
+                delayCanDash = 0;
+                canDash = true;
+            }
+            else
+                delayCanDash += 1 * Time.deltaTime;
+        }
+
         if (inDash)
         {
             if (delayDash >= 0.3f)
@@ -119,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 delayDash += 1 * Time.deltaTime;
 
-            rb.velocity = new Vector2(directionDash * speed, rb.velocity.y);
+            rb.velocity = new Vector2(directionDash * speed, 0);
         }
 
         if (inputDashLeft)
@@ -132,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 delayInputLeft += 1 * Time.deltaTime;
         }
-        if (inputsPlayers.ButtonDashLeft && !inDash)
+        if (inputsPlayers.ButtonDashLeft && !inDash && canDash)
         {
             inputsPlayers.ButtonDashLeft = false;
             if (inputDashLeft && !inDash)
@@ -141,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
                 canMove = false;
                 directionDash = -2;
                 inDash = true;
+                canDash = false;
                 inputDashLeft = false;
             }
             else
@@ -158,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 delayInputRight += 1 * Time.deltaTime;
         }
-        if (inputsPlayers.ButtonDashRight && !inDash)
+        if (inputsPlayers.ButtonDashRight && !inDash && canDash)
         {
             inputsPlayers.ButtonDashRight = false;
             if (inputDashRight && !inDash)
@@ -167,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
                 canMove = false;
                 directionDash = 2;
                 inDash = true;
+                canDash = false;
                 inputDashRight = false;
             }
             else
@@ -179,9 +201,11 @@ public class PlayerMovement : MonoBehaviour
     public void ResetDash()
     {
         delayDash = 0;
+        delayCanDash = 0;
         delayInputLeft = 0;
         delayInputRight = 0;
         inDash = false;
+        canDash = false;
         inputDashLeft = false;
         inputDashRight = false;
     }

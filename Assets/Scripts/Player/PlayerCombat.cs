@@ -64,6 +64,7 @@ public class PlayerCombat : MonoBehaviour
             inputsPlayers.Button3 = false;
             rb.velocity = Vector2.zero;
             playerMovement.CanMove = false;
+            playerMovement.CanDash = false;
             canAttack = false;
             inCombo++;
             combo = inCombo;
@@ -76,6 +77,7 @@ public class PlayerCombat : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             playerMovement.CanMove = false;
+            playerMovement.CanDash = false;
             canAttack = false;
             heavyAttack = true;
         }
@@ -95,6 +97,7 @@ public class PlayerCombat : MonoBehaviour
             inputsPlayers.Button4 = false;
             rb.velocity = Vector2.zero;
             playerMovement.CanMove = false;
+            playerMovement.CanDash = false;
             canAttack = false;
             playerStatus.Stamina -= 50;
             specialAttack = true;

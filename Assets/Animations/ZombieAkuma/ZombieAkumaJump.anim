@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyIdle
+  m_Name: ZombieAkumaJump
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,17 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1895772271, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - time: 0.1
-      value: {fileID: -2141987421, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - time: 0.2
-      value: {fileID: 1205696940, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - time: 0.3
-      value: {fileID: 1787790471, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - time: 0.4
-      value: {fileID: -686501864, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - time: 0.5
-      value: {fileID: 333660308, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
+      value: {fileID: -1249523424, guid: 9650ec019f51e4245aa9b2e7b2ffc81e, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
@@ -54,18 +44,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1895772271, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - {fileID: -2141987421, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - {fileID: 1205696940, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - {fileID: 1787790471, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - {fileID: -686501864, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
-    - {fileID: 333660308, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
+    - {fileID: -1249523424, guid: 9650ec019f51e4245aa9b2e7b2ffc81e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -6,15 +6,19 @@ public class EnemyAnimation : MonoBehaviour
 {
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
     private EnemyMovement enemyMovement;
     private EnemyStatus enemyStatus;
+    private EnemyCombat enemyCombat;
 
-    public EnemyAnimation(Animator animator, SpriteRenderer spriteRenderer, EnemyMovement enemyMovement, EnemyStatus enemyStatus)
+    public EnemyAnimation(Animator animator, SpriteRenderer spriteRenderer, Rigidbody2D rb,  EnemyMovement enemyMovement, EnemyStatus enemyStatus, EnemyCombat enemyCombat)
     {
         this.animator = animator;
         this.spriteRenderer = spriteRenderer;
+        this.rb = rb;
         this.enemyMovement = enemyMovement;
         this.enemyStatus = enemyStatus;
+        this.enemyCombat = enemyCombat;
     }
 
     public void FlipLogic()
@@ -27,9 +31,11 @@ public class EnemyAnimation : MonoBehaviour
 
     public void AnimationLogic()
     {
-        animator.SetFloat("Horizontal", enemyMovement.Direction.x);
-        animator.SetFloat("Vertical", enemyMovement.Direction.y);
+        animator.SetFloat("Horizontal", rb.velocity.x);
+        animator.SetFloat("Vertical", rb.velocity.y);
         animator.SetBool("InHurt", enemyStatus.InHurt);
-        animator.SetBool("InSpawn", enemyMovement.InSpawn);
+        animator.SetBool("Intro", enemyMovement.InSpawn);
+        animator.SetBool("Intro", enemyMovement.InSpawn);
+        animator.SetBool("Attack1", enemyCombat.Attack1);
     }
 }

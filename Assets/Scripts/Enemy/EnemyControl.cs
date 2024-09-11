@@ -30,7 +30,7 @@ public class EnemyControl : MonoBehaviour
         enemyMovement = new EnemyMovement(rb, gameObject, players);
         enemyStatus = new EnemyStatus(gameObject);
         enemyCombat = new EnemyCombat(rb, enemyMovement, enemyStatus);
-        enemyAnimation = new EnemyAnimation(animator, spriteRenderer, enemyMovement, enemyStatus);
+        enemyAnimation = new EnemyAnimation(animator, spriteRenderer, rb, enemyMovement, enemyStatus, enemyCombat);
 
         enemyHurtbox.SetStatus(enemyStatus);
     }
@@ -41,6 +41,7 @@ public class EnemyControl : MonoBehaviour
         Debug.DrawLine(new Vector3(transform.position.x, transform.position.y + 1.0f, 1), new Vector3(transform.position.x, transform.position.y - 1.0f, 1), Color.red);
         enemyMovement.LockPlayer();
         enemyMovement.CheckGround();
+        enemyCombat.AttackLogic();
         enemyStatus.DeathLogic();
         enemyAnimation.FlipLogic();
         enemyAnimation.AnimationLogic();
@@ -63,9 +64,19 @@ public class EnemyControl : MonoBehaviour
         set { enemyStatus = value; }
     }
 
+    public void SetForce(int force)
+    {
+        enemyStatus.Force = force;
+    }
+
     public void SpawnLogic()
     {
         enemyMovement.SpawnLogic();
+    }
+
+    public void ResetAttack()
+    {
+        enemyCombat.ResetAttack();
     }
 
     public void ResetStatus()
