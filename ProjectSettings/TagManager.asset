@@ -48,11 +48,11 @@ TagManager:
   - name: BackGround
     uniqueID: 3092292527
     locked: 0
-  - name: ForeGround
-    uniqueID: 3660406421
-    locked: 0
   - name: Player
     uniqueID: 1040250297
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3660406421
     locked: 0
   - name: HUD
     uniqueID: 970678449

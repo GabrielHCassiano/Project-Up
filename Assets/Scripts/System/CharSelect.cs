@@ -68,6 +68,7 @@ public class CharSelect : MonoBehaviour
                     selectObject[gameManager.InputsPlayers.Count - 1].SetActive(false);
                     select[gameManager.InputsPlayers.Count - 1].SetActive(false);
                     var inputObject = gameManager.InputsPlayers[gameManager.InputsPlayers.Count - 1];
+                    gameManager.PlayersDatas.Remove(inputObject.PlayerData);
                     gameManager.InputsPlayers.Remove(inputObject);
                     Destroy(inputObject.gameObject);
                 }

@@ -121,8 +121,7 @@ public class PlayerControl : MonoBehaviour
     public void SetCombo()
     {
         playerCombat.SetCombo();
-        playerMovement.ResetDash();
-
+        //playerMovement.ResetDash();
     }
 
     public void ResetAttack()

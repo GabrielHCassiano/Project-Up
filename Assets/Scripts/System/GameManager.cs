@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < inputsPlayers.Count + 1; i++)
             {
                 var inputObject = inputsPlayers[inputsPlayers.Count - 1];
+                playersDatas.Remove(inputObject.PlayerData);
                 inputsPlayers.Remove(inputObject);
                 Destroy(inputObject.gameObject);
             }

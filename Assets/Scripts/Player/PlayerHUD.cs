@@ -72,6 +72,13 @@ public class PlayerHUD : MonoBehaviour
         StartCoroutine(HitCooldown());
     }
 
+    public void EndHit()
+    {
+        StopAllCoroutines();
+        hitComboText.gameObject.SetActive(true);
+        StartCoroutine(CancelHitEndCooldown());
+    }
+
     public void CancelHit()
     {
         StopAllCoroutines();
@@ -101,8 +108,7 @@ public class PlayerHUD : MonoBehaviour
         hitCombo = 0;
         if (endHit == 0)
             hitComboText.text = "Bad";
-        else if (endHit > 0 && endHit < 10)
-            hitComboText.text = "Incomplete\n" + endHit.ToString() + "Hit";
+            //hitComboText.text = "Interrupted\n" + endHit.ToString() + "Hit";
         else if (endHit > 0 && endHit < 25)
             hitComboText.text = "Ok\n" + endHit.ToString() + "Hit";
         else if (endHit >= 25 && endHit < 50)
@@ -113,6 +119,17 @@ public class PlayerHUD : MonoBehaviour
             hitComboText.text = "Great\n" + endHit.ToString() + "Hit";
         else if (endHit >= 100)
             hitComboText.text = "Excellent\n" + endHit.ToString() + "Hit";
+        yield return new WaitForSeconds(0.3f);
+        hitComboText.fontSize = 25f;
+        hitComboText.color = hitBaseColor;
+        hitComboText.gameObject.SetActive(false);
+    }
+
+    IEnumerator CancelHitEndCooldown()
+    {
+        int endHit = hitCombo;
+        hitCombo = 0;
+        hitComboText.text = "Interrupted\n" + endHit.ToString() + "Hit";
         yield return new WaitForSeconds(0.3f);
         hitComboText.fontSize = 25f;
         hitComboText.color = hitBaseColor;
@@ -145,7 +162,7 @@ public class PlayerHUD : MonoBehaviour
             hitComboText.color = currentColor;
             yield return new WaitForSeconds(0.125f);
         }
-        CancelHit();
+        EndHit();
     }
 
 }

@@ -257,7 +257,7 @@
                 {
                     "name": "up",
                     "id": "6110b7e6-0838-4b85-8bab-3955affcd272",
-                    "path": "<HID:: USB Gamepad          >/stick/up",
+                    "path": "<HID:: USB Gamepad          >/hat/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 01",
@@ -268,7 +268,7 @@
                 {
                     "name": "down",
                     "id": "90abc989-e033-44fa-9fa9-a0fac5f87551",
-                    "path": "<HID:: USB Gamepad          >/stick/down",
+                    "path": "<HID:: USB Gamepad          >/hat/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 01",
@@ -279,7 +279,7 @@
                 {
                     "name": "left",
                     "id": "fa0f6428-7620-4891-95af-851478fde5c6",
-                    "path": "<HID:: USB Gamepad          >/stick/left",
+                    "path": "<HID:: USB Gamepad          >/hat/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 01",
@@ -290,7 +290,7 @@
                 {
                     "name": "right",
                     "id": "2f81a098-6c76-496b-91ab-09b3ad5670d6",
-                    "path": "<HID:: USB Gamepad          >/stick/right",
+                    "path": "<HID:: USB Gamepad          >/hat/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 01",

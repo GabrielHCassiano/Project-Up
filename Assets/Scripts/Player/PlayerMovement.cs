@@ -86,7 +86,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveLogic()
     {
+
         direction = new Vector2(inputsPlayers.MoveDirection.x, inputsPlayers.MoveDirection.y).normalized;
+
+        if (direction == Vector2.zero)
+        {
+            rb.mass = 100000;
+        }
+        else
+            rb.mass = 0.00001f;
 
         if (canMove)
             rb.velocity = direction * speed;
@@ -115,10 +123,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void DashLogic()
     {
-
         if (!canDash && !inDash)
         {
-            if (delayCanDash >= 1f)
+            if (delayCanDash >= 0.5f)
             {
                 delayCanDash = 0;
                 canDash = true;
@@ -157,7 +164,6 @@ public class PlayerMovement : MonoBehaviour
             inputsPlayers.ButtonDashLeft = false;
             if (inputDashLeft && !inDash)
             {
-                print("dash");
                 canMove = false;
                 directionDash = -2;
                 inDash = true;
@@ -184,7 +190,6 @@ public class PlayerMovement : MonoBehaviour
             inputsPlayers.ButtonDashRight = false;
             if (inputDashRight && !inDash)
             {
-                print("dash");
                 canMove = false;
                 directionDash = 2;
                 inDash = true;
@@ -205,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
         delayInputLeft = 0;
         delayInputRight = 0;
         inDash = false;
-        canDash = false;
+        canDash = true;
         inputDashLeft = false;
         inputDashRight = false;
     }
