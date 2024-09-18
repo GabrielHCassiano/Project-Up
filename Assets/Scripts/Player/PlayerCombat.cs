@@ -92,7 +92,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void SpecialAttackLogic()
     {
-        if (inputsPlayers.Button4 && canAttack && !playerMovement.InJump && playerStatus.Stamina > 50 && !playerMovement.InDash)
+        if (inputsPlayers.Button4 && canAttack && !playerMovement.InJump && playerStatus.Stamina >= 50 && !playerMovement.InDash)
         {
             inputsPlayers.Button4 = false;
             rb.velocity = Vector2.zero;

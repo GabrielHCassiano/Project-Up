@@ -16,6 +16,8 @@ public class EnemyControl : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    private AudioSource attackAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,8 @@ public class EnemyControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        attackAudio = GetComponent<AudioSource>();
 
         enemyMovement = new EnemyMovement(rb, gameObject, players);
         enemyStatus = new EnemyStatus(gameObject);
@@ -87,5 +91,10 @@ public class EnemyControl : MonoBehaviour
     public void InStun()
     {
         enemyCombat.InStun();
+    }
+
+    public void AttackSound()
+    {
+        attackAudio.Play();
     }
 }

@@ -24,7 +24,6 @@ public class EnemyStatus : MonoBehaviour
         life = maxLife;
         maxStamina = 0;
         stamina = maxStamina;
-        force = 70;
     }
 
     public int MaxLife
@@ -74,8 +73,9 @@ public class EnemyStatus : MonoBehaviour
     public void InHurtLogic(GameObject player)
     {
         life -= player.GetComponentInParent<PlayerControl>().PlayerStatus.Force;
-        player.GetComponentInParent<PlayerControl>().PlayerStatus.Stamina += 10;
+        player.GetComponentInParent<PlayerControl>().PlayerStatus.Stamina += 5;
         player.GetComponentInParent<PlayerControl>().PlayerCombat.CanAttack = true;
+        player.GetComponentInParent<PlayerControl>().AttackSound();
         player.GetComponentInParent<PlayerHUD>().AddHit();
         inHurt = true;
     }

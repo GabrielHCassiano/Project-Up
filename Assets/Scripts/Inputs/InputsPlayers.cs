@@ -203,4 +203,22 @@ public class InputsPlayers : MonoBehaviour
     }
 
     #endregion
+
+    public void ResetAllInputs()
+    {
+        moveDirection = Vector2.zero;
+        buttonDashLeft = false;
+        buttonDashRight = false;
+        button1 = false;
+        button2 = false;
+        button3 = false;
+        button3Hold = false;
+        button4 = false;
+        buttonR1 = false;
+        buttonR2 = false;
+        buttonL1 = false;
+        buttonL2 = false;
+        buttonStart = false;
+        buttonSelect = false;
+    }
 }

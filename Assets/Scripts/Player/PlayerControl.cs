@@ -22,6 +22,8 @@ public class PlayerControl : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    private AudioSource attackAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class PlayerControl : MonoBehaviour
         animator = GetComponent<Animator>();
 
         playerHUD = GetComponent<PlayerHUD>();
+
+        attackAudio = GetComponent<AudioSource>();
 
         playerHUD.SetPlayerUI(inputsPlayers.PlayerData);
         animator.runtimeAnimatorController = inputsPlayers.PlayerData.AnimatorController;
@@ -135,5 +139,10 @@ public class PlayerControl : MonoBehaviour
         playerCombat.InStun();
         playerMovement.ResetDash();
         playerHUD.CancelHit();
+    }
+
+    public void AttackSound()
+    {
+        attackAudio.Play();
     }
 }

@@ -46,7 +46,8 @@ public class BoxControl : MonoBehaviour
         {
             print("(Box) Player-Hit");
             life -= collision.GetComponentInParent<PlayerControl>().PlayerStatus.Force;
-            collision.GetComponentInParent<PlayerControl>().PlayerStatus.Stamina += 10;
+            collision.GetComponentInParent<PlayerControl>().PlayerStatus.Stamina += 5;
+            collision.GetComponentInParent<PlayerControl>().AttackSound();
             collision.GetComponentInParent<PlayerControl>().PlayerCombat.CanAttack = true;
             collision.GetComponentInParent<PlayerHUD>().AddHit();
         }

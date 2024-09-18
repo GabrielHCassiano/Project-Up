@@ -76,14 +76,14 @@ public class PlayerHUD : MonoBehaviour
     {
         StopAllCoroutines();
         hitComboText.gameObject.SetActive(true);
-        StartCoroutine(CancelHitEndCooldown());
+        StartCoroutine(HitEndCooldown());
     }
 
     public void CancelHit()
     {
         StopAllCoroutines();
         hitComboText.gameObject.SetActive(true);
-        StartCoroutine(HitEndCooldown());
+        StartCoroutine(CancelHitEndCooldown());
     }
 
     public void HitLevel()
@@ -129,7 +129,10 @@ public class PlayerHUD : MonoBehaviour
     {
         int endHit = hitCombo;
         hitCombo = 0;
-        hitComboText.text = "Interrupted\n" + endHit.ToString() + "Hit";
+        if (endHit == 0)
+            hitComboText.text = "Bad";
+        else
+            hitComboText.text = "Interrupted\n" + endHit.ToString() + "Hit";
         yield return new WaitForSeconds(0.3f);
         hitComboText.fontSize = 25f;
         hitComboText.color = hitBaseColor;

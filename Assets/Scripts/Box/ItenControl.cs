@@ -31,13 +31,13 @@ public class ItenControl : MonoBehaviour
         if (tag == "Candy")
         {
             print("GetCandy");
-            playerStatus.Life += 75;
+            playerStatus.Life += 50;
             Destroy(gameObject);
         }
         if (tag == "Coca")
         {
             print("GetCoca");
-            playerStatus.Life += 250;
+            playerStatus.Life += 200;
             Destroy(gameObject);
         }
         if (tag == "ExtraLife")
@@ -50,7 +50,7 @@ public class ItenControl : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("GroundCollision")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("GroundCollisionPlayer")
             && collision.GetComponentInParent<PlayerControl>() != null
             && collision.GetComponentInParent<PlayerControl>().InputsPlayers.Button1 
             && collision.GetComponentInParent<PlayerControl>().PlayerStatus.InHurt == false)

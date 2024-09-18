@@ -8,6 +8,7 @@ TagManager:
   - Candy
   - Coca
   - ExtraLife
+  - CamLock
   layers:
   - Default
   - TransparentFX
@@ -21,9 +22,9 @@ TagManager:
   - HitboxEnemy
   - Boxs
   - Itens
-  - GroundCollision
-  - 
-  - 
+  - GroundCollisionPlayer
+  - GroundCollisionEnemy
+  - CamCollider
   - 
   - 
   - 

@@ -71,7 +71,7 @@ public class EnemyMovement : MonoBehaviour
         direction = players[idLockPlayer].transform.position - enemy.transform.position;  
         direction = direction.normalized;
 
-        if (canMove && lockMove && players != null)
+        if (canMove && lockMove && players[idLockPlayer].GetComponentInChildren<SpriteRenderer>().gameObject.activeSelf)
         {
             rb.velocity = direction * speed;
         }
@@ -90,7 +90,7 @@ public class EnemyMovement : MonoBehaviour
             }
             distance = distanceCurrent;
         }
-        if (distance < 10)
+        if (distance < 10 || distance > 20)
         {
             lockMove = true;
         }

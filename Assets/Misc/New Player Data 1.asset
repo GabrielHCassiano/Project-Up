@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: New Player Data 1
   m_EditorClassIdentifier: 
   playerName: Player2
-  charName: Light
-  iconSprite: {fileID: 21300000, guid: e3b53a4e081727f4381d53c9c48e481d, type: 3}
-  animatorController: {fileID: 9100000, guid: 900c93d3097febc41b12f92f58168201, type: 2}
+  charName: Karai
+  iconSprite: {fileID: 21300000, guid: 4c4ecf48b83b019489f0d191a52ce466, type: 3}
+  animatorController: {fileID: 9100000, guid: a95479bffa8284243ba771059d4a2ec6, type: 2}

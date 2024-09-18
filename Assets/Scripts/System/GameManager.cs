@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < inputsPlayers.Count; i++)
             {
                 inputsPlayers[i].transform.parent = players[i].gameObject.transform;
+                inputsPlayers[i].ResetAllInputs();
                 players[i].gameObject.SetActive(true);
             }
         }

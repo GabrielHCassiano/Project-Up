@@ -30,12 +30,11 @@ public class PlayerStatus : MonoBehaviour
         this.spriteRenderer = spriteRenderer;
         this.inputsPlayers = inputsPlayers;
         checkpoint = playerControl.transform.position;
-        maxLife = 500;
+        maxLife = 200;
         life = maxLife;
-        maxStamina = 300;
+        maxStamina = 100;
         stamina = maxStamina;
         extraLife = 1;
-        force = 50;
     }
 
     public int MaxLife
@@ -122,7 +121,7 @@ public class PlayerStatus : MonoBehaviour
             life = maxLife;
             stamina = maxStamina;
             death = false;
-            playerControl.transform.position = checkpoint;
+            //playerControl.transform.position = checkpoint;
             inputsPlayers.ButtonStart = false;
             spriteRenderer.gameObject.SetActive(true);
             playerControl.ResetAttack();
@@ -133,6 +132,7 @@ public class PlayerStatus : MonoBehaviour
     public void InHurtLogic(GameObject enemy)
     {
         life -= enemy.GetComponentInParent<EnemyControl>().EnemyStatus.Force;
+        enemy.GetComponentInParent<EnemyControl>().AttackSound();
         inHurt = true;
     }
 
