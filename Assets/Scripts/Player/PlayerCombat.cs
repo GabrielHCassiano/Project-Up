@@ -19,7 +19,7 @@ public class PlayerCombat : MonoBehaviour
     private int combo = 0;
     private int inCombo = 0;
 
-    public PlayerCombat(PlayerMovement playerMovement, PlayerStatus playerStatus, Rigidbody2D rb, InputsPlayers inputsPlayers)
+    public PlayerCombat(PlayerMovement playerMovement, PlayerStatus playerStatus, Rigidbody2D rb ,InputsPlayers inputsPlayers)
     {
         this.playerMovement = playerMovement;
         this.playerStatus = playerStatus;
@@ -57,6 +57,12 @@ public class PlayerCombat : MonoBehaviour
         set { combo = value; }
     }
 
+    public int InCombo
+    {
+        get { return inCombo; }
+        set { inCombo = value; }
+    }
+
     public void AttackLogic()
     {
         if (inputsPlayers.Button3 && canAttack && !playerMovement.InJump && !playerMovement.InDash)
@@ -87,12 +93,14 @@ public class PlayerCombat : MonoBehaviour
             holdInput += 1 * Time.deltaTime;
         }
         else
+        {
             holdInput = 0;
+        }
     }
 
     public void SpecialAttackLogic()
     {
-        if (inputsPlayers.Button4 && canAttack && !playerMovement.InJump && playerStatus.Stamina >= 50 && !playerMovement.InDash)
+        if (inputsPlayers.Button4 && canAttack && inCombo == 0 && !playerMovement.InJump && playerStatus.Stamina >= 50 && !playerMovement.InDash)
         {
             inputsPlayers.Button4 = false;
             rb.velocity = Vector2.zero;

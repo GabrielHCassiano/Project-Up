@@ -83,6 +83,12 @@ public class PlayerMovement : MonoBehaviour
         set { canDash = value; }
     }
 
+    public float DirectionDash
+    { 
+        get { return directionDash; } 
+        set {   directionDash = value; }
+    }
+
 
     public void MoveLogic()
     {

@@ -53,10 +53,14 @@ public class PlayerHUD : MonoBehaviour
         if (playerCombat.HoldInput >= 1 && playerCombat.HoldInput <= 1.15f)
         {
             spriteHeavy.sprite = sprite.sprite;
+            sprite.enabled = false;
             spriteHeavy.gameObject.SetActive(true);
         }
         else
+        {
+            sprite.enabled = true;
             spriteHeavy.gameObject.SetActive(false);
+        }
     }
 
     public void AddHit()

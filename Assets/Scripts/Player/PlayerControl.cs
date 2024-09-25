@@ -27,8 +27,6 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inputsPlayers = GetComponentInChildren<InputsPlayers>();
-
         playerHurtbox = GetComponentInChildren<PlayerHurtbox>();
 
         rb = GetComponent<Rigidbody2D>();
