@@ -56,12 +56,12 @@ public class PlayerControl : MonoBehaviour
         playerMovement.DashLogic();
         //playerMovement.JumpLogic();
         playerCombat.AttackLogic();
-        playerCombat.HeavyAttackLogic();
-        playerCombat.SpecialAttackLogic();
+        //playerCombat.HeavyAttackLogic();
+        //playerCombat.SpecialAttackLogic();
         playerStatus.StatusBalance();
         playerStatus.DeathLogic();
         playerHUD.SetHUD(playerStatus);
-        playerHUD.HeavyAnim(playerCombat, spriteRenderer);
+        //playerHUD.HeavyAnim(playerCombat, spriteRenderer);
         playerAnimation.FlipLogic();
         playerAnimation.AnimationLogic();
     }

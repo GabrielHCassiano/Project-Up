@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -125,6 +125,12 @@ public class PlayerStatus : MonoBehaviour
             inputsPlayers.ButtonStart = false;
             spriteRenderer.gameObject.SetActive(true);
             playerControl.ResetAttack();
+        }
+
+        if (death && extraLife == 0)
+        {
+            Destroy(GameManager.Instance.gameObject);
+            SceneManager.LoadScene(0);
         }
 
     }

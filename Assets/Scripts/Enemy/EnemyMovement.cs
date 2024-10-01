@@ -90,14 +90,14 @@ public class EnemyMovement : MonoBehaviour
             }
             distance = distanceCurrent;
         }
-        if (distance < 10 || distance > 20)
+        if (distance < 5 || distance > 15)
         {
             lockMove = true;
         }
         else
         {
-            lockMove = false;
-            rb.velocity = Vector2.zero;
+            //lockMove = false;
+            //rb.velocity = Vector2.zero;
         }
     }
 

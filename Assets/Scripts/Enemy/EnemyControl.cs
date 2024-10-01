@@ -97,4 +97,16 @@ public class EnemyControl : MonoBehaviour
     {
         attackAudio.Play();
     }
+
+    public void StartDeath()
+    {
+        enemyMovement.CanMove = false;
+        enemyStatus.InHurt = false;
+        enemyStatus.Death = false;
+    }
+
+    public void DeathSet()
+    {
+        enemyStatus.DeathSet();
+    }
 }

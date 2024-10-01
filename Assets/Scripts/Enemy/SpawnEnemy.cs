@@ -1,8 +1,7 @@
-using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnEnemy : MonoBehaviour
 {
@@ -37,6 +36,7 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         StartWave();
+        EndLevel();
     }
 
     public void StartWave()
@@ -86,6 +86,23 @@ public class SpawnEnemy : MonoBehaviour
             enemyCount[i] = enemyCount[i] * difficult;
 
         canSpawn = true;
+    }
+
+    public void EndLevel()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            ResetGame();
+
+        if (enemies.Length == 0 && waveCount == 0 && canSpawn && nextWave == null)
+        {
+            ResetGame();
+        }
+    }
+
+    public void ResetGame()
+    {
+        Destroy(GameManager.Instance.gameObject);
+        SceneManager.LoadScene(0);
     }
 
 }

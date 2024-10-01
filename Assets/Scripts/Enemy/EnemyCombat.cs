@@ -53,14 +53,14 @@ public class EnemyCombat : MonoBehaviour
             else
                 attackCooldown += 1 * Time.deltaTime;
         }
-        if (canAttack && enemyMovement.Distance < 3)
+        if (canAttack && enemyMovement.Distance < 2)
         {
             rb.velocity = Vector2.zero;
             enemyMovement.CanMove = false;
             canAttack = false;
             inAttack = true;
         }
-        else if (!canAttack && enemyMovement.Distance > 3)
+        else if (!canAttack && enemyMovement.Distance > 2)
         {
             ResetAttack();
         }

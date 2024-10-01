@@ -13,14 +13,15 @@ public class EnemyStatus : MonoBehaviour
     private int stamina;
 
     private bool inHurt;
-    private bool death;
+    private bool death = false;
+    private bool canDeath = true; 
 
     private int force;
 
     public EnemyStatus(GameObject enemy)
     {
         this.enemy = enemy;
-        maxLife = 300;
+        maxLife = 200;
         life = maxLife;
         maxStamina = 0;
         stamina = maxStamina;
@@ -62,12 +63,24 @@ public class EnemyStatus : MonoBehaviour
         set { inHurt = value; }
     }
 
+    public bool Death
+    {
+        get { return death; }
+        set { death = value; }
+    }
+
     public void DeathLogic()
     {
-        if (life <= 0)
+        if (life <= 0 && canDeath)
+        {
             death = true;
-        if (death)
-            Destroy(enemy.gameObject);
+            canDeath = false;
+        }
+    }
+
+    public void DeathSet()
+    {
+        Destroy(enemy.gameObject);
     }
 
     public void InHurtLogic(GameObject player)

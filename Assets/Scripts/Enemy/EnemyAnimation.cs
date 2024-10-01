@@ -37,5 +37,6 @@ public class EnemyAnimation : MonoBehaviour
         animator.SetBool("Intro", enemyMovement.InSpawn);
         animator.SetBool("Intro", enemyMovement.InSpawn);
         animator.SetBool("Attack1", enemyCombat.Attack1);
+        animator.SetBool("Dead", enemyStatus.Death);
     }
 }

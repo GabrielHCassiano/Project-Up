@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b927ee830eed7c54292687193a013183
+guid: d1cb3bfe3c40f654d90194cd748a524d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anubis_idle_0
+      name: AnubisWALKINGsheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d17493c720bbf84098925e0fa682c6f
-      internalID: 1023118165
+      spriteID: 6da53d77f2729974bb701bc960e9f215
+      internalID: 1253062472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anubis_idle_1
+      name: AnubisWALKINGsheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06a9737542f611841ba6da0b3f34e905
-      internalID: 678306546
+      spriteID: 9bc9048b7bd5a4247a3eeca6345651ac
+      internalID: 1297754858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anubis_idle_2
+      name: AnubisWALKINGsheet_2
       rect:
         serializedVersion: 2
         x: 256
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62f0d68805ed2e04dab5402236c8c020
-      internalID: -1839348884
+      spriteID: 393b23331a0fd134d8c4f4d628a4cbca
+      internalID: -203400011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anubis_idle_3
+      name: AnubisWALKINGsheet_3
       rect:
         serializedVersion: 2
         x: 384
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a8c293a17ea32f4da62d342ec71b45e
-      internalID: -1652732738
+      spriteID: 87415baa1b41e4747a7dfc4ad5ae68a7
+      internalID: -510268073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anubis_idle_4
+      name: AnubisWALKINGsheet_4
       rect:
         serializedVersion: 2
         x: 512
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c48201df0ff2524796d7a20f64f2cca
-      internalID: 770989848
+      spriteID: 97681c5d1ef50e34dbab07624a2a1040
+      internalID: -992267759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anubis_idle_5
+      name: AnubisWALKINGsheet_5
       rect:
         serializedVersion: 2
         x: 640
@@ -216,8 +216,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fabcda81812e1c14bbcb952f6db0af9b
-      internalID: -1385689118
+      spriteID: b87f44d5c133af348bb2bef921158e1e
+      internalID: -1786218351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnubisWALKINGsheet_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e52472048cd84545b57097af82dc99e
+      internalID: -604502622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnubisWALKINGsheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505334d99b7c19d43846f788d2e7a16e
+      internalID: -1904518286
       vertices: []
       indices: 
       edges: []
@@ -233,12 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      anubis_idle_0: 1023118165
-      anubis_idle_1: 678306546
-      anubis_idle_2: -1839348884
-      anubis_idle_3: -1652732738
-      anubis_idle_4: 770989848
-      anubis_idle_5: -1385689118
+      AnubisWALKINGsheet_0: 1253062472
+      AnubisWALKINGsheet_1: 1297754858
+      AnubisWALKINGsheet_2: -203400011
+      AnubisWALKINGsheet_3: -510268073
+      AnubisWALKINGsheet_4: -992267759
+      AnubisWALKINGsheet_5: -1786218351
+      AnubisWALKINGsheet_6: -604502622
+      AnubisWALKINGsheet_7: -1904518286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

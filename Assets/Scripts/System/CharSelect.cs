@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,6 +14,7 @@ public class CharSelect : MonoBehaviour
     [SerializeField] private GameObject selectMenu;
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private GameObject buttonStart;
+    [SerializeField] private GameObject startGame;
 
     [SerializeField] private GameObject[] pressStartObject;
     [SerializeField] private GameObject[] selectObject;
@@ -145,14 +147,20 @@ public class CharSelect : MonoBehaviour
             StartLevel();
         else if (playerConfirmed[0] && playerConfirmed[1] && playerConfirmed[2] && playerConfirmed[3] && gameManager.InputsPlayers.Count == 4)
             StartLevel();
+        else
+            startGame.SetActive(false);
+
     }
 
     public void StartLevel()
     {
-        if (gameManager.InputsPlayers[0].Button3)
+        startGame.SetActive(true);
+
+        if (gameManager.InputsPlayers[0].ButtonStart)
         {
             gameManager.InputsPlayers[0].Button3 = false;
             gameManager.StartLevel("Fase1");
         }
     }
+
 }
