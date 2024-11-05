@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItenControl : MonoBehaviour
 {
-    private PlayerStatus playerStatus;
+    private PlayerControl playerControl;
     private bool inGet = false;
 
     public void Update()
@@ -14,15 +14,16 @@ public class ItenControl : MonoBehaviour
 
     public void GetStatus()
     {
-        if (inGet == true && playerStatus.SetIten == true)
+        if (inGet == true && playerControl.PlayerStatus.SetIten == true)
         {
-            playerStatus.SetIten = false;
+            playerControl.PlayerStatus.SetIten = false;
+            playerControl.ItenSound();
             SetStatus();
         }
-        else if (inGet == true && playerStatus.InHurt == true) 
+        else if (inGet == true && playerControl.PlayerStatus.InHurt == true) 
         {
             inGet = false;
-            playerStatus = null;
+            playerControl.PlayerStatus = null;
         }
     }
 
@@ -31,19 +32,19 @@ public class ItenControl : MonoBehaviour
         if (tag == "Candy")
         {
             print("GetCandy");
-            playerStatus.Life += 50;
+            playerControl.PlayerStatus.Life += 50;
             Destroy(gameObject);
         }
         if (tag == "Coca")
         {
             print("GetCoca");
-            playerStatus.Life += 200;
+            playerControl.PlayerStatus.Life += 200;
             Destroy(gameObject);
         }
         if (tag == "ExtraLife")
         {
             print("GetExtra");
-            playerStatus.ExtraLife += 1;
+            playerControl.PlayerStatus.ExtraLife += 1;
             Destroy(gameObject);
         }
     }
@@ -55,9 +56,9 @@ public class ItenControl : MonoBehaviour
             && collision.GetComponentInParent<PlayerControl>().InputsPlayers.Button1 
             && collision.GetComponentInParent<PlayerControl>().PlayerStatus.InHurt == false)
         {
-            collision.GetComponentInParent<PlayerControl>().InputsPlayers.Button1 = false;
-            playerStatus = collision.GetComponentInParent<PlayerControl>().PlayerStatus;
-            playerStatus.GetIten = true;
+            playerControl = collision.GetComponentInParent<PlayerControl>();
+            playerControl.InputsPlayers.Button1 = false;
+            playerControl.PlayerStatus.GetIten = true;
             inGet = true;
         }
     }

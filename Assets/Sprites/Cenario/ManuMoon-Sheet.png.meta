@@ -1,0 +1,906 @@
+fileFormatVersion: 2
+guid: 06d62d369698c5c439fc3d4e65bebe89
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a0c8f4117865943a43c903d6b9ee2e
+      internalID: 1907871684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c5053653e4bc74fa56f866e04b48b2
+      internalID: -192095094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1124e716bb379fe42bf990e51744d909
+      internalID: 1862340381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6407fabc0e2d08547bc30366608d9652
+      internalID: -895662293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d784238cfe019846b46954b7dbebb11
+      internalID: -990674611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f5a6e6c94c6b747b3e42dd5bdceb33
+      internalID: -1528542646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e6e93e9e7463347ae6e84cdf990f8b
+      internalID: -490203378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff44c51b384ff2048995cdd3d47c0546
+      internalID: -1680682555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6f86c8e13337240a9ae79268879eda
+      internalID: -584451867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4653da842b33b1c40a04ed66d399eb7c
+      internalID: 1413839435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cbe9466aa8caa47b80abcc5b7a20e3
+      internalID: 1610245730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1212844d822c2a43a83f3838ec86aa9
+      internalID: 482221555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d6c66db3ef8104ab708b14107e6541
+      internalID: -1358029772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972741633bbc29041a7f70e5e6487bfc
+      internalID: 654135133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f6c00cff5e3d74a8f1b79a37f2cfe5
+      internalID: 1206839896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160c7490291a98b47b35ee94a3cfd0c2
+      internalID: 263277774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e49df0cb52f7e4fa9f32513585fb0c
+      internalID: 1530773805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff76d3faa10aa1b459bde7bb1c3eb568
+      internalID: -1328737919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76b8d993c7922944916f5070995e1a8
+      internalID: -667032453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff76ff34046b7cc419e38bac16b93a56
+      internalID: 2139031471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b6bce3bf9dc5c4099424efde10ab4e
+      internalID: -1077862358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab3147c877d7814ba64f20a1d3bed55
+      internalID: -1375977117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfee5d6ea40cef448f22c0ec14b3465
+      internalID: -791203155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3cba088917ad44ea9d22fcc714d5d0
+      internalID: -1668635718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0734aaa9ce4d6914ead6194e5bfdae37
+      internalID: 2041058735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a965a9d8244e046863dae606cf5f3b
+      internalID: 936810778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3c18a5747dae24fb9e01ca73418088
+      internalID: 311170260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e86a665a4c5ed442879c3500abbbd40
+      internalID: -10641495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18170f6491a7091438cee9ba3d708f73
+      internalID: -1543393144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c71513e0684e14d8bb629020b4af4e
+      internalID: -1905852685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2435e1e6713869c4284391afdec05d08
+      internalID: 2006232450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0db87f6b1a2dec4f9f9d010ee70becc
+      internalID: -69661188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede7dbca5407f314fa677fa85ad2b66c
+      internalID: -1402763827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bf37434d998ed49a7e6f9122732884
+      internalID: -1011442240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066c08e13f5c75f43b93ee2241ca521c
+      internalID: -550326048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManuMoon-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74a169e2e684f54c95ba3aaa9de7aa1
+      internalID: 120841990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ManuMoon-Sheet_0: 1907871684
+      ManuMoon-Sheet_1: -192095094
+      ManuMoon-Sheet_10: 1610245730
+      ManuMoon-Sheet_11: 482221555
+      ManuMoon-Sheet_12: -1358029772
+      ManuMoon-Sheet_13: 654135133
+      ManuMoon-Sheet_14: 1206839896
+      ManuMoon-Sheet_15: 263277774
+      ManuMoon-Sheet_16: 1530773805
+      ManuMoon-Sheet_17: -1328737919
+      ManuMoon-Sheet_18: -667032453
+      ManuMoon-Sheet_19: 2139031471
+      ManuMoon-Sheet_2: 1862340381
+      ManuMoon-Sheet_20: -1077862358
+      ManuMoon-Sheet_21: -1375977117
+      ManuMoon-Sheet_22: -791203155
+      ManuMoon-Sheet_23: -1668635718
+      ManuMoon-Sheet_24: 2041058735
+      ManuMoon-Sheet_25: 936810778
+      ManuMoon-Sheet_26: 311170260
+      ManuMoon-Sheet_27: -10641495
+      ManuMoon-Sheet_28: -1543393144
+      ManuMoon-Sheet_29: -1905852685
+      ManuMoon-Sheet_3: -895662293
+      ManuMoon-Sheet_30: 2006232450
+      ManuMoon-Sheet_31: -69661188
+      ManuMoon-Sheet_32: -1402763827
+      ManuMoon-Sheet_33: -1011442240
+      ManuMoon-Sheet_34: -550326048
+      ManuMoon-Sheet_35: 120841990
+      ManuMoon-Sheet_4: -990674611
+      ManuMoon-Sheet_5: -1528542646
+      ManuMoon-Sheet_6: -490203378
+      ManuMoon-Sheet_7: -1680682555
+      ManuMoon-Sheet_8: -584451867
+      ManuMoon-Sheet_9: 1413839435
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,6 +5,7 @@ using UnityEngine.Windows;
 
 public class EnemyStatus : MonoBehaviour
 {
+    private Knockback knockback;
     private GameObject enemy;
 
     private int maxLife;
@@ -18,8 +19,9 @@ public class EnemyStatus : MonoBehaviour
 
     private int force;
 
-    public EnemyStatus(GameObject enemy)
+    public EnemyStatus(Knockback knockback, GameObject enemy)
     {
+        this.knockback = knockback;
         this.enemy = enemy;
         maxLife = 200;
         life = maxLife;
@@ -85,10 +87,13 @@ public class EnemyStatus : MonoBehaviour
 
     public void InHurtLogic(GameObject player)
     {
-        life -= player.GetComponentInParent<PlayerControl>().PlayerStatus.Force;
-        player.GetComponentInParent<PlayerControl>().PlayerStatus.Stamina += 5;
-        player.GetComponentInParent<PlayerControl>().PlayerCombat.CanAttack = true;
-        player.GetComponentInParent<PlayerControl>().AttackSound();
+        PlayerControl playerControl = player.GetComponentInParent<PlayerControl>();
+        life -= playerControl.PlayerStatus.Force;
+        if ((playerControl.PlayerCombat.InCombo == 3 || playerControl.PlayerCombat.HeavyAttack) && life > 0)
+            knockback.Knocking(playerControl.SpriteRenderer);
+        playerControl.PlayerStatus.Stamina += 5;
+        playerControl.PlayerCombat.CanAttack = true;
+        playerControl.AttackSound(playerControl.PlayerCombat.InCombo - 1);
         player.GetComponentInParent<PlayerHUD>().AddHit();
         inHurt = true;
     }

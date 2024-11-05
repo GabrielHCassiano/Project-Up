@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private GameObject player;
     private InputsPlayers inputsPlayers;
     private Rigidbody2D rb;
+    private Knockback knockback;
 
     private Vector2 direction;
 
@@ -28,10 +29,11 @@ public class PlayerMovement : MonoBehaviour
     private bool inputDashLeft = false;
     private bool inputDashRight = false;
 
-    public PlayerMovement(GameObject player, Rigidbody2D rb, InputsPlayers inputsPlayers)
+    public PlayerMovement(GameObject player, Rigidbody2D rb, Knockback knockback, InputsPlayers inputsPlayers)
     {
         this.player = player;
         this.rb = rb;
+        this.knockback = knockback;
         this.inputsPlayers = inputsPlayers;
     }
 
@@ -94,18 +96,22 @@ public class PlayerMovement : MonoBehaviour
     {
 
         direction = new Vector2(inputsPlayers.MoveDirection.x, inputsPlayers.MoveDirection.y).normalized;
-
         if (direction == Vector2.zero)
         {
             rb.mass = 100000;
         }
         else
             rb.mass = 0.00001f;
-
-        if (canMove)
-            rb.velocity = direction * speed;
+       
+        if (knockback.KnockbackCountLogic < 0)
+        {
+            if (canMove)
+                rb.velocity = direction * speed;
+        }
+        else
+            knockback.KnockLogic();
         //else if (inJump)
-            //rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+        //rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
     }
 
     public void JumpLogic()

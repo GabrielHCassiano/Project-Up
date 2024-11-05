@@ -31,9 +31,9 @@ public class EnemyCombat : MonoBehaviour
 
     public void AttackLogic()
     {
-        if (inAttack)
+        /*if (inAttack)
         {
-            if (delayAttack >= 0.3f)
+            if (delayAttack >= 0.01f)
             {
                 delayAttack = 0;
                 inAttack = false;
@@ -41,7 +41,7 @@ public class EnemyCombat : MonoBehaviour
             }
             else
                 delayAttack += 1 * Time.deltaTime;
-        }
+        }*/
 
         if (!canAttack && !inAttack)
         {
@@ -53,12 +53,13 @@ public class EnemyCombat : MonoBehaviour
             else
                 attackCooldown += 1 * Time.deltaTime;
         }
-        if (canAttack && enemyMovement.Distance < 2)
+        if (canAttack && enemyMovement.Distance < 2 && enemyMovement.Distance != 0)
         {
             rb.velocity = Vector2.zero;
             enemyMovement.CanMove = false;
             canAttack = false;
-            inAttack = true;
+            attack1 = true;
+            //inAttack = true;
         }
         else if (!canAttack && enemyMovement.Distance > 2)
         {

@@ -72,7 +72,8 @@ public class PlayerCombat : MonoBehaviour
             playerMovement.CanMove = false;
             playerMovement.CanDash = false;
             canAttack = false;
-            inCombo++;
+            if (inCombo < 3)
+                inCombo++;
             combo = inCombo;
         }
     }

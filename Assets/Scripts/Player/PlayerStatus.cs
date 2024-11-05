@@ -7,6 +7,7 @@ public class PlayerStatus : MonoBehaviour
 {
     private PlayerControl playerControl;
     private SpriteRenderer spriteRenderer;
+    private Knockback knockback;
     private InputsPlayers inputsPlayers;
 
     private int maxLife;
@@ -24,10 +25,11 @@ public class PlayerStatus : MonoBehaviour
 
     private Vector3 checkpoint;
 
-    public PlayerStatus(PlayerControl playerControl, SpriteRenderer spriteRenderer, InputsPlayers inputsPlayers)
+    public PlayerStatus(PlayerControl playerControl, SpriteRenderer spriteRenderer, Knockback knockback, InputsPlayers inputsPlayers)
     {
         this.playerControl = playerControl;
         this.spriteRenderer = spriteRenderer;
+        this.knockback = knockback;
         this.inputsPlayers = inputsPlayers;
         checkpoint = playerControl.transform.position;
         maxLife = 200;
@@ -91,6 +93,13 @@ public class PlayerStatus : MonoBehaviour
         set { setIten = value; }
     }
 
+    public bool Death
+    {
+        get { return death; }
+        set { death = value; }
+    }
+
+
     public void StatusBalance()
     {
         if (life > maxLife)
@@ -138,6 +147,8 @@ public class PlayerStatus : MonoBehaviour
     public void InHurtLogic(GameObject enemy)
     {
         life -= enemy.GetComponentInParent<EnemyControl>().EnemyStatus.Force;
+        if (life > 0)
+            knockback.Knocking(enemy.GetComponentInParent<EnemyControl>().SpriteRenderer);
         enemy.GetComponentInParent<EnemyControl>().AttackSound();
         inHurt = true;
     }

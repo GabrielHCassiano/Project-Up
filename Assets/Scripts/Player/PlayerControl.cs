@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -19,10 +20,11 @@ public class PlayerControl : MonoBehaviour
     private PlayerHUD playerHUD;
 
     private Rigidbody2D rb;
+    private Knockback knockback;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private AudioSource attackAudio;
+    [SerializeField] private AudioSource[] audios;
 
     // Start is called before the first frame update
     void Start()
@@ -30,18 +32,17 @@ public class PlayerControl : MonoBehaviour
         playerHurtbox = GetComponentInChildren<PlayerHurtbox>();
 
         rb = GetComponent<Rigidbody2D>();
+        knockback = GetComponent<Knockback>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
         playerHUD = GetComponent<PlayerHUD>();
 
-        attackAudio = GetComponent<AudioSource>();
-
         playerHUD.SetPlayerUI(inputsPlayers.PlayerData);
         animator.runtimeAnimatorController = inputsPlayers.PlayerData.AnimatorController;
 
-        playerMovement = new PlayerMovement(gameObject, rb, inputsPlayers);
-        playerStatus = new PlayerStatus(this, spriteRenderer, inputsPlayers);
+        playerMovement = new PlayerMovement(gameObject, rb, knockback, inputsPlayers);
+        playerStatus = new PlayerStatus(this, spriteRenderer, knockback, inputsPlayers);
         playerCombat = new PlayerCombat(playerMovement, playerStatus, rb, inputsPlayers);
         playerAnimation = new PlayerAnimation(animator, spriteRenderer, playerMovement, playerStatus, playerCombat, inputsPlayers);
 
@@ -56,12 +57,12 @@ public class PlayerControl : MonoBehaviour
         playerMovement.DashLogic();
         //playerMovement.JumpLogic();
         playerCombat.AttackLogic();
-        //playerCombat.HeavyAttackLogic();
-        //playerCombat.SpecialAttackLogic();
+        playerCombat.HeavyAttackLogic();
+        playerCombat.SpecialAttackLogic();
         playerStatus.StatusBalance();
         playerStatus.DeathLogic();
         playerHUD.SetHUD(playerStatus);
-        //playerHUD.HeavyAnim(playerCombat, spriteRenderer);
+        playerHUD.HeavyAnim(playerCombat, spriteRenderer);
         playerAnimation.FlipLogic();
         playerAnimation.AnimationLogic();
     }
@@ -100,6 +101,12 @@ public class PlayerControl : MonoBehaviour
         get { return playerStatus; }
         set { playerStatus = value; }
     }
+    public SpriteRenderer SpriteRenderer
+    {
+        get { return spriteRenderer; }
+        set { spriteRenderer = value; }
+    }
+
 
     public void GetIten()
     {
@@ -108,6 +115,16 @@ public class PlayerControl : MonoBehaviour
         playerCombat.CanAttack = false;
         playerStatus.GetIten = false;
         playerMovement.ResetDash();
+    }
+
+    public void MoveChar(float speed)
+    {
+        rb.velocity = new Vector2(speed * spriteRenderer.transform.localScale.x, rb.velocity.y);
+    }
+
+    public void MoveZeroChar()
+    {
+        rb.velocity = Vector2.zero;
     }
 
     public void SetIten()
@@ -139,8 +156,13 @@ public class PlayerControl : MonoBehaviour
         playerHUD.CancelHit();
     }
 
-    public void AttackSound()
+    public void AttackSound(int id)
     {
-        attackAudio.Play();
+        audios[id].Play();
+    }
+
+    public void ItenSound()
+    {
+        audios[3].Play();
     }
 }

@@ -44,11 +44,11 @@ public class BoxControl : MonoBehaviour
             && ground <= collision.GetComponentInParent<PlayerControl>().PlayerMovement.Ground + 1.0f
             && ground >= collision.GetComponentInParent<PlayerControl>().PlayerMovement.Ground - 1.0f)
         {
-            print("(Box) Player-Hit");
-            life -= collision.GetComponentInParent<PlayerControl>().PlayerStatus.Force;
-            collision.GetComponentInParent<PlayerControl>().PlayerStatus.Stamina += 5;
-            collision.GetComponentInParent<PlayerControl>().AttackSound();
-            collision.GetComponentInParent<PlayerControl>().PlayerCombat.CanAttack = true;
+            PlayerControl playerControl = collision.GetComponentInParent<PlayerControl>();
+            life -= playerControl.PlayerStatus.Force;
+            playerControl.PlayerStatus.Stamina += 5;
+            playerControl.AttackSound(playerControl.PlayerCombat.InCombo - 1);
+            playerControl.PlayerCombat.CanAttack = true;
             collision.GetComponentInParent<PlayerHUD>().AddHit();
         }
     }

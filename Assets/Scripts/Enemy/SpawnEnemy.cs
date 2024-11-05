@@ -65,7 +65,6 @@ public class SpawnEnemy : MonoBehaviour
             posX = Random.Range(minPosX, maxPosX);
             posY = Random.Range(minPosY, maxPosY);
             Vector3 enemyPos = new Vector2(posX, posY);
-            print((enemyPos + transform.position));
             Instantiate(enemyBase, enemyPos + transform.position, Quaternion.identity, transform);
         }
     }
@@ -74,8 +73,6 @@ public class SpawnEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         players = GameObject.FindGameObjectsWithTag("Player");
-
-        print(players.Length);
 
         if (players.Length == 1 || players.Length == 2)
             difficult = 1;

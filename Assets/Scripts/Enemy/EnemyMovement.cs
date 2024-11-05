@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
+    private NavMeshAgent navMeshAgent;
     private Rigidbody2D rb;
+    private Knockback knockback;
 
     private GameObject enemy;
     private GameObject[] players;
@@ -20,11 +24,15 @@ public class EnemyMovement : MonoBehaviour
     private bool lockMove;
     private int idLockPlayer = 0;
 
+    private bool canEnemy = true;
+
     private bool inSpawn = true;
 
-    public EnemyMovement(Rigidbody2D rb,GameObject enemy, GameObject[] players)
+    public EnemyMovement(NavMeshAgent navMeshAgent, Rigidbody2D rb, Knockback knockback, GameObject enemy, GameObject[] players)
     {
+        this.navMeshAgent = navMeshAgent;
         this.rb = rb;
+        this.knockback = knockback;
         this.enemy = enemy;
         this.players = players;
     }
@@ -68,36 +76,54 @@ public class EnemyMovement : MonoBehaviour
 
     public void MoveLogic()
     {
-        direction = players[idLockPlayer].transform.position - enemy.transform.position;  
-        direction = direction.normalized;
+        direction = players[idLockPlayer].transform.position;
+        //direction = players[idLockPlayer].transform.position - enemy.transform.position;  
+        //direction = direction.normalized;
 
-        if (canMove && lockMove && players[idLockPlayer].GetComponentInChildren<SpriteRenderer>().gameObject.activeSelf)
+        if (knockback.KnockbackCountLogic < 0)
         {
-            rb.velocity = direction * speed;
+            if (canMove && lockMove && !players[idLockPlayer].GetComponent<PlayerControl>().PlayerStatus.Death)
+            {
+                canEnemy = true;
+                //rb.velocity = direction * speed;
+                navMeshAgent.SetDestination(direction);
+                
+            }
+            else if(players[idLockPlayer].GetComponent<PlayerControl>().PlayerStatus.Death)
+            {
+                rb.velocity = Vector2.zero;
+                canEnemy = false;
+                distance = 0;
+            }
         }
+        else
+            knockback.KnockLogic();
     }
 
     public void LockPlayer()
     {
-        for (int i = 0; i < players.Length; i++)
+        if (canEnemy)
         {
-            float distanceCurrent = Vector2.Distance(players[idLockPlayer].transform.position, enemy.transform.position);
-            float newDistance = Vector2.Distance(players[i].transform.position, enemy.transform.position);
-            if (newDistance < distanceCurrent)
+            for (int i = 0; i < players.Length; i++)
             {
-                idLockPlayer = i;
-                distanceCurrent = newDistance;
+                float distanceCurrent = Vector2.Distance(players[idLockPlayer].transform.position, enemy.transform.position);
+                float newDistance = Vector2.Distance(players[i].transform.position, enemy.transform.position);
+                if (newDistance < distanceCurrent)
+                {
+                    idLockPlayer = i;
+                    distanceCurrent = newDistance;
+                }
+                distance = distanceCurrent;
             }
-            distance = distanceCurrent;
-        }
-        if (distance < 5 || distance > 15)
-        {
-            lockMove = true;
-        }
-        else
-        {
-            //lockMove = false;
-            //rb.velocity = Vector2.zero;
+            if (distance < 5 || distance > 15)
+            {
+                lockMove = true;
+            }
+            else
+            {
+                //lockMove = false;
+                //rb.velocity = Vector2.zero;
+            }
         }
     }
 

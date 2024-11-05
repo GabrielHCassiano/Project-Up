@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyControl : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class EnemyControl : MonoBehaviour
 
     [SerializeField] private GameObject[] players;
 
+    private NavMeshAgent navMeshAgent;
     private Rigidbody2D rb;
+    private Knockback knockback;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
@@ -25,14 +28,18 @@ public class EnemyControl : MonoBehaviour
 
         enemyHurtbox = GetComponentInChildren<EnemyHurtbox>();
 
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
         rb = GetComponent<Rigidbody2D>();
+        knockback = GetComponent<Knockback>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
         attackAudio = GetComponent<AudioSource>();
 
-        enemyMovement = new EnemyMovement(rb, gameObject, players);
-        enemyStatus = new EnemyStatus(gameObject);
+        enemyMovement = new EnemyMovement(navMeshAgent, rb, knockback, gameObject, players);
+        enemyStatus = new EnemyStatus(knockback, gameObject);
         enemyCombat = new EnemyCombat(rb, enemyMovement, enemyStatus);
         enemyAnimation = new EnemyAnimation(animator, spriteRenderer, rb, enemyMovement, enemyStatus, enemyCombat);
 
@@ -66,6 +73,12 @@ public class EnemyControl : MonoBehaviour
     {
         get { return enemyStatus; }
         set { enemyStatus = value; }
+    }
+
+    public SpriteRenderer SpriteRenderer 
+    { 
+        get { return spriteRenderer; }
+        set { spriteRenderer = value; }
     }
 
     public void SetForce(int force)

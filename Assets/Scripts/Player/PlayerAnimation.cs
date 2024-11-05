@@ -22,14 +22,14 @@ public class PlayerAnimation : MonoBehaviour
 
     public void FlipLogic()
     {
-        if (inputsPlayers.MoveDirection.x > 0 && !playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0)
+        if (inputsPlayers.MoveDirection.x > 0 && !playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0 && !playerCombat.HeavyAttack)
             spriteRenderer.transform.localScale = new Vector2(1, spriteRenderer.transform.localScale.y);
-        else if (inputsPlayers.MoveDirection.x < 0 && !playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0)
+        else if (inputsPlayers.MoveDirection.x < 0 && !playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0 && !playerCombat.HeavyAttack)
             spriteRenderer.transform.localScale = new Vector2(-1, spriteRenderer.transform.localScale.y);
 
-        if (playerMovement.DirectionDash > 0 && playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0)
+        if (playerMovement.DirectionDash > 0 && playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0 && !playerCombat.HeavyAttack)
             spriteRenderer.transform.localScale = new Vector2(1, spriteRenderer.transform.localScale.y);
-        else if (playerMovement.DirectionDash < 0 && playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0)
+        else if (playerMovement.DirectionDash < 0 && playerMovement.InDash && !playerMovement.InJump && playerCombat.InCombo == 0 && !playerCombat.HeavyAttack)
             spriteRenderer.transform.localScale = new Vector2(-1, spriteRenderer.transform.localScale.y);
     }
 

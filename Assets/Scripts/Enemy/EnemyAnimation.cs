@@ -23,9 +23,9 @@ public class EnemyAnimation : MonoBehaviour
 
     public void FlipLogic()
     {
-        if (enemyMovement.Direction.x > 0)
+        if (enemyMovement.Direction.x > 0 && !enemyStatus.InHurt)
             spriteRenderer.transform.localScale = new Vector2(1, spriteRenderer.transform.localScale.y);
-        else if (enemyMovement.Direction.x < 0)
+        else if (enemyMovement.Direction.x < 0 && !enemyStatus.InHurt)
             spriteRenderer.transform.localScale = new Vector2(-1, spriteRenderer.transform.localScale.y);
     }
 
