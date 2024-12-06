@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.Rendering.VolumeComponent;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerStatus : MonoBehaviour
     private bool getIten;
     private bool setIten;
     private bool death;
+    private bool trueDeath;
+
 
     private int force;
 
@@ -31,10 +34,10 @@ public class PlayerStatus : MonoBehaviour
         this.spriteRenderer = spriteRenderer;
         this.knockback = knockback;
         this.inputsPlayers = inputsPlayers;
-        checkpoint = playerControl.transform.position;
-        maxLife = 200;
+        this.checkpoint = playerControl.transform.position;
+        maxLife = 50;
         life = maxLife;
-        maxStamina = 100;
+        maxStamina = 25;
         stamina = maxStamina;
         extraLife = 1;
     }
@@ -99,6 +102,12 @@ public class PlayerStatus : MonoBehaviour
         set { death = value; }
     }
 
+    public bool TrueDeath
+    {
+        get { return trueDeath; }
+        set { trueDeath = value; }
+    }
+
 
     public void StatusBalance()
     {
@@ -120,17 +129,17 @@ public class PlayerStatus : MonoBehaviour
         }
         if (death)
         {
-            spriteRenderer.gameObject.SetActive(false);
+            inputsPlayers.MoveDirection = Vector2.zero;
             playerControl.InStun();
         }
 
-        if (inputsPlayers.ButtonStart && death && extraLife > 0 && extraLife - 1 >= 0)
+        if (inputsPlayers.ButtonStart && death && !trueDeath && extraLife > 0 && extraLife - 1 >= 0)
         {
             extraLife -= 1;
             life = maxLife;
             stamina = maxStamina;
             death = false;
-            //playerControl.transform.position = checkpoint;
+            playerControl.transform.position = new Vector2(checkpoint.x + FindObjectOfType<Camera>().transform.position.x, checkpoint.y + FindObjectOfType<Camera>().transform.position.y);
             inputsPlayers.ButtonStart = false;
             spriteRenderer.gameObject.SetActive(true);
             playerControl.ResetAttack();
@@ -138,18 +147,23 @@ public class PlayerStatus : MonoBehaviour
 
         if (death && extraLife == 0)
         {
-            Destroy(GameManager.Instance.gameObject);
-            SceneManager.LoadScene(0);
+            trueDeath = true;
         }
 
     }
 
     public void InHurtLogic(GameObject enemy)
     {
-        life -= enemy.GetComponentInParent<EnemyControl>().EnemyStatus.Force;
-        if (life > 0)
-            knockback.Knocking(enemy.GetComponentInParent<EnemyControl>().SpriteRenderer);
-        enemy.GetComponentInParent<EnemyControl>().AttackSound();
+        EnemyControl enemyControl = enemy.GetComponentInParent<EnemyControl>();
+
+        life -= enemyControl.EnemyStatus.Force;
+        if (enemyControl.EnemyCombat.InCombo == enemyControl.LeghtCombo && life > 0)
+        {
+            knockback.Knocking(enemyControl.SpriteRenderer);
+        }
+        if (enemyControl.EnemyCombat.InCombo < enemyControl.LeghtCombo)
+            enemyControl.EnemyCombat.CanAttack = true;
+        enemyControl.AttackSound();
         inHurt = true;
     }
 

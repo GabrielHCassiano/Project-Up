@@ -9,6 +9,14 @@ public class ParallaxControl : MonoBehaviour
     [SerializeField] private GameObject cam;
     [SerializeField] private float parallaxEffect;
 
+    [SerializeField] private float diference;
+
+    private Vector3 pos;
+
+    [SerializeField] private float distance;
+    [SerializeField] private float movement;
+
+    [SerializeField] private bool canCloud;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,28 +27,37 @@ public class ParallaxControl : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        float distance = cam.transform.position.x * parallaxEffect;
-        float movement = cam.transform.position.x * (1 - parallaxEffect);
-
-        transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
-
-        if (movement > startPos + lenght)
-            startPos += lenght;
-        else if (movement < startPos - lenght)
-            startPos -= lenght;
+        ParallaxLogic();
     }
 
     public void ParallaxLogic()
     {
-        float distance = cam.transform.position.x * parallaxEffect;
-        float movement = cam.transform.position.x * (1 - parallaxEffect);
+        if (canCloud)
+        {
+            distance += (0.1f * Time.deltaTime)/* * parallaxEffect*/;
+            movement -= (0.1f * Time.deltaTime)/* * (1 - parallaxEffect)*/;
 
-        transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
+            transform.position = new Vector3(startPos + distance + cam.transform.position.x, transform.position.y, transform.position.z);
 
-        if (movement > startPos + lenght)
-            startPos += lenght;
-        else if (movement < startPos - lenght)
-            startPos -= lenght;
+            if (movement > startPos + lenght)
+                startPos += lenght;
+            else if (movement < startPos - lenght)
+                startPos -= lenght;
+        }
+        else
+        {
+            pos = cam.transform.position;
+
+            distance = pos.x * parallaxEffect;
+            movement = pos.x * (1 - parallaxEffect);
+
+            transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
+
+            if (movement > startPos + lenght + diference)
+                startPos += lenght + diference;
+            else if (movement < startPos - lenght + diference)
+                startPos -= lenght + diference;
+        }
     }
 
 }

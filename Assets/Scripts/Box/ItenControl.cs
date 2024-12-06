@@ -31,21 +31,18 @@ public class ItenControl : MonoBehaviour
     {
         if (tag == "Candy")
         {
-            print("GetCandy");
-            playerControl.PlayerStatus.Life += 50;
-            Destroy(gameObject);
+            playerControl.PlayerStatus.Life += 5;
+            gameObject.SetActive(false);
         }
         if (tag == "Coca")
         {
-            print("GetCoca");
-            playerControl.PlayerStatus.Life += 200;
-            Destroy(gameObject);
+            playerControl.PlayerStatus.Life += 20;
+            gameObject.SetActive(false);
         }
         if (tag == "ExtraLife")
         {
-            print("GetExtra");
             playerControl.PlayerStatus.ExtraLife += 1;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

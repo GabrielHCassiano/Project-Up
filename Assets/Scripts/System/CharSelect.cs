@@ -20,6 +20,7 @@ public class CharSelect : MonoBehaviour
     [SerializeField] private GameObject[] selectObject;
     [SerializeField] private GameObject[] select;
     [SerializeField] private GameObject[] selectCharIcon;
+    [SerializeField] private TextMeshProUGUI[] inputsIcons;
 
     [SerializeField] private TextMeshProUGUI[] charName;
     [SerializeField] private Animator[] charAnimator;
@@ -89,6 +90,11 @@ public class CharSelect : MonoBehaviour
             pressStartObject[i].SetActive(!gameManager.InputsPlayers[i].gameObject.activeSelf);
             selectObject[i].SetActive(gameManager.InputsPlayers[i].gameObject.activeSelf);
             select[i].SetActive(gameManager.InputsPlayers[i].gameObject.activeSelf);
+
+
+
+            if (!pressStartObject[i].activeSelf)
+                inputsIcons[i].text = " <sprite=" + gameManager.InputsPlayers[i].IdButton3 + "> Seleciona \n <sprite=" + gameManager.InputsPlayers[i].IdButton2 + "> Voltar";
 
             charName[i].text = charsNames[idChar[i]];
             select[i].transform.parent = selectCharIcon[idChar[i]].transform;

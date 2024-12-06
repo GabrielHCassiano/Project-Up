@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
-[CreateAssetMenu(fileName = "New Player Data", menuName = "Player Data")]
 public class PlayerData : ScriptableObject
 {
     [SerializeField] private string playerName;
     [SerializeField] private string charName;
     [SerializeField] private Sprite iconSprite;
     [SerializeField] private RuntimeAnimatorController animatorController;
+    private int comboScore = 0;
 
     public string PlayerName
     { 
@@ -32,5 +33,11 @@ public class PlayerData : ScriptableObject
     {
         get { return animatorController; }
         set { animatorController = value; }
+    }
+
+    public int ComboScore
+    {
+        get { return comboScore; }
+        set { comboScore = value; }
     }
 }

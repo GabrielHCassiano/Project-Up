@@ -19,11 +19,11 @@ public class EnemyStatus : MonoBehaviour
 
     private int force;
 
-    public EnemyStatus(Knockback knockback, GameObject enemy)
+    public EnemyStatus(Knockback knockback, GameObject enemy, int maxLife)
     {
         this.knockback = knockback;
         this.enemy = enemy;
-        maxLife = 200;
+        this.maxLife = maxLife;
         life = maxLife;
         maxStamina = 0;
         stamina = maxStamina;
@@ -76,6 +76,7 @@ public class EnemyStatus : MonoBehaviour
         if (life <= 0 && canDeath)
         {
             death = true;
+            enemy.GetComponent<EnemyControl>().EnemyMovement.NavMeshAgent.velocity = Vector3.zero;
             canDeath = false;
         }
     }
@@ -91,9 +92,16 @@ public class EnemyStatus : MonoBehaviour
         life -= playerControl.PlayerStatus.Force;
         if ((playerControl.PlayerCombat.InCombo == 3 || playerControl.PlayerCombat.HeavyAttack) && life > 0)
             knockback.Knocking(playerControl.SpriteRenderer);
-        playerControl.PlayerStatus.Stamina += 5;
+        playerControl.PlayerStatus.Stamina += 2;
         playerControl.PlayerCombat.CanAttack = true;
-        playerControl.AttackSound(playerControl.PlayerCombat.InCombo - 1);
+
+        if (!playerControl.PlayerCombat.HeavyAttack && !playerControl.PlayerCombat.SpecialAttack)
+            playerControl.AttackSound(playerControl.PlayerCombat.InCombo - 1);
+        else if (playerControl.PlayerCombat.HeavyAttack && !playerControl.PlayerCombat.SpecialAttack)
+            playerControl.AttackSound(2);
+        else
+            playerControl.AttackSound(0);
+
         player.GetComponentInParent<PlayerHUD>().AddHit();
         inHurt = true;
     }

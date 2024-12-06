@@ -17,7 +17,6 @@ public class EnemyHurtbox : MonoBehaviour
             && GetComponentInParent<EnemyControl>().EnemyMovement.Ground <= collision.GetComponentInParent<PlayerControl>().PlayerMovement.Ground + 1.0f 
             && GetComponentInParent<EnemyControl>().EnemyMovement.Ground >= collision.GetComponentInParent<PlayerControl>().PlayerMovement.Ground - 1.0f)
         {
-            print("Player-Hit");
             enemyStatus.InHurtLogic(collision.gameObject);
         }
     }

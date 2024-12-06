@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     private float speed = 2;
 
     private Vector3 direction;
+    private Vector3 directionEnemy;
     private float distance;
 
     private float ground;
@@ -37,10 +37,16 @@ public class EnemyMovement : MonoBehaviour
         this.players = players;
     }
 
-    public Vector2 Direction
+    public NavMeshAgent NavMeshAgent
+    {
+        get { return navMeshAgent; }
+        set { navMeshAgent = value; }
+    }
+
+    public Vector2 DirectionEnemy
     { 
-        get { return direction; }
-        set { direction = value; }
+        get { return directionEnemy; }
+        set { directionEnemy = value; }
     }
 
     public float Distance
@@ -77,23 +83,48 @@ public class EnemyMovement : MonoBehaviour
     public void MoveLogic()
     {
         direction = players[idLockPlayer].transform.position;
+        directionEnemy = players[idLockPlayer].transform.position - enemy.transform.position;
         //direction = players[idLockPlayer].transform.position - enemy.transform.position;  
         //direction = direction.normalized;
 
         if (knockback.KnockbackCountLogic < 0)
         {
-            if (canMove && lockMove && !players[idLockPlayer].GetComponent<PlayerControl>().PlayerStatus.Death)
+            if (canMove && !players[idLockPlayer].GetComponent<PlayerControl>().PlayerStatus.Death)
             {
+                if (navMeshAgent.isStopped == true && players.Length == 1)
+                {
+                    idLockPlayer = 0;
+                    navMeshAgent.isStopped = false;
+                    canEnemy = true;
+                }
+
                 canEnemy = true;
                 //rb.velocity = direction * speed;
                 navMeshAgent.SetDestination(direction);
-                
+                //navMeshAgent.isStopped = true;
             }
             else if(players[idLockPlayer].GetComponent<PlayerControl>().PlayerStatus.Death)
             {
-                rb.velocity = Vector2.zero;
-                canEnemy = false;
-                distance = 0;
+                if (idLockPlayer < players.Length - 1 && players.Length > 1)
+                {
+                    idLockPlayer++;
+                }
+                else if (idLockPlayer == players.Length - 1 && players.Length > 1)
+                {
+                    idLockPlayer = 0;
+                }
+
+                if ((players[0].GetComponent<PlayerControl>().PlayerStatus.Death && players.Length == 1) ||
+                    (players[0].GetComponent<PlayerControl>().PlayerStatus.Death && players[1].GetComponent<PlayerControl>().PlayerStatus.Death && players.Length == 20))
+                {
+                    idLockPlayer = 0;
+                    navMeshAgent.isStopped = true;
+                    navMeshAgent.velocity = Vector2.zero;
+                    rb.velocity = Vector2.zero;
+                    canEnemy = false;
+                    distance = 0;
+                }
+               
             }
         }
         else
@@ -108,14 +139,14 @@ public class EnemyMovement : MonoBehaviour
             {
                 float distanceCurrent = Vector2.Distance(players[idLockPlayer].transform.position, enemy.transform.position);
                 float newDistance = Vector2.Distance(players[i].transform.position, enemy.transform.position);
-                if (newDistance < distanceCurrent)
+                if (newDistance < distanceCurrent && !players[i].GetComponent<PlayerControl>().PlayerStatus.Death)
                 {
                     idLockPlayer = i;
                     distanceCurrent = newDistance;
                 }
                 distance = distanceCurrent;
             }
-            if (distance < 5 || distance > 15)
+            /*if (distance < 5 || distance > 15)
             {
                 lockMove = true;
             }
@@ -123,7 +154,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 //lockMove = false;
                 //rb.velocity = Vector2.zero;
-            }
+            }*/
         }
     }
 

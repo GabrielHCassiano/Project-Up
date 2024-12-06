@@ -60,7 +60,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Button 3 Hold",
+                    "name": "Button 4 Hold",
                     "type": "Button",
                     "id": "4448e2c7-e7eb-47ce-858b-6092b59ff8e6",
                     "expectedControlType": "Button",
@@ -708,7 +708,7 @@
                 {
                     "name": "",
                     "id": "30f73c9a-aff5-47ce-86dc-d3e41566f4ac",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -763,7 +763,7 @@
                 {
                     "name": "",
                     "id": "9ecd0808-2b99-4de4-9522-079703b5fa0d",
-                    "path": "<Keyboard>/j",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -818,7 +818,7 @@
                 {
                     "name": "",
                     "id": "45991302-2dba-4593-af29-e6754982afcf",
-                    "path": "<Keyboard>/l",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -1181,11 +1181,11 @@
                 {
                     "name": "",
                     "id": "55fde5ae-75a3-4f00-abc0-6085ad103a26",
-                    "path": "<HID:: USB Gamepad          >/button3",
+                    "path": "<HID:: USB Gamepad          >/button4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 01",
-                    "action": "Button 3 Hold",
+                    "action": "Button 4 Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1196,7 +1196,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Button 3 Hold",
+                    "action": "Button 4 Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1207,29 +1207,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Button 3 Hold",
+                    "action": "Button 4 Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "ead1ee72-a499-4fd5-9070-1f19f0a210f0",
-                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 02",
-                    "action": "Button 3 Hold",
+                    "action": "Button 4 Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "2ba99983-5484-4b04-a561-7d6b21b39906",
-                    "path": "<HID::Microntek              USB Joystick          >/button3",
+                    "path": "<HID::Microntek              USB Joystick          >/button4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 03",
-                    "action": "Button 3 Hold",
+                    "action": "Button 4 Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1292,6 +1292,28 @@
                     "name": "",
                     "id": "1cc37073-f417-4e06-8089-2408357ade75",
                     "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70d225c0-633a-4759-b9aa-0a053413ee64",
+                    "path": "<HID::Microntek              USB Joystick          >/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82a43089-1c18-46c0-b262-4d91b83472b2",
+                    "path": "<HID::Microntek              USB Joystick          >/stick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 02",
@@ -1380,6 +1402,28 @@
                     "name": "",
                     "id": "b00dba82-25bc-47e0-b3cd-c190375d7498",
                     "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17a8f6b9-7dbb-4c3d-a107-1dec7b47da1f",
+                    "path": "<HID::Microntek              USB Joystick          >/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick 02",
+                    "action": "DashRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93863159-3633-4739-8796-8487ffddd92e",
+                    "path": "<HID::Microntek              USB Joystick          >/stick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick 02",

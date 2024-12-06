@@ -239,7 +239,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2875401548170692944}
         m_TargetAssemblyTypeName: InputsPlayers, Assembly-CSharp
-        m_MethodName: Button3HoldSet
+        m_MethodName: Button4HoldSet
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -307,7 +307,7 @@ MonoBehaviour:
   button1: 0
   button2: 0
   button3: 0
-  button3Hold: 0
+  button4Hold: 0
   button4: 0
   buttonR1: 0
   buttonR2: 0
@@ -315,4 +315,54 @@ MonoBehaviour:
   buttonL2: 0
   buttonStart: 0
   buttonSelect: 0
+  keyboardIDs:
+  - 15
+  - 14
+  - 13
+  - 12
+  - 16
+  - 18
+  - 17
+  - 19
+  - 26
+  playstationIDs:
+  - 2
+  - 3
+  - 0
+  - 1
+  - 20
+  - '21 '
+  - 22
+  - 23
+  - 26
+  xboxIDs:
+  - 10
+  - 11
+  - 8
+  - 9
+  - 20
+  - '21 '
+  - 22
+  - 23
+  - 26
+  nintendoIDs:
+  - 9
+  - 8
+  - 11
+  - 10
+  - 20
+  - '21 '
+  - 22
+  - 23
+  - 26
+  genericIDs:
+  - 6
+  - 7
+  - 4
+  - 5
+  - 20
+  - '21 '
+  - 22
+  - 23
+  - 26
   playerData: {fileID: 0}

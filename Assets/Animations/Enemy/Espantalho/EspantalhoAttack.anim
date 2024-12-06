@@ -192,7 +192,7 @@ AnimationClip:
     - time: 0.41666666
       value: {fileID: 893531596, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
     - time: 0.5
-      value: {fileID: -1127034450, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
+      value: {fileID: -1492597660, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
@@ -266,7 +266,7 @@ AnimationClip:
     - {fileID: -1078727200, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
     - {fileID: -1694598244, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
     - {fileID: 893531596, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
-    - {fileID: -1127034450, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
+    - {fileID: -1492597660, guid: 8e278dfd52a296247a66d9fd22e9d1d9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -452,11 +452,18 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
+    functionName: SetCombo
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
     functionName: SetForce
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 40
+    intParameter: 3
     messageOptions: 0
   - time: 0.5
     functionName: ResetStatus

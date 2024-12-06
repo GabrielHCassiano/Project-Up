@@ -10,18 +10,23 @@ public class BoxControl : MonoBehaviour
 
     [SerializeField] private GameObject iten;
 
+    [SerializeField] private bool secret = false;
+
     private float ground;
+
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         ground = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        DropItenLogic();
+        AnimatorLogic();
     }
 
     public void DropItenLogic()
@@ -38,6 +43,17 @@ public class BoxControl : MonoBehaviour
         }
     }
 
+    public void ResetHitSecret()
+    {
+        animator.SetBool("Hurt", false);
+    }
+
+
+    public void AnimatorLogic()
+    {
+        animator.SetInteger("Life", life);
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("HitboxPlayer")
@@ -46,10 +62,23 @@ public class BoxControl : MonoBehaviour
         {
             PlayerControl playerControl = collision.GetComponentInParent<PlayerControl>();
             life -= playerControl.PlayerStatus.Force;
-            playerControl.PlayerStatus.Stamina += 5;
-            playerControl.AttackSound(playerControl.PlayerCombat.InCombo - 1);
+            playerControl.PlayerStatus.Stamina += 2;
+
+            if (!playerControl.PlayerCombat.HeavyAttack && !playerControl.PlayerCombat.SpecialAttack)
+                playerControl.AttackSound(playerControl.PlayerCombat.InCombo - 1);
+            else if (playerControl.PlayerCombat.HeavyAttack && !playerControl.PlayerCombat.SpecialAttack)
+                playerControl.AttackSound(2);
+            else
+                playerControl.AttackSound(0);
+
             playerControl.PlayerCombat.CanAttack = true;
-            collision.GetComponentInParent<PlayerHUD>().AddHit();
+
+            animator.SetBool("Hurt", true);
+
+
+            if (!secret)
+                collision.GetComponentInParent<PlayerHUD>().AddHit();
+
         }
     }
 }

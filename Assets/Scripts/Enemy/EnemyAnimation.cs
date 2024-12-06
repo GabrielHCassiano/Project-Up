@@ -23,20 +23,19 @@ public class EnemyAnimation : MonoBehaviour
 
     public void FlipLogic()
     {
-        if (enemyMovement.Direction.x > 0 && !enemyStatus.InHurt)
+        if (enemyMovement.DirectionEnemy.x > 0 && !enemyStatus.InHurt)
             spriteRenderer.transform.localScale = new Vector2(1, spriteRenderer.transform.localScale.y);
-        else if (enemyMovement.Direction.x < 0 && !enemyStatus.InHurt)
+        else if (enemyMovement.DirectionEnemy.x < 0 && !enemyStatus.InHurt)
             spriteRenderer.transform.localScale = new Vector2(-1, spriteRenderer.transform.localScale.y);
     }
 
     public void AnimationLogic()
     {
-        animator.SetFloat("Horizontal", rb.velocity.x);
-        animator.SetFloat("Vertical", rb.velocity.y);
+        animator.SetFloat("Horizontal", enemyMovement.NavMeshAgent.velocity.x);
+        animator.SetFloat("Vertical", enemyMovement.NavMeshAgent.velocity.y);
         animator.SetBool("InHurt", enemyStatus.InHurt);
         animator.SetBool("Intro", enemyMovement.InSpawn);
-        animator.SetBool("Intro", enemyMovement.InSpawn);
-        animator.SetBool("Attack1", enemyCombat.Attack1);
+        animator.SetTrigger("Attack" + enemyCombat.Combo);
         animator.SetBool("Dead", enemyStatus.Death);
     }
 }

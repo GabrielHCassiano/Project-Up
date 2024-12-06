@@ -456,7 +456,14 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 40
+    intParameter: 12
+    messageOptions: 0
+  - time: 0
+    functionName: SetCombo
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
     messageOptions: 0
   - time: 0.5
     functionName: ResetStatus

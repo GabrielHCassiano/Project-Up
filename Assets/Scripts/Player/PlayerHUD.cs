@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class PlayerHUD : MonoBehaviour
 {
+    private PlayerData playerData;
+
     [SerializeField] private GameObject playerUI;
     [SerializeField] private TextMeshProUGUI charName;
     [SerializeField] private Image charImage;
@@ -20,6 +22,7 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField] private Color hitLevel3Color;
     [SerializeField] private Color hitLevel4Color;
     [SerializeField] private Color hitLevel5Color;
+    [SerializeField] private Color hitBadColor;
     [SerializeField] private Color alphaColor;
 
     private Color currentColor;
@@ -34,7 +37,12 @@ public class PlayerHUD : MonoBehaviour
         set { hitCombo = value; }
     }
 
-    public void SetPlayerUI(PlayerData playerData)
+    public void SetPlayerData(PlayerData playerData)
+    {
+        this.playerData = playerData;
+    }
+
+    public void SetPlayerUI()
     {
         playerUI.SetActive(true);
         charName.text = playerData.CharName;
@@ -94,7 +102,9 @@ public class PlayerHUD : MonoBehaviour
 
     public void HitLevel()
     {
-        if (hitCombo < 25)
+        if (hitCombo == 0)
+            hitComboText.color = hitBadColor;
+        else if (hitCombo > 0 && hitCombo < 25)
             hitComboText.color = hitBaseColor;
         else if (hitCombo >= 25 && hitCombo < 50)
             hitComboText.color = hitLevel2Color;
@@ -110,6 +120,9 @@ public class PlayerHUD : MonoBehaviour
 
     IEnumerator HitEndCooldown()
     {
+        if (playerData.ComboScore < hitCombo)
+            playerData.ComboScore = hitCombo;
+
         int endHit = hitCombo;
         hitCombo = 0;
         if (endHit == 0)
@@ -133,7 +146,11 @@ public class PlayerHUD : MonoBehaviour
 
     IEnumerator CancelHitEndCooldown()
     {
+        if (playerData.ComboScore < hitCombo)
+            playerData.ComboScore = hitCombo;
+
         int endHit = hitCombo;
+
         hitCombo = 0;
         if (endHit == 0)
             hitComboText.text = "Bad";

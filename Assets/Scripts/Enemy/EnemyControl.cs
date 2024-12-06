@@ -19,6 +19,9 @@ public class EnemyControl : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    [SerializeField] private int maxLife;
+    [SerializeField] private int leghtCombo;
+
     private AudioSource attackAudio;
 
     // Start is called before the first frame update
@@ -39,8 +42,8 @@ public class EnemyControl : MonoBehaviour
         attackAudio = GetComponent<AudioSource>();
 
         enemyMovement = new EnemyMovement(navMeshAgent, rb, knockback, gameObject, players);
-        enemyStatus = new EnemyStatus(knockback, gameObject);
-        enemyCombat = new EnemyCombat(rb, enemyMovement, enemyStatus);
+        enemyStatus = new EnemyStatus(knockback, gameObject, maxLife);
+        enemyCombat = new EnemyCombat(rb, enemyMovement, enemyStatus, leghtCombo);
         enemyAnimation = new EnemyAnimation(animator, spriteRenderer, rb, enemyMovement, enemyStatus, enemyCombat);
 
         enemyHurtbox.SetStatus(enemyStatus);
@@ -75,10 +78,22 @@ public class EnemyControl : MonoBehaviour
         set { enemyStatus = value; }
     }
 
+    public EnemyCombat EnemyCombat
+    {
+        get { return enemyCombat; }
+        set { enemyCombat = value; }
+    }
+
     public SpriteRenderer SpriteRenderer 
     { 
         get { return spriteRenderer; }
         set { spriteRenderer = value; }
+    }
+
+    public int LeghtCombo
+    {
+        get { return leghtCombo; }
+        set { leghtCombo = value; }
     }
 
     public void SetForce(int force)
@@ -91,18 +106,26 @@ public class EnemyControl : MonoBehaviour
         enemyMovement.SpawnLogic();
     }
 
+    public void SetCombo()
+    {
+        enemyCombat.SetCombo();
+    }
+
     public void ResetAttack()
     {
+        enemyMovement.CanMove = true;
         enemyCombat.ResetAttack();
     }
 
     public void ResetStatus()
     {
+        enemyMovement.CanMove = true;
         enemyCombat.ResetStatus();
     }
 
     public void InStun()
     {
+        enemyMovement.CanMove = false;
         enemyCombat.InStun();
     }
 

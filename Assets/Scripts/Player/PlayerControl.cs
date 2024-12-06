@@ -26,6 +26,9 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] private AudioSource[] audios;
 
+    [SerializeField] private float ds;
+    [SerializeField] private float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +41,19 @@ public class PlayerControl : MonoBehaviour
 
         playerHUD = GetComponent<PlayerHUD>();
 
-        playerHUD.SetPlayerUI(inputsPlayers.PlayerData);
+        playerHUD.SetPlayerData(inputsPlayers.PlayerData);
+        playerHUD.SetPlayerUI();
         animator.runtimeAnimatorController = inputsPlayers.PlayerData.AnimatorController;
 
-        playerMovement = new PlayerMovement(gameObject, rb, knockback, inputsPlayers);
+        switch (inputsPlayers.PlayerData.CharName)
+        {
+            case "Suni":
+                playerMovement = new PlayerMovement(gameObject, rb, knockback, inputsPlayers, 12, 0.55f);
+                break;
+            case "Alu":
+                playerMovement = new PlayerMovement(gameObject, rb, knockback, inputsPlayers, 12, 0.5f);
+                break;
+        }
         playerStatus = new PlayerStatus(this, spriteRenderer, knockback, inputsPlayers);
         playerCombat = new PlayerCombat(playerMovement, playerStatus, rb, inputsPlayers);
         playerAnimation = new PlayerAnimation(animator, spriteRenderer, playerMovement, playerStatus, playerCombat, inputsPlayers);
@@ -52,6 +64,10 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //playerMovement.SpeedDash = speed;
+        //playerMovement.DistanceDash = ds;
+
+
         Debug.DrawLine(new Vector3(transform.position.x, transform.position.y + 1.0f, 1), new Vector3(transform.position.x, transform.position.y - 1.0f, 1), Color.red);
         playerMovement.CheckGround();
         playerMovement.DashLogic();
@@ -135,6 +151,11 @@ public class PlayerControl : MonoBehaviour
     public void SetForce(int force)
     {
         playerStatus.Force = force;
+    }
+
+    public void ReturnCombo()
+    {
+        playerCombat.ReturnCombo();
     }
 
     public void SetCombo()

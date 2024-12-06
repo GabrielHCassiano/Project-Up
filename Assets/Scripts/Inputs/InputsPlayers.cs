@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XInput;
 using UnityEngine.SceneManagement;
 
 public class InputsPlayers : MonoBehaviour
@@ -10,33 +11,156 @@ public class InputsPlayers : MonoBehaviour
 
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private bool buttonDashLeft, buttonDashRight;
-    [SerializeField] private bool button1, button2, button3, button3Hold, button4;
+    [SerializeField] private bool button1, button2, button3, button4Hold, button4;
     [SerializeField] private bool buttonR1, buttonR2, buttonL1, buttonL2;
     [SerializeField] private bool buttonStart, buttonSelect;
+
+    [Header("Buttons IDs Declarations")]
+    [SerializeField] private List<string> keyboardIDs;
+    [SerializeField] private List<string> playstationIDs;
+    [SerializeField] private List<string> xboxIDs;
+    [SerializeField] private List<string> nintendoIDs;
+    [SerializeField] private List<string> genericIDs;
+
+    private string inputName,idButton1, idButton2, idButton3, idButton4, idUp, idDown, idLeft, idRight, idDash;
 
     [SerializeField] private PlayerData playerData;
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-        if (GameManager.Instance != null)
+        if (SceneManager.GetActiveScene().name == "Fase1")
         {
-            playerInput = GetComponent<PlayerInput>();
-            playerData = ScriptableObject.CreateInstance<PlayerData>();
-            playerData.PlayerName = "Player" + (playerInput.playerIndex + 1);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            if (GameManager.Instance != null)
+            {
+                playerInput = GetComponent<PlayerInput>();
+                playerData = ScriptableObject.CreateInstance<PlayerData>();
 
-            transform.parent = GameManager.Instance.transform;
+                switch (playerInput.playerIndex + 1)
+                {
+                    case 1:
+                        playerData.PlayerName = "<color=red>Player 1</color>";
+                        break;
+                    case 2:
+                        playerData.PlayerName = "<color=blue>Player 2</color>";
+                        break;
+                    case 3:
+                        playerData.PlayerName = "<color=green>Player 3</color>";
+                        break;
+                    case 4:
+                        playerData.PlayerName = "<color=yellow>Player 4</color>";
+                        break;
+                }
 
-            GameManager.Instance.InputsPlayers.Add(this);
-            GameManager.Instance.PlayersDatas.Add(playerData);
+                transform.parent = GameManager.Instance.transform;
+
+                GameManager.Instance.InputsPlayers.Add(this);
+                GameManager.Instance.PlayersDatas.Add(playerData);
+            }
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        TyperInput();
     }
+
+    #region TyperInput
+
+    public void TyperInput()
+    {
+        if (playerInput.devices[0] is Keyboard)
+        {
+            inputName = "Keyboard";
+            idButton1 = keyboardIDs[0];
+            idButton2 = keyboardIDs[1];
+            idButton3 = keyboardIDs[2];
+            idButton4 = keyboardIDs[3];
+            idUp = keyboardIDs[4];
+            idDown = keyboardIDs[5];
+            idLeft = keyboardIDs[6];
+            idRight = keyboardIDs[7];
+            idDash = keyboardIDs[8];
+        }
+        else if (playerInput.devices[0].description.manufacturer != "")
+        {
+            switch (playerInput.devices[0].description.manufacturer)
+            {
+                case "Sony Interactive Entertainment":
+                    inputName = "Playstation";
+                    idButton1 = playstationIDs[0];
+                    idButton2 = playstationIDs[1];
+                    idButton3 = playstationIDs[2];
+                    idButton4 = playstationIDs[3];
+                    idUp = playstationIDs[4];
+                    idDown = playstationIDs[5];
+                    idLeft = playstationIDs[6];
+                    idRight = playstationIDs[7];
+                    idDash = playstationIDs[8];
+                    break;
+                case "Nintendo":
+                    inputName = "Nintendo";
+                    idButton1 = nintendoIDs[0];
+                    idButton2 = nintendoIDs[1];
+                    idButton3 = nintendoIDs[2];
+                    idButton4 = nintendoIDs[3];
+                    idUp = nintendoIDs[4];
+                    idDown = nintendoIDs[5];
+                    idLeft = nintendoIDs[6];
+                    idRight = nintendoIDs[7];
+                    idDash = nintendoIDs[8];
+                    break;
+                default:
+                    inputName = "Generic";
+                    idButton1 = genericIDs[0];
+                    idButton2 = genericIDs[1];
+                    idButton3 = genericIDs[2];
+                    idButton4 = genericIDs[3];
+                    idUp = genericIDs[4];
+                    idDown = genericIDs[5];
+                    idLeft = genericIDs[6];
+                    idRight = genericIDs[7];
+                    idDash = genericIDs[8];
+                    break;
+            }
+        }
+        else
+        {
+            if (playerInput.devices[0] is XInputController)
+            {
+                inputName = "Xbox";
+                idButton1 = xboxIDs[0];
+                idButton2 = xboxIDs[1];
+                idButton3 = xboxIDs[2];
+                idButton4 = xboxIDs[3];
+                idUp = xboxIDs[4];
+                idDown = xboxIDs[5];
+                idLeft = xboxIDs[6];
+                idRight = xboxIDs[7];
+                idDash = xboxIDs[8];
+            }
+            else
+            {
+                inputName = "Generic";
+                idButton1 = genericIDs[0];
+                idButton2 = genericIDs[1];
+                idButton3 = genericIDs[2];
+                idButton4 = genericIDs[3];
+                idUp = genericIDs[4];
+                idDown = genericIDs[5];
+                idLeft = genericIDs[6];
+                idRight = genericIDs[7];
+                idDash = genericIDs[8];
+            }
+        }
+    }
+
+    #endregion
 
     #region GetAndSet
 
@@ -76,10 +200,10 @@ public class InputsPlayers : MonoBehaviour
         set { button3 = value; }
     }
 
-    public bool Button3Hold
+    public bool Button4Hold
     {
-        get { return button3Hold; }
-        set { button3Hold = value; }
+        get { return button4Hold; }
+        set { button4Hold = value; }
     }
 
     public bool Button4
@@ -124,6 +248,59 @@ public class InputsPlayers : MonoBehaviour
         set { buttonSelect = value; }
     }
 
+    public string IdButton1
+    {
+        get { return idButton1; }
+        set { idButton1 = value; }
+    }
+
+    public string IdButton2
+    {
+        get { return idButton2; }
+        set { idButton2 = value; }
+    }
+
+    public string IdButton3
+    {
+        get { return idButton3; }
+        set { idButton3 = value; }
+    }
+
+    public string IdButton4
+    {
+        get { return idButton4; }
+        set { idButton4 = value; }
+    }
+
+    public string IdUp
+    {
+        get { return idUp; }
+        set { idUp = value; }
+    }
+
+    public string IdDown
+    {
+        get { return idDown; }
+        set { idDown = value; }
+    }
+
+    public string IdLeft
+    {
+        get { return idLeft; }
+        set { idLeft = value; }
+    }
+    public string IdRight
+    {
+        get { return idRight; }
+        set { idRight = value; }
+    }
+
+    public string IdDash
+    {
+        get { return idDash; }
+        set { idDash = value; }
+    }
+
     public PlayerData PlayerData
     {
         get { return playerData; }
@@ -164,9 +341,9 @@ public class InputsPlayers : MonoBehaviour
         button3 = context.action.triggered;
     }
 
-    public void Button3HoldSet(InputAction.CallbackContext context)
+    public void Button4HoldSet(InputAction.CallbackContext context)
     {
-        button3Hold = context.action.triggered;
+        button4Hold = context.action.triggered;
     }
 
     public void Button4Set(InputAction.CallbackContext context)
@@ -214,7 +391,7 @@ public class InputsPlayers : MonoBehaviour
         button1 = false;
         button2 = false;
         button3 = false;
-        button3Hold = false;
+        button4Hold = false;
         button4 = false;
         buttonR1 = false;
         buttonR2 = false;

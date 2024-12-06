@@ -164,7 +164,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1040250297
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1895772271, guid: de7faa16bdb7090498473c0ea76f80fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 4587880014917364781}
   - component: {fileID: 8752358127280317742}
   - component: {fileID: 1103259146016910410}
+  - component: {fileID: 8386829104015635460}
   - component: {fileID: 2855508815040281854}
   - component: {fileID: 1205034327285895674}
   - component: {fileID: 1217739456494842035}
@@ -227,6 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
+  maxLife: 26
+  leghtCombo: 1
 --- !u!114 &1103259146016910410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +247,30 @@ MonoBehaviour:
   knockbackTime: 0
   isKnock: 0
   difference: 0
+  agent: {fileID: 8386829104015635460}
   sprite: {fileID: 3276113157813342675}
+--- !u!195 &8386829104015635460
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906816841347822202}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2
+  m_Acceleration: 2
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!50 &2855508815040281854
 Rigidbody2D:
   serializedVersion: 4

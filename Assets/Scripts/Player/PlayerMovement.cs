@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 direction;
 
     private float speed = 8;
+    private float curretSpeed = 4;
+
+    private float speedDash;
+
     private float forceJump = 8;
 
     private bool canMove = true;
@@ -29,12 +34,16 @@ public class PlayerMovement : MonoBehaviour
     private bool inputDashLeft = false;
     private bool inputDashRight = false;
 
-    public PlayerMovement(GameObject player, Rigidbody2D rb, Knockback knockback, InputsPlayers inputsPlayers)
+    private float distanceDash;
+
+    public PlayerMovement(GameObject player, Rigidbody2D rb, Knockback knockback, InputsPlayers inputsPlayers, float speedDash, float distanceDash)
     {
         this.player = player;
         this.rb = rb;
         this.knockback = knockback;
         this.inputsPlayers = inputsPlayers;
+        this.speedDash = speedDash;
+        this.distanceDash = distanceDash;
     }
 
     public bool CanMove
@@ -91,10 +100,21 @@ public class PlayerMovement : MonoBehaviour
         set {   directionDash = value; }
     }
 
+    public float SpeedDash
+    {
+        get { return speedDash; }
+        set { speedDash = value; }
+    }
+
+    public float DistanceDash
+    {
+        get { return distanceDash; }
+        set { distanceDash = value; }
+    }
+
 
     public void MoveLogic()
     {
-
         direction = new Vector2(inputsPlayers.MoveDirection.x, inputsPlayers.MoveDirection.y).normalized;
         if (direction == Vector2.zero)
         {
@@ -102,11 +122,27 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             rb.mass = 0.00001f;
-       
+
         if (knockback.KnockbackCountLogic < 0)
         {
             if (canMove)
-                rb.velocity = direction * speed;
+            {
+                if (direction != Vector2.zero)
+                {
+                    if (curretSpeed < speed)
+                    {
+                        curretSpeed += 1 * Time.deltaTime;
+                    }
+                    else if (curretSpeed >= speed)
+                    {
+                        curretSpeed = speed;
+                    }
+                }
+                else
+                    curretSpeed = 4;
+
+                rb.velocity = direction * curretSpeed;
+            }
         }
         else
             knockback.KnockLogic();
@@ -121,10 +157,10 @@ public class PlayerMovement : MonoBehaviour
             print("InGround");
         }
 
-        if (inputsPlayers.Button2 && player.transform.position.y == ground && !inJump)
+        if (inputsPlayers.Button3 && player.transform.position.y == ground && !inJump)
         {
             print("jump");
-            inputsPlayers.Button2 = false;
+            inputsPlayers.Button3 = false;
             canMove = false;
             inJump = true;
             rb.velocity = Vector2.zero;
@@ -148,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (inDash)
         {
-            if (delayDash >= 0.3f)
+            if (delayDash >= distanceDash)
             {
                 delayDash = 0;
                 rb.velocity = Vector2.zero;
@@ -158,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 delayDash += 1 * Time.deltaTime;
 
-            rb.velocity = new Vector2(directionDash * speed, 0);
+            rb.velocity = new Vector2(directionDash * speedDash, 0);
         }
 
         if (inputDashLeft)
@@ -177,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
             if (inputDashLeft && !inDash)
             {
                 canMove = false;
-                directionDash = -2;
+                directionDash = -1f;
                 inDash = true;
                 canDash = false;
                 inputDashLeft = false;
@@ -203,7 +239,7 @@ public class PlayerMovement : MonoBehaviour
             if (inputDashRight && !inDash)
             {
                 canMove = false;
-                directionDash = 2;
+                directionDash = 1f;
                 inDash = true;
                 canDash = false;
                 inputDashRight = false;

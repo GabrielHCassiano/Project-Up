@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyCombat : MonoBehaviour
 {
@@ -11,22 +12,38 @@ public class EnemyCombat : MonoBehaviour
 
     private bool canAttack = true;
     private bool inAttack;
-    private bool attack1;
 
     private float delayAttack;
     private float attackCooldown;
 
-    public EnemyCombat(Rigidbody2D rb, EnemyMovement enemyMovement, EnemyStatus enemyStatus)
+    private int inCombo = 0;
+    private int combo = 0;
+    private int leghtCombo;
+
+    public EnemyCombat(Rigidbody2D rb, EnemyMovement enemyMovement, EnemyStatus enemyStatus, int leghtCombo)
     {
         this.rb = rb;
         this.enemyMovement = enemyMovement;
         this.enemyStatus = enemyStatus;
+        this.leghtCombo = leghtCombo;
     }
 
-    public bool Attack1
+    public bool CanAttack
     {
-        get { return attack1; }
-        set { attack1 = value; }
+        get { return canAttack; }
+        set { canAttack = value; }
+    }
+
+    public int Combo
+    {
+        get { return combo; }
+        set { combo = value; }
+    }
+
+    public int InCombo
+    {
+        get { return inCombo; }
+        set { inCombo = value; }
     }
 
     public void AttackLogic()
@@ -43,7 +60,7 @@ public class EnemyCombat : MonoBehaviour
                 delayAttack += 1 * Time.deltaTime;
         }*/
 
-        if (!canAttack && !inAttack)
+        /*if (!canAttack && !inAttack)
         {
             if (attackCooldown >= 0.5f)
             {
@@ -52,13 +69,17 @@ public class EnemyCombat : MonoBehaviour
             }
             else
                 attackCooldown += 1 * Time.deltaTime;
-        }
+        }*/
         if (canAttack && enemyMovement.Distance < 2 && enemyMovement.Distance != 0)
         {
+            enemyMovement.NavMeshAgent.velocity = Vector2.zero;
             rb.velocity = Vector2.zero;
             enemyMovement.CanMove = false;
+            enemyMovement.NavMeshAgent.isStopped = true;
             canAttack = false;
-            attack1 = true;
+            if (inCombo < leghtCombo)
+                inCombo++;
+            combo = inCombo;
             //inAttack = true;
         }
         else if (!canAttack && enemyMovement.Distance > 2)
@@ -67,31 +88,43 @@ public class EnemyCombat : MonoBehaviour
         }
     }
 
+    public void SetCombo()
+    {
+        inCombo = combo;
+        combo = 0;
+    }
+
+
     public void ResetAttack()
     {
+        inCombo = 0;
         attackCooldown = 0;
         delayAttack = 0;
         enemyMovement.CanMove = true;
-        attack1 = false;
+        enemyMovement.NavMeshAgent.velocity = Vector2.zero;
+        enemyMovement.NavMeshAgent.isStopped = false;
         inAttack = false;
     }
 
     public void ResetStatus()
     {
+        inCombo = 0;
         attackCooldown = 0;
         delayAttack = 0;
         enemyMovement.CanMove = true;
+        enemyMovement.NavMeshAgent.isStopped = false;
         canAttack = true;
         inAttack = false;
-        attack1 = false;
     }
 
     public void InStun()
     {
+        enemyMovement.NavMeshAgent.velocity = Vector2.zero;
         rb.velocity = Vector2.zero;
         attackCooldown = 0;
         delayAttack = 0;
         enemyMovement.CanMove = false;
+        enemyMovement.NavMeshAgent.isStopped = true;
         canAttack = false;
         inAttack = false;
         enemyStatus.InHurt = false;

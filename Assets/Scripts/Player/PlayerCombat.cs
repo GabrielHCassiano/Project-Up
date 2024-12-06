@@ -18,6 +18,7 @@ public class PlayerCombat : MonoBehaviour
 
     private int combo = 0;
     private int inCombo = 0;
+    private bool canCombo = true;
 
     public PlayerCombat(PlayerMovement playerMovement, PlayerStatus playerStatus, Rigidbody2D rb ,InputsPlayers inputsPlayers)
     {
@@ -65,9 +66,9 @@ public class PlayerCombat : MonoBehaviour
 
     public void AttackLogic()
     {
-        if (inputsPlayers.Button3 && canAttack && !playerMovement.InJump && !playerMovement.InDash)
+        if (inputsPlayers.Button4 && canAttack && canCombo && !playerMovement.InJump && !playerMovement.InDash && !heavyAttack && !specialAttack)
         {
-            inputsPlayers.Button3 = false;
+            inputsPlayers.Button4 = false;
             rb.velocity = Vector2.zero;
             playerMovement.CanMove = false;
             playerMovement.CanDash = false;
@@ -80,7 +81,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void HeavyAttackLogic()
     {
-        if (!inputsPlayers.Button3Hold && holdInput > 1 && canAttack && !playerMovement.InJump && !playerMovement.InDash)
+        if (!inputsPlayers.Button4Hold && holdInput > 1 && canAttack && combo == 0 && inCombo == 0 && !playerMovement.InJump && !playerMovement.InDash && !specialAttack)
         {
             rb.velocity = Vector2.zero;
             playerMovement.CanMove = false;
@@ -89,7 +90,7 @@ public class PlayerCombat : MonoBehaviour
             heavyAttack = true;
         }
 
-        if (inputsPlayers.Button3Hold && canAttack && !playerMovement.InJump)
+        if (inputsPlayers.Button4Hold && canAttack && !playerMovement.InJump)
         {
             holdInput += 1 * Time.deltaTime;
         }
@@ -101,16 +102,21 @@ public class PlayerCombat : MonoBehaviour
 
     public void SpecialAttackLogic()
     {
-        if (inputsPlayers.Button4 && canAttack && inCombo == 0 && !playerMovement.InJump && playerStatus.Stamina >= 50 && !playerMovement.InDash)
+        if (inputsPlayers.Button2 && canAttack && combo == 0 && inCombo == 0 && !playerMovement.InJump && playerStatus.Stamina >= 25 && !playerMovement.InDash && !heavyAttack)
         {
-            inputsPlayers.Button4 = false;
+            inputsPlayers.Button2 = false;
             rb.velocity = Vector2.zero;
             playerMovement.CanMove = false;
             playerMovement.CanDash = false;
             canAttack = false;
-            playerStatus.Stamina -= 50;
+            playerStatus.Stamina -= 25;
             specialAttack = true;
         }
+    }
+
+    public void ReturnCombo()
+    {
+        canCombo = false;
     }
 
     public void SetCombo()
@@ -121,6 +127,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void ResetStatus()
     {
+        canCombo = true;
+        combo = 0;
         inCombo = 0;
         playerMovement.CanMove = true;
         canAttack = true;

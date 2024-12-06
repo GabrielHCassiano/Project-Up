@@ -1,7 +1,8 @@
+using NavMeshPlus.Components;
 using System.Collections;
 using System.Collections.Generic;
+//using Unity.AI.Navigation;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SpawnEnemy : MonoBehaviour
 {
@@ -12,19 +13,17 @@ public class SpawnEnemy : MonoBehaviour
 
     private EnemyControl[] enemies;
 
-    [SerializeField] private GameObject enemyBase;
-
     [SerializeField] private CamCollider camCollider;
     [SerializeField] private GameObject levelCamCollider;
 
-    [SerializeField] private float minPosX, maxPosX, minPosY, maxPosY;
-    private float posX, posY;
-
-    [SerializeField] private int[] enemyCount;
-
     [SerializeField] private int waveCount;
+    [SerializeField] private GameObject[] subWavesL1;
+    [SerializeField] private GameObject[] subWavesL2;
 
     [SerializeField] private GameObject nextWave;
+    [SerializeField] private GameObject nextWavePoint;
+
+    [SerializeField] private NavMeshSurface navMeshSurface;
 
     // Start is called before the first frame update
     void Start()
@@ -36,19 +35,23 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         StartWave();
-        EndLevel();
     }
 
     public void StartWave()
     {
+        navMeshSurface.BuildNavMesh();
+
         enemies = FindObjectsOfType<EnemyControl>();
 
         if (waveCount == 0 && enemies.Length == 0 && nextWave != null)
         {
+            nextWavePoint.SetActive(true);
             Destroy(levelCamCollider.gameObject);
             camCollider.NextLevel = false;
-            nextWave.SetActive(true);
-            gameObject.SetActive(false);
+        }
+        else if (waveCount == 0 && enemies.Length == 0 && nextWave == null)
+        {
+            GameManager.Instance.WinGame = true;
         }
 
         if (enemies.Length <= 0 && waveCount > 0 && canSpawn)
@@ -60,12 +63,15 @@ public class SpawnEnemy : MonoBehaviour
     public void SpawnEnemyLogic()
     {
         waveCount--;
-        for (int i = 0; i < enemyCount[waveCount]; i++)
+
+        switch (difficult)
         {
-            posX = Random.Range(minPosX, maxPosX);
-            posY = Random.Range(minPosY, maxPosY);
-            Vector3 enemyPos = new Vector2(posX, posY);
-            Instantiate(enemyBase, enemyPos + transform.position, Quaternion.identity, transform);
+            case 1:
+                subWavesL1[waveCount].SetActive(true);
+                break;
+            case 2:
+                subWavesL2[waveCount].SetActive(true);
+                break;
         }
     }
 
@@ -79,27 +85,16 @@ public class SpawnEnemy : MonoBehaviour
         else if (players.Length == 3 || players.Length == 4)
             difficult = 2;
 
-        for (int i = 0; i < enemyCount.Length; i++)
-            enemyCount[i] = enemyCount[i] * difficult;
-
         canSpawn = true;
     }
 
-    public void EndLevel()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.P))
-            ResetGame();
-
-        if (enemies.Length == 0 && waveCount == 0 && canSpawn && nextWave == null)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("GroundCollisionPlayer") && nextWavePoint.activeSelf)
         {
-            ResetGame();
+            nextWave.SetActive(true);
+            gameObject.SetActive(false);
         }
-    }
-
-    public void ResetGame()
-    {
-        Destroy(GameManager.Instance.gameObject);
-        SceneManager.LoadScene(0);
     }
 
 }
