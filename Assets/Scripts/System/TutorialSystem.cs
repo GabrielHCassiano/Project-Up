@@ -130,11 +130,11 @@ public class TutorialSystem : MonoBehaviour
                     }
                     if (moveDownConfirm[i] && !dashConfirm[i] && !canDashConfirm[i])
                     {
-                        tutorialText[i].text = "Aperte <sprite=" + players[i].InputsPlayers.IdDash + "> para usar dash <color=red>[0 / 1]</color> \n <color=red>Termine o Tutorial</color>";
+                        tutorialText[i].text = "Aperte <sprite=" + players[i].InputsPlayers.IdButton3 + "> para usar dash <color=red>[0 / 1]</color> \n <color=red>Termine o Tutorial</color>";
                         if (players[i].PlayerMovement.InDash)
                         {
                             canDashConfirm[i] = true;
-                            StartCoroutine(TutorialCooldown(i, "Aperte <sprite=" + players[i].InputsPlayers.IdDash + "> para usar dash <color=green>[1 / 1]</color> \n <color=red>Termine o Tutorial</color>", dashConfirm));
+                            StartCoroutine(TutorialCooldown(i, "Aperte <sprite=" + players[i].InputsPlayers.IdButton3 + "> para usar dash <color=green>[1 / 1]</color> \n <color=red>Termine o Tutorial</color>", dashConfirm));
                         }
                     }
                     if (dashConfirm[i] && !attackConfirm[i] && !canAttackConfirm[i])

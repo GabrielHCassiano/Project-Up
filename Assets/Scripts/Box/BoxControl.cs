@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Analytics;
+using NavMeshPlus.Components;
 
 public class BoxControl : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class BoxControl : MonoBehaviour
                 iten.transform.parent = null;
                 iten.SetActive(true);
             }
+
+            FindObjectOfType<NavMeshSurface>().BuildNavMesh();
 
             Destroy(gameObject);
         }

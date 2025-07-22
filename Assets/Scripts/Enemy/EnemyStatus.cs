@@ -90,7 +90,7 @@ public class EnemyStatus : MonoBehaviour
     {
         PlayerControl playerControl = player.GetComponentInParent<PlayerControl>();
         life -= playerControl.PlayerStatus.Force;
-        if ((playerControl.PlayerCombat.InCombo == 3 || playerControl.PlayerCombat.HeavyAttack) && life > 0)
+        if (((playerControl.PlayerCombat.InCombo > 1 && playerControl.InputsPlayers.PlayerData.CharName == "Suni") || (playerControl.PlayerCombat.InCombo == 3 && playerControl.InputsPlayers.PlayerData.CharName == "Alu") || playerControl.PlayerCombat.HeavyAttack) && life > 0)
             knockback.Knocking(playerControl.SpriteRenderer);
         playerControl.PlayerStatus.Stamina += 2;
         playerControl.PlayerCombat.CanAttack = true;

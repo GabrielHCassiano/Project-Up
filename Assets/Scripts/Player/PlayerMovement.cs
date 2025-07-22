@@ -197,9 +197,26 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(directionDash * speedDash, 0);
         }
 
-        if (inputDashLeft)
+        if (inputsPlayers.Button3 && !inDash && canDash)
         {
-            if (delayInputLeft >= 0.3f)
+            inputsPlayers.Button3 = false;
+
+            canMove = false;
+
+            if (inputsPlayers.MoveDirection.x > 0)
+                directionDash = 1;
+            else if (inputsPlayers.MoveDirection.x < 0)
+                directionDash = -1;
+            else
+                directionDash = 1;
+
+            inDash = true;
+            canDash = false;
+        }
+
+        /*if (inputDashLeft)
+        {
+            if (delayInputLeft >= 0.5f)
             {
                 delayInputLeft = 0;
                 inputDashLeft = false;
@@ -248,7 +265,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 inputDashRight = true;
             }
-        }
+        }*/
     }
 
     public void ResetDash()

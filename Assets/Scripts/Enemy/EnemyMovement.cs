@@ -77,7 +77,7 @@ public class EnemyMovement : MonoBehaviour
     {
         idLockPlayer = Random.Range(0, players.Length);
         inSpawn = false;
-        canMove = false;
+        //canMove = false;
     }
 
     public void MoveLogic()
@@ -87,10 +87,17 @@ public class EnemyMovement : MonoBehaviour
         //direction = players[idLockPlayer].transform.position - enemy.transform.position;  
         //direction = direction.normalized;
 
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.Alpha9)) 
+            CanMove = true;
+
         if (knockback.KnockbackCountLogic < 0)
         {
             if (canMove && !players[idLockPlayer].GetComponent<PlayerControl>().PlayerStatus.Death)
             {
+                /*print("0");
+                print("0 - " + canMove);
+                print("0 - " + direction);
+                print("0 - " + directionEnemy);*/
                 if (navMeshAgent.isStopped == true && players.Length == 1)
                 {
                     idLockPlayer = 0;

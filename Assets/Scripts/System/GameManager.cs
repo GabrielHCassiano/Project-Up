@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using NavMeshPlus.Components;
 
 public class GameManager : MonoBehaviour
 {
@@ -131,15 +132,23 @@ public class GameManager : MonoBehaviour
 
     public void BackMenu()
     {
-        if (SceneManager.GetActiveScene().name == "Fase1" && !endPanel.activeSelf)
+        /*if (SceneManager.GetActiveScene().name == "Fase1" && !endPanel.activeSelf)
         {
             for (int i = 0; i < inputsPlayers.Count; i++)
             {
-                if (inputsPlayers[i].ButtonL1 && inputsPlayers[i].ButtonR1 && inputsPlayers[i].ButtonStart)
+                if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha0))
                 {
                     Destroy(gameObject);
                     SceneManager.LoadScene(0);
                 }
+            }
+        }*/
+        if (SceneManager.GetActiveScene().name == "Fase1")
+        {
+            if (Input.GetKey(KeyCode.LeftShift) == true && Input.GetKey(KeyCode.Alpha0) == true)
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene(0);
             }
         }
     }
@@ -170,6 +179,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 pausePanel.SetActive(false);
+                FindObjectOfType<NavMeshSurface>().BuildNavMesh();
                 Time.timeScale = 1f;
             }
         }

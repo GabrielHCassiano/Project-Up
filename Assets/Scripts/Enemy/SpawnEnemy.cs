@@ -39,7 +39,7 @@ public class SpawnEnemy : MonoBehaviour
 
     public void StartWave()
     {
-        navMeshSurface.BuildNavMesh();
+        //navMeshSurface.BuildNavMesh();
 
         enemies = FindObjectsOfType<EnemyControl>();
 

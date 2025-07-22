@@ -48,7 +48,7 @@ public class PlayerControl : MonoBehaviour
         switch (inputsPlayers.PlayerData.CharName)
         {
             case "Suni":
-                playerMovement = new PlayerMovement(gameObject, rb, knockback, inputsPlayers, 12, 0.55f);
+                playerMovement = new PlayerMovement(gameObject, rb, knockback, inputsPlayers, 16, 0.45f);
                 break;
             case "Alu":
                 playerMovement = new PlayerMovement(gameObject, rb, knockback, inputsPlayers, 12, 0.5f);
